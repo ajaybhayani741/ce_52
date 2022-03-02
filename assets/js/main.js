@@ -162,17 +162,17 @@ window.onload = function () {
 
 			$(".js-main-slider").slick({
 				dots: true,
-				arrows: true,
+				arrows: false,
 				infinite: true,
-				autoplay: true,
-				autoplaySpeed: 7000,
+				autoplay: false,
+				autoplaySpeed: 3000,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				touchThreshold: 200,
 				speed: 1000,
 				waitForAnimate: false,
 				fade: true,
-				appendArrows: $(".js-main-arrows"),
+				// appendArrows: $(".js-main-arrows"),
 				appendDots: $(".js-main-dots")
 			});
 
