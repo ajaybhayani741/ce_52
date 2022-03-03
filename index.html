@@ -8,7 +8,7 @@
     <title>Fashionee - Main page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Raleway:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
@@ -58,11 +58,16 @@
           <div class="header__cols">
             <div class="header__left">
               <div class="header__cols">
-                <!-- <div class="header__col">
-                    <button class="mob-button js-mob-open">
-                        <span class="mob-button__icon"></span>
-                    </button>
-                </div> -->
+                <div class="header__col">
+                  <button class="mob-button js-mob-open">
+                    <span class="mob-button__icon"></span>
+                  </button>
+                </div>
+                <div class="header__col">
+                  <a class="mob__logo logo" href="#">
+                    <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
+                  </a>
+                </div>
                 <div class="header__col header__col_hide-mob">
                   <nav class="header-nav">
                     <ul class="header-nav__list">
@@ -128,6 +133,13 @@
                           </ul>
                         </div>
                       </li>
+                      <li class="header-nav__item logo_nav">
+                        <div class="header__col text-center">
+                          <a class="logo" href="#">
+                            <h3>Logo</h3>
+                          </a>
+                        </div>
+                      </li>
                       <li class="header-nav__item">
                         <a class="header-nav__link" href="blog.html">Blog</a>
                       </li>
@@ -137,14 +149,6 @@
                     </ul>
                   </nav>
                 </div>
-              </div>
-            </div>
-            <div class="header__center">
-              <div class="header__col text-center">
-                <a class="logo" href="#">
-                  <!-- <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" /> -->
-                  <h3>Logo</h3>
-                </a>
               </div>
             </div>
             <div class="header__right">
@@ -281,35 +285,103 @@
       <main class="main">
         <!-- BEGIN FIRST SCREEN -->
         <div class="first-screen">
+          <div class="first-screen__left">
+            <div class="first-screen__mob-cols">
+              <div class="first-screen__mob-col">
+                <div class="slider-count">
+                  <span class="slider-count__text js-main-count"><span>1</span>/3</span>
+                </div>
+              </div>
+              <div class="first-screen__mob-col">
+                <ul class="first-screen__socials side-socials">
+                  <li class="side-socials__item">
+                    <a class="side-socials__link" href="#">FB</a>
+                  </li>
+                  <li class="side-socials__item">
+                    <a class="side-socials__link" href="#">TW</a>
+                  </li>
+                  <li class="side-socials__item">
+                    <a class="side-socials__link" href="#">INS</a>
+                  </li>
+                  <li class="side-socials__item">
+                    <a class="side-socials__link" href="#">PT</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="first-screen__mob-col js-to-1"></div>
+            </div>
+          </div>
           <div class="first-screen__center">
             <div class="main-slider">
               <div class="main-slider__list-wrap">
                 <div class="main-slider__list js-main-slider loaded">
                   <div class="main-slider__item js-slide active">
-                    <div class="main-slider__banner_image">
-                      <img src="assets/img/banner/banner-1.jpeg" data-lazy="assets/img/banner/banner-1.jpeg" alt="" />
-                      <div class="main-slider__banner_text">
-                        <h2></h2>
+                    <div class="main-slider__max">
+                      <div class="main-slider__row">
+                        <div class="main-slider__cell">
+                          <div class="main-slider__content">
+                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
+                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
+                            <a class="main-slider__button button" href="shop.html">
+                              <span class="button__text">Shop now</span>
+                            </a>
+                          </div>
+                          <div class="main-slider__image-wrap">
+                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="main-slider__item js-slide">
-                    <div class="main-slider__banner_image">
-                      <img src="assets/img/banner/banner-2.jpeg" data-lazy="assets/img/banner/banner-2.jpeg" alt="" />
+                    <div class="main-slider__max">
+                      <div class="main-slider__row">
+                        <div class="main-slider__cell">
+                          <div class="main-slider__content">
+                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
+                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
+                            <a class="main-slider__button button" href="shop.html">
+                              <span class="button__text">Shop now</span>
+                            </a>
+                          </div>
+                          <div class="main-slider__image-wrap">
+                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="main-slider__item js-slide">
-                    <div class="main-slider__banner_image">
-                      <img src="assets/img/banner/banner-3.jpeg" data-lazy="assets/img/banner/banner-3.jpeg" alt="" />
+                    <div class="main-slider__max">
+                      <div class="main-slider__row">
+                        <div class="main-slider__cell">
+                          <div class="main-slider__content">
+                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
+                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
+                            <a class="main-slider__button button" href="shop.html">
+                              <span class="button__text">Shop now</span>
+                            </a>
+                          </div>
+                          <div class="main-slider__image-wrap">
+                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="main-slider__bg-wrap">
+                <img class="main-slider__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
+                <div class="scroll-down">
+                  <span class="scroll-down__icon"></span>
                 </div>
               </div>
             </div>
           </div>
           <div class="first-screen__right js-from-1">
             <div class="slider-dots dots-1 js-main-dots"></div>
-            <!-- <div class="slider-arrows arrows-1 js-main-arrows js-content-1"></div> -->
+            <div class="slider-arrows arrows-1 js-main-arrows js-content-1"></div>
           </div>
         </div>
         <!-- FIRST SCREEN END -->
@@ -412,18 +484,8 @@
               </a>
             </div>
           </div>
-          <img
-            class="collection-block__bg-left"
-            src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-            data-lazy="assets/img/svg/vector-collections.svg"
-            alt=""
-          />
-          <img
-            class="collection-block__bg-right"
-            src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-            data-lazy="assets/img/svg/vector-collections.svg"
-            alt=""
-          />
+          <img class="collection-block__bg-left" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
+          <img class="collection-block__bg-right" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
         </section>
         <!-- COLLECTION END -->
 
@@ -665,12 +727,7 @@
                   </div>
                 </article>
               </div>
-              <img
-                class="main-catalog__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-catalog.svg"
-                alt=""
-              />
+              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 1 END -->
@@ -886,12 +943,7 @@
                   </div>
                 </article>
               </div>
-              <img
-                class="main-catalog__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-catalog.svg"
-                alt=""
-              />
+              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 2 END -->
@@ -1107,12 +1159,7 @@
                   </div>
                 </article>
               </div>
-              <img
-                class="main-catalog__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-catalog.svg"
-                alt=""
-              />
+              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 3 END -->
@@ -1328,12 +1375,7 @@
                   </div>
                 </article>
               </div>
-              <img
-                class="main-catalog__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-catalog.svg"
-                alt=""
-              />
+              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 4 END -->
@@ -1549,12 +1591,7 @@
                   </div>
                 </article>
               </div>
-              <img
-                class="main-catalog__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-catalog.svg"
-                alt=""
-              />
+              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 5 END -->
@@ -1584,12 +1621,7 @@
                   </div>
                 </div>
               </div>
-              <img
-                class="deal-block__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-deal.svg"
-                alt=""
-              />
+              <img class="deal-block__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
         </section>
@@ -1607,12 +1639,7 @@
                 <div class="advantage__line"></div>
                 <p class="advantage__text">Non aliqua reprehenderit reprehenderit culpa laboris nulla minim anim velit</p>
               </div>
-              <img
-                class="advantage__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-advantages.svg"
-                alt=""
-              />
+              <img class="advantage__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </article>
             <article class="advantage">
               <div class="advantage__content">
@@ -1628,12 +1655,7 @@
                 <div class="advantage__line"></div>
                 <p class="advantage__text">Non aliqua reprehenderit reprehenderit culpa laboris nulla minim anim velit</p>
               </div>
-              <img
-                class="advantage__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-advantages.svg"
-                alt=""
-              />
+              <img class="advantage__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </article>
             <article class="advantage">
               <div class="advantage__content">
@@ -1649,12 +1671,7 @@
                 <div class="advantage__line"></div>
                 <p class="advantage__text">Non aliqua reprehenderit reprehenderit culpa laboris nulla minim anim velit</p>
               </div>
-              <img
-                class="advantage__bg"
-                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-lazy="assets/img/svg/vector-advantages.svg"
-                alt=""
-              />
+              <img class="advantage__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </article>
           </div>
         </div>
@@ -1979,12 +1996,7 @@
               </div>
             </div>
             <div class="load-icon"></div>
-            <img
-              class="catalog-slider__bg"
-              src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-lazy="assets/img/svg/vector-catalog.svg"
-              alt=""
-            />
+            <img class="catalog-slider__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
           </div>
         </section>
         <!-- BEST SELLERS END -->
@@ -2189,18 +2201,8 @@
               </div>
             </div>
           </div>
-          <img
-            class="footer__bg-left"
-            src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-            data-lazy="assets/img/svg/vector-footer-left.svg"
-            alt=""
-          />
-          <img
-            class="footer__bg-right"
-            src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-            data-lazy="assets/img/svg/vector-footer-right.svg"
-            alt=""
-          />
+          <img class="footer__bg-left" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
+          <img class="footer__bg-right" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
         </div>
       </footer>
       <!-- FOOTER END -->

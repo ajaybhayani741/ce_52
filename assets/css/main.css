@@ -127,7 +127,7 @@ body {
     min-width: 320px;
     height: 100% !important;
     position: relative;
-    font: 16px/27px Raleway, sans-serif;
+    font: 16px/27px 'Poppins', sans-serif;
     background: #fff;
     color: #444
 }
@@ -156,17 +156,17 @@ body {
 }
 
 .title-1 {
-    font: 400 80px/1 'Josefin Sans', sans-serif;
+    font: 400 80px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
 .title-2 {
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
 .title-3 {
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -175,48 +175,48 @@ body {
 }
 
 .title-5 {
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
 .title-6 {
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
 h1 {
     padding: 0 0 30px;
-    font: 400 80px/1 'Josefin Sans', sans-serif;
+    font: 400 80px/1 'Montserrat', sans-serif;
     color: #000
 }
 
 h2 {
     padding: 0 0 30px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     color: #000
 }
 
 h3 {
     padding: 0 0 30px;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     color: #000
 }
 
 h4 {
     padding: 0 0 30px;
-    font: 400 28px/31px 'Josefin Sans', sans-serif;
+    font: 400 28px/31px 'Montserrat', sans-serif;
     color: #000
 }
 
 h5 {
     padding: 0 0 30px;
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     color: #000
 }
 
 h6 {
     padding: 0 0 30px;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -293,7 +293,7 @@ a {
     margin: 0 0 20px;
     padding: 7px 0 13px;
     display: block;
-    font: 14px/1 Raleway, sans-serif;
+    font: 14px/1 'Poppins', sans-serif;
     background: #fff;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
@@ -314,7 +314,7 @@ a {
     margin: 0 0 20px;
     padding: 12px 0;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -333,7 +333,7 @@ a {
     margin: 0 0 20px;
     padding: 0 19px;
     display: block;
-    font: 16px/1 Raleway, sans-serif;
+    font: 16px/1 'Poppins', sans-serif;
     background: #fff;
     color: #000;
     border-radius: 10px
@@ -363,7 +363,7 @@ blockquote p {
     padding: 0 0 13px;
     position: relative;
     z-index: 1;
-    font: 20px/34px Raleway, sans-serif;
+    font: 20px/34px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -374,7 +374,7 @@ blockquote p:after, blockquote p:before {
 blockquote footer {
     position: relative;
     z-index: 1;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -395,7 +395,7 @@ button {
     vertical-align: top;
     position: relative;
     border: none;
-    font: 600 16px/52px Raleway, sans-serif;
+    font: 600 16px/52px 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
     text-transform: capitalize;
@@ -491,10 +491,14 @@ button {
     background: #000
 }
 
+.mob__logo {
+    display: none;
+}
+
 .mob-button {
     width: 22px;
     height: 22px;
-    display: block;
+    display: none;
     position: relative
 }
 
@@ -625,7 +629,7 @@ button {
     padding: 0 0 0 39px;
     display: inline-block;
     position: relative;
-    font: 600 16px/1 Raleway, sans-serif;
+    font: 600 16px/1 'Poppins', sans-serif;
     color: #000;
     text-transform: capitalize
 }
@@ -656,7 +660,7 @@ button {
     padding: 0 0 0 30px;
     display: inline-block;
     position: relative;
-    font: 600 16px/24px Raleway, sans-serif;
+    font: 600 16px/24px 'Poppins', sans-serif;
     color: #ff8e8e
 }
 
@@ -792,7 +796,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px Raleway, sans-serif;
+    font: 600 16px/24px 'Poppins', sans-serif;
     color: #000;
     text-transform: capitalize;
     overflow: hidden
@@ -858,7 +862,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px Raleway, sans-serif;
+    font: 600 16px/24px 'Poppins', sans-serif;
     white-space: nowrap;
     color: #000;
     text-transform: capitalize
@@ -912,7 +916,7 @@ button {
 .remove-button:before {
     content: "X";
     display: block;
-    font: 600 10px/24px Raleway, sans-serif;
+    font: 600 10px/24px 'Poppins', sans-serif;
     text-align: center
 }
 
@@ -928,7 +932,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px Raleway, sans-serif;
+    font: 600 16px/24px 'Poppins', sans-serif;
     color: #000;
     text-transform: capitalize;
     overflow: hidden
@@ -980,17 +984,6 @@ button {
     background: #fff;
 }
 
-header.header::after {
-    content: '';
-    background: url(../img/nav-border.png) repeat-x bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 7px;
-    z-index: -1;
-}
-
 .header.scrolled {
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, .15)
@@ -1003,7 +996,7 @@ header.header::after {
 .header__main {
     max-width: 1920px;
     margin: auto;
-    padding: 15px 60px;
+    padding: 25px 60px;
 }
 
 .header__cols {
@@ -1015,17 +1008,25 @@ header.header::after {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .header__col, .header__left, .header__right {
     padding: 0 20px
 }
 
-.header__cols .header__left, .header__cols .header__right, .header__cols .header__center {
-    width: 33.33%;
+.header__left {
+    flex: 1 1;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+}
+
+.header__right {
+    position: absolute;
+    right: 0;
 }
 
 .logo {
@@ -1052,6 +1053,9 @@ header.header::after {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     padding-bottom: 0;
 }
 
@@ -1151,7 +1155,7 @@ header.header::after {
     padding: 10px 20px;
     display: block;
     color: #000;
-    font: 500 14px/22px Raleway, sans-serif;
+    font: 500 14px/22px 'Poppins', sans-serif;
     border-bottom: 1px solid rgba(68, 68, 68, .1);
     white-space: nowrap;
     text-transform: capitalize
@@ -1292,7 +1296,7 @@ header.header::after {
     display: inline-block;
     vertical-align: top;
     background: #000;
-    font: bold 14px/16px Raleway, sans-serif;
+    font: bold 14px/16px 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
     -webkit-transition: .2s ease-out;
@@ -1363,7 +1367,7 @@ header.header::after {
 .mob-nav__link {
     padding: 10px 20px;
     display: block;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     text-align: center;
     color: #000
@@ -1450,7 +1454,7 @@ header.header::after {
     padding: 5px 20px;
     display: block;
     text-align: center;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -1643,7 +1647,7 @@ header.header::after {
 .socials__link {
     display: block;
     color: #444;
-    font: 600 12px/20px Raleway, sans-serif;
+    font: 600 12px/20px 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
@@ -1655,7 +1659,7 @@ header.header::after {
 .footer-title {
     padding: 3px 0 17px;
     display: block;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -1692,7 +1696,7 @@ header.header::after {
     padding: 0 0 0 15px;
     display: block;
     position: relative;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -1728,7 +1732,7 @@ header.header::after {
     height: 56px;
     padding: 10px 30px 10px 0;
     display: block;
-    font: 14px/1 Raleway, sans-serif;
+    font: 14px/1 'Poppins', sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -1911,7 +1915,7 @@ header.header::after {
 .side-socials__link {
     display: block;
     text-align: center;
-    font: 600 12px/20px Raleway, sans-serif;
+    font: 600 12px/20px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -1926,7 +1930,7 @@ header.header::after {
     bottom: 50px;
     left: 0;
     text-align: center;
-    font: 600 16px/1 'Josefin Sans', sans-serif;
+    font: 600 16px/1 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -1974,7 +1978,7 @@ header.header::after {
     position: absolute;
     top: -78px;
     left: -50px;
-    font: 500 14px/16px Raleway, sans-serif;
+    font: 500 14px/16px 'Poppins', sans-serif;
     color: #444;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -2017,7 +2021,7 @@ header.header::after {
 .category-subtitle {
     padding: 0 0 20px;
     display: block;
-    font: 14px/20px Raleway, sans-serif;
+    font: 20px/20px 'Poppins', sans-serif;
     color: #444;
     text-transform: uppercase;
     letter-spacing: .2em
@@ -2153,7 +2157,7 @@ header.header::after {
     display: block;
     position: relative;
     right: 12px;
-    font: 120px/1 'Josefin Sans', sans-serif;
+    font: 500 120px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -2391,7 +2395,7 @@ header.header::after {
 
 .collection__title {
     padding: 0 0 35px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize;
     position: relative;
     right: 2px;
@@ -2410,7 +2414,7 @@ header.header::after {
     top: 100%;
     left: 0;
     z-index: 1;
-    font: 900 80px/1 Raleway, sans-serif;
+    font: 900 80px/1 'Poppins', sans-serif;
     text-shadow: 0 -4px 7px rgba(0, 0, 0, .15);
     color: #fff;
     text-transform: uppercase;
@@ -2505,7 +2509,7 @@ header.header::after {
     padding: 0 0 10px;
     position: relative;
     z-index: 1;
-    font: 600 40px/1 Raleway, sans-serif;
+    font: 600 40px/1 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: .41em;
     color: #fff
@@ -2514,7 +2518,7 @@ header.header::after {
 .season-sale__title span {
     padding: 9px 0;
     display: block;
-    font: 800 100px/1 Raleway, sans-serif;
+    font: 800 100px/1 'Poppins', sans-serif;
     letter-spacing: normal
 }
 
@@ -2623,7 +2627,7 @@ header.header::after {
 
 .main-block__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -2677,7 +2681,7 @@ header.header::after {
 
 .tabs-nav__link {
     display: block;
-    font: 500 16px/24px Raleway, sans-serif;
+    font: 500 16px/24px 'Poppins', sans-serif;
     color: rgba(0, 0, 0, .5);
     text-transform: capitalize
 }
@@ -2810,14 +2814,14 @@ header.header::after {
     padding: 0 12px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 20px/22px 'Josefin Sans', sans-serif;
+    font: 20px/22px 'Montserrat', sans-serif;
     color: #000
 }
 
 .short-item__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/22px 'Josefin Sans', sans-serif;
+    font: 300 16px/22px 'Montserrat', sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -2829,7 +2833,7 @@ header.header::after {
     display: inline-block;
     vertical-align: top;
     background: #000;
-    font: 800 10px/22px Raleway, sans-serif;
+    font: 800 10px/22px 'Poppins', sans-serif;
     text-transform: uppercase;
     color: #fff
 }
@@ -2902,7 +2906,7 @@ header.header::after {
     padding: 0 0 24px;
     position: relative;
     right: 11px;
-    font: 120px/1 'Josefin Sans', sans-serif;
+    font: 500 120px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -2941,7 +2945,7 @@ header.header::after {
     position: absolute;
     top: 0;
     right: -5px;
-    font: 36px/26px 'Josefin Sans', sans-serif;
+    font: 36px/26px 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -3015,7 +3019,7 @@ header.header::after {
 
 .advantage__title {
     padding: 0 0 14px;
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3161,12 +3165,12 @@ header.header::after {
 
 .short-post__bg:before {
     content: "";
-    width: 226px;
-    height: 130px;
+    width: 230px;
+    height: 230px;
     position: absolute;
     bottom: -47px;
     right: 0;
-    background: url(../img/svg/vector-short-post.svg) 0 0/100% 100% no-repeat
+    background: url(../img/patterns/flower.png) 0 0/100% 100% no-repeat
 }
 
 .short-post__content {
@@ -3185,7 +3189,7 @@ header.header::after {
     padding: 0;
     display: table-cell;
     vertical-align: bottom;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3202,7 +3206,7 @@ header.header::after {
 .short-post__date {
     padding: 0 0 22px;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     text-transform: capitalize
 }
 
@@ -3331,7 +3335,7 @@ header.header::after {
 
 .inner-top__title {
     padding: 0 0 21px;
-    font: 400 80px/1 'Josefin Sans', sans-serif;
+    font: 400 80px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3421,7 +3425,7 @@ header.header::after {
 
 .newsletter__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3553,7 +3557,7 @@ header.header::after {
 
 .about-company__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3624,7 +3628,7 @@ header.header::after {
 .about-section__title {
     margin: 0 0 0 -67px;
     padding: 0 0 21px;
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3716,7 +3720,7 @@ header.header::after {
 
 .inner-deal__title {
     padding: 0 0 20px;
-    font: 70px/1 'Josefin Sans', sans-serif;
+    font: 70px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -3794,7 +3798,7 @@ header.header::after {
     height: 56px;
     padding: 10px 30px 10px 0;
     display: block;
-    font: 14px/1 Raleway, sans-serif;
+    font: 14px/1 'Poppins', sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -3852,7 +3856,7 @@ header.header::after {
 .widget__title {
     margin: 0 0 19px;
     padding: 0 0 14px;
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -3863,7 +3867,7 @@ header.header::after {
     padding: 0 30px 14px 0;
     display: none;
     position: relative;
-    font: 400 24px/28px 'Josefin Sans', sans-serif;
+    font: 400 24px/28px 'Montserrat', sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -3938,7 +3942,7 @@ header.header::after {
     padding: 6px 0 5px 17px;
     display: block;
     position: relative;
-    font: 16px/28px Raleway, sans-serif;
+    font: 16px/28px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -4005,7 +4009,7 @@ header.header::after {
     padding: 0 0 0 30px;
     display: block;
     position: relative;
-    font: 14px/16px Raleway, sans-serif;
+    font: 14px/16px 'Poppins', sans-serif;
     color: #444;
     cursor: pointer
 }
@@ -4119,14 +4123,14 @@ header.header::after {
     padding: 0 6px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Josefin Sans', sans-serif;
+    font: 14px/20px 'Montserrat', sans-serif;
     color: #000
 }
 
 .reviewed__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 12px/20px 'Josefin Sans', sans-serif;
+    font: 12px/20px 'Montserrat', sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -4237,7 +4241,7 @@ header.header::after {
     padding: 0 0 24px;
     position: relative;
     z-index: 1;
-    font: 600 24px/1 Raleway, sans-serif;
+    font: 600 24px/1 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: .41em;
     color: #fff
@@ -4246,7 +4250,7 @@ header.header::after {
 .sale-banner__title span {
     padding: 6px 0;
     display: block;
-    font: 800 60px/1 Raleway, sans-serif;
+    font: 800 60px/1 'Poppins', sans-serif;
     letter-spacing: normal
 }
 
@@ -4466,7 +4470,7 @@ header.header::after {
 
 .product__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -4486,7 +4490,7 @@ header.header::after {
     padding: 3px 16px 3px 0;
     display: inline-block;
     vertical-align: middle;
-    font: 30px/1 'Josefin Sans', sans-serif;
+    font: 30px/1 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -4495,7 +4499,7 @@ header.header::after {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    font: 300 20px/1 'Josefin Sans', sans-serif;
+    font: 300 20px/1 'Montserrat', sans-serif;
     color: #444
 }
 
@@ -4526,7 +4530,7 @@ header.header::after {
 
 .product-rating__text {
     display: block;
-    font: 12px/20px Raleway, sans-serif;
+    font: 12px/20px 'Poppins', sans-serif;
     color: #999
 }
 
@@ -4627,7 +4631,7 @@ header.header::after {
     display: block;
     position: relative;
     z-index: 1;
-    font: 12px/40px Raleway, sans-serif;
+    font: 12px/40px 'Poppins', sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: #444;
@@ -4648,7 +4652,7 @@ header.header::after {
     padding: 0 36px;
     display: block;
     background: #f8f8fb;
-    font: 16px/1 Raleway, sans-serif;
+    font: 16px/1 'Poppins', sans-serif;
     color: #000;
     text-align: center
 }
@@ -4874,14 +4878,14 @@ header.header::after {
 
 .review__author {
     padding: 0;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     color: #000
 }
 
 .review__date {
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     white-space: nowrap
 }
 
@@ -4904,7 +4908,7 @@ header.header::after {
 
 .add-review__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -4975,7 +4979,7 @@ header.header::after {
 
 .post-header__title {
     padding: 0 0 60px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5029,13 +5033,13 @@ header.header::after {
     padding: 0;
     position: relative;
     bottom: 2px;
-    font: 500 16px/24px Raleway, sans-serif;
+    font: 500 16px/24px 'Poppins', sans-serif;
     color: #000
 }
 
 .post-info__date {
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     white-space: nowrap
 }
 
@@ -5055,7 +5059,7 @@ header.header::after {
     padding: 0 0 0 22px;
     display: block;
     position: relative;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -5128,7 +5132,7 @@ header.header::after {
 .post-nav__item {
     padding: 3px 25px 3px 8px;
     position: relative;
-    font: 500 14px/20px Raleway, sans-serif;
+    font: 500 14px/20px 'Poppins', sans-serif;
     color: #ff8e8e
 }
 
@@ -5179,7 +5183,7 @@ header.header::after {
 
 .about-author__title {
     padding: 0 0 20px;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5266,7 +5270,7 @@ header.header::after {
 
 .post-mini__title {
     padding: 0;
-    font: 300 14px/17px 'Josefin Sans', sans-serif;
+    font: 300 14px/17px 'Montserrat', sans-serif;
     text-transform: capitalize;
     text-shadow: 0 0
 }
@@ -5314,7 +5318,7 @@ header.header::after {
 
 .add-comment__title {
     padding: 0 0 15px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5376,7 +5380,7 @@ header.header::after {
 
 .popular__title {
     padding: 0 0 4px;
-    font: 16px/19px 'Josefin Sans', sans-serif;
+    font: 16px/19px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5393,7 +5397,7 @@ header.header::after {
 .popular__date {
     padding: 0 0 15px;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #444
 }
 
@@ -5433,7 +5437,7 @@ header.header::after {
 
 .newsletter-block__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5500,7 +5504,7 @@ header.header::after {
 
 .faq__title {
     padding: 0;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     position: relative
 }
@@ -5629,7 +5633,7 @@ header.header::after {
 
 .login-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5685,7 +5689,7 @@ header.header::after {
 .login-form__label {
     padding: 10px 0 5px;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     color: #000
 }
 
@@ -5864,7 +5868,7 @@ header.header::after {
 
 .page-404__subtitle {
     padding: 0 0 20px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -5946,7 +5950,7 @@ header.header::after {
 
 .contacts-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -6001,7 +6005,7 @@ header.header::after {
 .contacts__title {
     padding: 0;
     display: block;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -6216,7 +6220,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .wishlist__title {
     padding: 0;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -6232,7 +6236,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 7px 5px 0;
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/20px 'Josefin Sans', sans-serif;
+    font: 300 16px/20px 'Montserrat', sans-serif;
     text-decoration: line-through
 }
 
@@ -6301,7 +6305,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    font: 500 12px/20px Raleway, sans-serif;
+    font: 500 12px/20px 'Poppins', sans-serif;
     color: #999
 }
 
@@ -6531,13 +6535,13 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .order-header__number {
     padding: 0;
     display: block;
-    font: 500 16px/24px Raleway, sans-serif;
+    font: 500 16px/24px 'Poppins', sans-serif;
     color: #000
 }
 
 .order-header__date {
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     white-space: nowrap
 }
 
@@ -6545,7 +6549,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     height: 24px;
     display: block;
     position: relative;
-    font: 600 16px/24px Raleway, sans-serif;
+    font: 600 16px/24px 'Poppins', sans-serif;
     white-space: nowrap
 }
 
@@ -6677,7 +6681,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .order-table__price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/24px 'Josefin Sans', sans-serif;
+    font: 300 16px/24px 'Montserrat', sans-serif;
     text-shadow: 0 0
 }
 
@@ -6713,7 +6717,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .order-total__price {
     display: block;
-    font: 20px/26px 'Josefin Sans', sans-serif;
+    font: 20px/26px 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -6765,7 +6769,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .promo__title {
     padding: 0 0 20px;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -6814,7 +6818,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .your-order__title {
     padding: 0;
-    font: 400 32px/38px 'Josefin Sans', sans-serif;
+    font: 400 32px/38px 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -6896,7 +6900,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     display: block;
     position: relative;
     top: 2px;
-    font: 25px/28px 'Josefin Sans', sans-serif;
+    font: 25px/28px 'Montserrat', sans-serif;
     color: #000
 }
 
@@ -6957,7 +6961,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 4px 60px;
     position: relative;
     text-align: center;
-    font: 400 20px/24px 'Josefin Sans', sans-serif;
+    font: 400 20px/24px 'Montserrat', sans-serif;
     text-transform: capitalize;
     color: rgba(0, 0, 0, .5);
     border-bottom: 2px solid rgba(68, 68, 68, .1)
@@ -7088,14 +7092,14 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 8px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Josefin Sans', sans-serif;
+    font: 14px/20px 'Montserrat', sans-serif;
     color: #000
 }
 
 .side-cart__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 12px/20px 'Josefin Sans', sans-serif;
+    font: 300 12px/20px 'Montserrat', sans-serif;
     text-shadow: 0 0;
     text-decoration: line-through;
     color: #444
@@ -7107,7 +7111,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .checkout-form__title {
     padding: 0 0 30px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -7201,7 +7205,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 0 0 31px;
     display: block;
     position: relative;
-    font: 20px/24px 'Josefin Sans', sans-serif;
+    font: 20px/24px 'Montserrat', sans-serif;
     color: rgba(0, 0, 0, .5);
     text-transform: capitalize;
     cursor: pointer;
@@ -7348,7 +7352,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .thanks__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Josefin Sans', sans-serif;
+    font: 400 40px/1 'Montserrat', sans-serif;
     text-transform: capitalize
 }
 
@@ -7468,8 +7472,13 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     text-align: center
 }
 
+.dots-1 .slick-dots li {
+    height: 23px
+}
+
 .dots-1 .slick-dots li.slick-active button:after, .dots-1 .slick-dots li.slick-active button:before {
-    box-shadow: inset 0 0 0 3px #fff;
+    width: 12px;
+    background: #000
 }
 
 .dots-1 .slick-dots li:before {
@@ -7477,34 +7486,36 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 }
 
 .dots-1 .slick-dots li button {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 13px;
     display: inline-block;
+    vertical-align: top;
     position: relative
 }
 
-.dots-1 .slick-dots li button:after {
+.dots-1 .slick-dots li button:after, .dots-1 .slick-dots li button:before {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 6px;
+    height: 3px;
     margin: -1.5px -1px 0 0;
     position: absolute;
     top: 50%;
     right: 50%;
-    border: 2px solid#fff;
+    background: #b3b3b3;
     -webkit-transition: .3s ease-out;
     -ms-transition: .3s ease-out;
     transition: .3s ease-out;
-    border-radius: 100%;
+    border-radius: 1px
 }
 
 .dots-1 .slick-dots li button:after {
     margin: -1.5px 0 0 -1px;
     right: auto;
     left: 50%;
+    border-radius: 1px
 }
 
-.desktop .dots-1 .slick-dots li button:hover:after {
+.desktop .dots-1 .slick-dots li button:hover:after, .desktop .dots-1 .slick-dots li button:hover:before {
     background: #000
 }
 
@@ -7783,7 +7794,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     margin: 0;
     padding: 3px 20px;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     overflow: hidden;
     color: #000;
     word-break: break-all;
@@ -7829,7 +7840,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 30px 0 0;
     display: block;
     position: relative;
-    font: 14px/40px Raleway, sans-serif;
+    font: 14px/40px 'Poppins', sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -9281,7 +9292,7 @@ body.compensate-for-scrollbar .header {
     -webkit-transition: .3s ease-out;
     -ms-transition: .3s ease-out;
     transition: .3s ease-out;
-    font: 14px/40px Raleway, sans-serif;
+    font: 14px/40px 'Poppins', sans-serif;
     color: #000
 }
 
@@ -9323,7 +9334,7 @@ body.compensate-for-scrollbar .header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 14px/1 Raleway, sans-serif;
+    font: 14px/1 'Poppins', sans-serif;
     color: #000
 }
 
@@ -9333,7 +9344,7 @@ body.compensate-for-scrollbar .header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 14px/40px Raleway, sans-serif;
+    font: 14px/40px 'Poppins', sans-serif;
     color: #000
 }
 
@@ -9358,7 +9369,7 @@ body.compensate-for-scrollbar .header {
     margin: 0;
     padding: 3px 20px;
     display: block;
-    font: 14px/24px Raleway, sans-serif;
+    font: 14px/24px 'Poppins', sans-serif;
     overflow: hidden;
     color: #000;
     word-break: break-all;
@@ -9438,9 +9449,6 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:1279px) {
-    .header__main {
-        padding: 47px 40px 2px
-    }
 
     .header-nav {
         padding: 0 40px
@@ -10195,7 +10203,7 @@ body.compensate-for-scrollbar .header {
         bottom: 100% !important;
         left: 0 !important;
         right: auto !important;
-        font: 900 40px/1 Raleway, sans-serif;
+        font: 900 40px/1 'Poppins', sans-serif;
         text-shadow: 0 2px 7px rgba(0, 0, 0, .15) !important;
         text-align: center !important
     }
@@ -10326,7 +10334,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .review__author {
-        font: 400 20px/24px 'Josefin Sans', sans-serif;
+        font: 400 20px/24px 'Montserrat', sans-serif;
         text-transform: capitalize
     }
 
@@ -10386,7 +10394,7 @@ body.compensate-for-scrollbar .header {
 
     .popular__title {
         padding: 0;
-        font: 300 14px/17px 'Josefin Sans', sans-serif;
+        font: 300 14px/17px 'Montserrat', sans-serif;
         text-shadow: 0 0
     }
 
@@ -10606,8 +10614,22 @@ body.compensate-for-scrollbar .header {
         font-size: 15px
     }
 
+    .mob-button,
+    .mob__logo {
+        display: block;
+    }
+
     .header__col_hide-mob {
         display: none
+    }
+
+    .header__left {
+        flex: none;
+        -webkit-flex: none;
+    }
+
+    .header__right {
+        position: inherit;
     }
 
     .footer__col:nth-child(1) {
@@ -11371,7 +11393,7 @@ body.compensate-for-scrollbar .header {
     .collection-title {
         padding: 0 0 20px;
         display: inline-block;
-        font: 60px/1 'Josefin Sans', sans-serif;
+        font: 60px/1 'Montserrat', sans-serif;
         text-align: left
     }
 
@@ -12906,7 +12928,7 @@ body.compensate-for-scrollbar .header {
 
     .shop-panel__text {
         padding: 0 0 10px;
-        font: 16px/24px Raleway, sans-serif;
+        font: 16px/24px 'Poppins', sans-serif;
         text-align: center
     }
 
@@ -13016,7 +13038,7 @@ body.compensate-for-scrollbar .header {
         position: absolute;
         top: -8px;
         right: -10px;
-        font: bold 12px/16px Raleway, sans-serif;
+        font: bold 12px/16px 'Poppins', sans-serif;
         border-radius: 8px
     }
 
