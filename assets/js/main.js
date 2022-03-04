@@ -835,7 +835,8 @@ function resizeWindow() {
 				);
 		});
 	}
-	// tabs line fix end	
+	// tabs line fix end
+
 
 }
 
@@ -853,3 +854,11 @@ jQuery(window).on("scroll load", function () {
 	}
 });
 /* scrolled header */
+
+// Side Nav Jquery
+$(function () {
+	$('.side-nav__item').on("click", function () {
+		$('.side-nav__item').removeClass('active');
+		$(this).addClass('active');
+	})
+});

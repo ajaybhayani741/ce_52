@@ -1080,7 +1080,7 @@ button {
     display: block;
     position: relative;
     top: 2px;
-    font: 500 14px/22px Roboto, sans-serif;
+    font: 500 14px/22px 'Montserrat', sans-serif;
     color: #444
 }
 
@@ -1498,9 +1498,6 @@ button {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between
 }
 
 .footer__col, .footer__left, .footer__right {
@@ -1559,8 +1556,10 @@ button {
 
 .footer-description {
     padding: 0 0 19px;
-    display: block;
-    font: 14px/24px Raleway, sans-serif
+    display: inline-block;
+    font: 14px/24px Raleway, sans-serif;
+    border-bottom: 1px solid rgba(68, 68, 68, .2);
+    margin-bottom: 35px;
 }
 
 .footer-line {
