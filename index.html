@@ -1047,57 +1047,44 @@
     <script src="assets/js/components/syotimer.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      var myArray = [];
+      var productList = [];
+      var allMyArray = [];
 
       var request = new XMLHttpRequest();
-      request.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+      request.open("GET", "http://192.168.1.181:3000/go", true);
       request.onload = function () {
         var data = JSON.parse(this.response);
+        this.allMyArray = data.data;
 
-        if (request.status === 200) {
-          this.myArray = data;
-          createData(data, "shortItemAll");
+        this.allMyArray.forEach((data1) => {
+          if (data1.title === "Product List") {
+            this.productList = data1.data;
+            console.log("this.productList", this.productList);
+          }
+        });
+        createData(this.productList, "shortItemAll");
 
-          const carpetData = [];
-          data.forEach((element) => {
-            if (element.collections === "Carpet") {
-              console.log("element", element);
-              carpetData.push(element);
-            }
-          });
-          createData(carpetData, "carpetData");
+        const carpetData = this.productList.filter((element) => element.collections === "Carpet");
+        createData(carpetData, "carpetData");
 
-          const homeDecoreData = [];
-          data.forEach((element) => {
-            if (element.collections === "Home Decor") {
-              console.log("element", element);
-              homeDecoreData.push(element);
-            }
-          });
-          createData(homeDecoreData, "homeDecoreData");
+        const homeDecoreData = this.productList.filter((element) => element.collections === "Home Decor");
+        createData(homeDecoreData, "homeDecoreData");
 
-          const kitchenData = [];
-          data.forEach((element) => {
-            if (element.collections === "Kitchen") {
-              console.log("element", element);
-              kitchenData.push(element);
-            }
-          });
-          createData(kitchenData, "kitchenData");
-        } else {
-          console.log("error");
-        }
+        const kitchenData = this.productList.filter((element) => element.collections === "Kitchen");
+        createData(kitchenData, "kitchenData");
+        // } else {
+        //   console.log("error");
+        // }
 
         function createData(myArray, id) {
           var shortItemAllCreate = "";
           shortItemAll = document.getElementById(id);
-          console.log("shortItemAll", shortItemAll);
           for (var i in myArray) {
             shortItemAllCreate += "<article class='short-item'>";
             shortItemAllCreate += "<div class='short-item__all'>";
             shortItemAllCreate += "<a class='short-item__image-bg' href='product_page.html'>";
             shortItemAllCreate +=
-              "<img class='short-item__image' src='data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' data-lazy='https://via.placeholder.com/262x360' alt='' />";
+              "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' data-lazy='https://via.placeholder.com/262x360' alt='' />";
             shortItemAllCreate += "</a>";
             shortItemAllCreate += "<div class='short-item__top'>";
             shortItemAllCreate += "<div class='short-item__cols'>";
@@ -1110,9 +1097,9 @@
             shortItemAllCreate += "</div>";
             shortItemAllCreate += "</div>";
             shortItemAllCreate += "<h4 class='short-item__title'>";
-            shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>Cotton T-shirt</a>";
+            shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
             shortItemAllCreate += "</h4>";
-            shortItemAllCreate += "<span class='short-item__price'>$35.99</span>";
+            shortItemAllCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
             shortItemAllCreate += "</div>";
             shortItemAllCreate += "</article>";
           }

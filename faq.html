@@ -317,7 +317,7 @@
             <!-- BEGIN LEFT COLUMN -->
             <div class="faq-page__left">
               <div class="faq js-faq" id="faqData">
-                <article class="faq__item js-faq-item">
+                <!-- <article class="faq__item js-faq-item">
                   <h2 class="faq__title">
                     <a class="faq__button js-faq-button" href="javascript:void(0);">Can linen be worn in March? Skin in July 12?</a>
                   </h2>
@@ -330,7 +330,7 @@
                       </p>
                     </div>
                   </div>
-                </article>
+                </article> -->
               </div>
             </div>
             <!-- LEFT COLUMN END -->
@@ -559,19 +559,30 @@
     <script src="assets/js/libs/jquery-migrate-1.4.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+      var faqsList = [];
+      var allMyArray = [];
+
       var myArray = [];
 
       var request = new XMLHttpRequest();
-      request.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+      request.open("GET", "http://192.168.1.181:3000/go", true);
       request.onload = function () {
         var data = JSON.parse(this.response);
+        console.log("data", data);
 
-        if (request.status === 200) {
-          this.myArray = data;
-          createData(data, "faqData");
-        } else {
-          console.log("error");
-        }
+        this.allMyArray = data.data;
+        this.allMyArray.forEach((data1) => {
+          if (data1.title === "FAQs") {
+            this.faqsList = data1.data;
+          }
+        });
+        createData(this.faqsList, "faqData");
+
+        // if (request.status === 200) {
+        //   this.myArray = data;
+        // } else {
+        //   console.log("error");
+        // }
 
         function createData(myArray, id) {
           console.log("myArray", myArray);
@@ -580,11 +591,11 @@
           for (var i in myArray) {
             faqDataCreate += "<article class='faq__item js-faq-item'>";
             faqDataCreate += "<h2 class='faq__title'>";
-            faqDataCreate += "<a class='faq__button js-faq-button' href='javascript:void(0);'>" + myArray[i].email + "</a>";
+            faqDataCreate += "<a class='faq__button js-faq-button' href='javascript:void(0);'>" + myArray[i].answer + "</a>";
             faqDataCreate += "</h2>";
             faqDataCreate += "<div class='faq__hide js-faq-hide'>";
             faqDataCreate += "<div class='faq__content'>";
-            faqDataCreate += "<p>" + myArray[i].company.catchPhrase + "</p>";
+            faqDataCreate += "<p>" + myArray[i].question + "</p>";
             faqDataCreate += "</div>";
             faqDataCreate += "</div>";
             faqDataCreate += "</article>";

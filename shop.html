@@ -333,13 +333,13 @@
                         <a class="side-nav__link" href="javascript:void(0)">All</a>
                       </li>
                       <li class="side-nav__item active">
-                        <a class="side-nav__link" href="javascript:void(0)">Carpet</a>
+                        <a class="side-nav__link" href="javascript:void(0)" onClick="selectCollectionsList('Carpet')">Carpet</a>
                       </li>
                       <li class="side-nav__item">
-                        <a class="side-nav__link" href="javascript:void(0)">Home Decor</a>
+                        <a class="side-nav__link" href="javascript:void(0)" onClick="selectCollectionsList('Home Decor')">Home Decor</a>
                       </li>
                       <li class="side-nav__item">
-                        <a class="side-nav__link" href="javascript:void(0)">Kitchen</a>
+                        <a class="side-nav__link" href="javascript:void(0)" onClick="selectCollectionsList('Kitchen')">Kitchen</a>
                       </li>
                       <li class="side-nav__item">
                         <a class="side-nav__link" href="javascript:void(0)">New Arrivals</a>
@@ -760,19 +760,30 @@
 
     <script>
       var myArray = [];
+      var productList = [];
+      var allMyArray = [];
 
       var request = new XMLHttpRequest();
-      request.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+      request.open("GET", "http://192.168.1.181:3000/go", true);
       request.onload = function () {
         var data = JSON.parse(this.response);
 
-        if (request.status === 200) {
-          this.myArray = data;
-          createData(data, "shortItemAll");
-        } else {
-          console.log("error");
-        }
+        this.allMyArray = data.data;
 
+        this.allMyArray.forEach((data1) => {
+          if (data1.title === "Product List") {
+            this.productList = data1.data;
+            console.log("this.productList", this.productList);
+          }
+        });
+        createData(this.productList, "shortItemAll");
+
+        // if (request.status === 200) {
+        //    this.myArray = data;
+        //   createData(data, "shortItemAll");
+        // } else {
+        //   console.log("error");
+        // }
         function createData(myArray, id) {
           var shortItemAllCreate = "";
           shortItemAll = document.getElementById(id);
@@ -804,7 +815,27 @@
           shortItemAll.innerHTML = shortItemAllCreate;
         }
       };
+
       request.send();
+
+      function selectCollectionsList(type) {
+        console.log("Carpet", type);
+        console.log("productList", productList);
+        console.log("this.productList", this.productList);
+        console.log("this.allMyArray", this.allMyArray);
+
+        console.log("allMyArray", allMyArray);
+        if (type === "Carpet") {
+          const carpetData = this.productList.filter((element) => element.collections === "Carpet");
+          this.createData(carpetData, "shortItemAll");
+        } else if (type === "Carpet") {
+          const homeDecoreData = this.productList.filter((element) => element.collections === "Home Decor");
+          this.createData(homeDecoreData, "shortItemAll");
+        } else if (type === "Carpet") {
+          const kitchenData = this.productList.filter((element) => element.collections === "Kitchen");
+          this.createData(kitchenData, "shortItemAll");
+        }
+      }
     </script>
   </body>
 </html>
