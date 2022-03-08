@@ -568,7 +568,6 @@
       request.open("GET", "http://192.168.1.181:3000/go", true);
       request.onload = function () {
         var data = JSON.parse(this.response);
-        console.log("data", data);
 
         this.allMyArray = data.data;
         this.allMyArray.forEach((data1) => {
@@ -578,24 +577,17 @@
         });
         createData(this.faqsList, "faqData");
 
-        // if (request.status === 200) {
-        //   this.myArray = data;
-        // } else {
-        //   console.log("error");
-        // }
-
         function createData(myArray, id) {
-          console.log("myArray", myArray);
           var faqDataCreate = "";
           faqData = document.getElementById(id);
           for (var i in myArray) {
             faqDataCreate += "<article class='faq__item js-faq-item'>";
             faqDataCreate += "<h2 class='faq__title'>";
-            faqDataCreate += "<a class='faq__button js-faq-button' href='javascript:void(0);'>" + myArray[i].answer + "</a>";
+            faqDataCreate += "<a class='faq__button js-faq-button' href='javascript:void(0);'>" + myArray[i].question + "</a>";
             faqDataCreate += "</h2>";
             faqDataCreate += "<div class='faq__hide js-faq-hide'>";
             faqDataCreate += "<div class='faq__content'>";
-            faqDataCreate += "<p>" + myArray[i].question + "</p>";
+            faqDataCreate += "<p>" + myArray[i].answer + "</p>";
             faqDataCreate += "</div>";
             faqDataCreate += "</div>";
             faqDataCreate += "</article>";
