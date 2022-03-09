@@ -835,7 +835,7 @@
           shortItemAllCreate += "<div class='short-item__all'>";
           shortItemAllCreate += "<a class='short-item__image-bg' href='product_page.html'>";
           shortItemAllCreate +=
-            "<img class='short-item__image' src='data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' data-lazy='https://via.placeholder.com/262x360' alt='' />";
+            "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' data-lazy='" + myArray[i]["image-1"] + "' alt='' />";
           shortItemAllCreate += "</a>";
           shortItemAllCreate += "<div class='short-item__top'>";
           shortItemAllCreate += "<div class='short-item__cols'>";
@@ -848,9 +848,9 @@
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "<h4 class='short-item__title'>";
-          shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>Cotton T-shirt</a>";
+          shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
           shortItemAllCreate += "</h4>";
-          shortItemAllCreate += "<span class='short-item__price'>$35.99</span>";
+          shortItemAllCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "</article>";
         }
