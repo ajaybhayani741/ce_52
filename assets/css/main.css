@@ -156,17 +156,17 @@ body {
 }
 
 .title-1 {
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-2 {
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-3 {
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -175,48 +175,48 @@ body {
 }
 
 .title-5 {
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-6 {
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 h1 {
     padding: 0 0 30px;
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     color: #000
 }
 
 h2 {
     padding: 0 0 30px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     color: #000
 }
 
 h3 {
     padding: 0 0 30px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     color: #000
 }
 
 h4 {
     padding: 0 0 30px;
-    font: 400 28px/31px 'Montserrat', sans-serif;
+    font: 400 28px/31px "Eina", sans-serif;
     color: #000
 }
 
 h5 {
     padding: 0 0 30px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     color: #000
 }
 
 h6 {
     padding: 0 0 30px;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     color: #000
 }
 
@@ -374,7 +374,7 @@ blockquote p:after, blockquote p:before {
 blockquote footer {
     position: relative;
     z-index: 1;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -989,14 +989,14 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, .15)
 }
 
-.header.scrolled .header__main {
+/* .header.scrolled .header__main {
     padding-top: 27px
-}
+} */
 
 .header__main {
-    max-width: 1920px;
+    max-width: 1790px;
     margin: auto;
-    padding: 25px 60px;
+    padding: 0px 15px;
 }
 
 .header__cols {
@@ -1018,15 +1018,13 @@ button {
     padding: 0 20px
 }
 
-.header__left {
-    flex: 1 1;
-    -webkit-flex: 1 1;
-    -ms-flex: 1 1;
+.header__left, .header__right {
+    width: 16.666667%;
 }
 
-.header__right {
-    position: absolute;
-    right: 0;
+.header__center {
+    width: 66.666667%;
+    position: relative;
 }
 
 .logo h3 {
@@ -1056,8 +1054,12 @@ button {
 }
 
 .header-nav__item {
-    padding: 0 20px;
-    position: relative
+    padding: 34px 24px;
+    position: static;
+}
+
+.header-nav__item.logo_nav {
+    padding: 0 24px;
 }
 
 .header-nav__item:before {
@@ -1080,8 +1082,10 @@ button {
     display: block;
     position: relative;
     top: 2px;
-    font: 500 14px/22px 'Montserrat', sans-serif;
-    color: #444
+    font: 700 13px/22px "Eina", sans-serif;
+    letter-spacing: 0.1em;
+    color: #2b2b2b;
+    text-transform: uppercase;
 }
 
 .desktop .header-nav__link:hover {
@@ -1089,7 +1093,7 @@ button {
     text-decoration: none
 }
 
-.header-nav__link_arrow {
+/* .header-nav__link_arrow {
     padding: 0 18px 0 0
 }
 
@@ -1118,7 +1122,7 @@ button {
 
 .desktop .header-nav__link_arrow:hover:before {
     opacity: 0
-}
+} */
 
 .desktop .header-nav__link_arrow:hover:after {
     opacity: 1
@@ -1129,14 +1133,105 @@ button {
     padding: 20px 0 0;
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0
+    top: 90px;
+    left: unset;
+    width: 75%;
+    right: 0;
+    transform: translateX(-40px);
+}
+
+.hide-nav .clearfix {
+    padding: 36px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    -moz-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image::before, .hide-nav .clearfix .hide-nav-collecton__image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    z-index: 1;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image:hover::before {
+    right: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image:hover::after {
+    top: 50%;
+    bottom: 50%;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.hide-nav .clearfix .hide-nav__image__wrap label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0;
+    font: 600 14px/16px "Eina", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hide-nav .clearfix .hide-nav__list.hide-nav__list_wrap+.hide-nav__list.hide-nav__list_wrap {
+    position: relative;
+}
+
+.hide-nav .clearfix .hide-nav__list.hide-nav__list_wrap+.hide-nav__list.hide-nav__list_wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #eee;
 }
 
 .hide-nav__list {
     padding: 0;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+    flex-grow: 1;
 }
 
 .hide-nav__item:before {
@@ -1150,11 +1245,18 @@ button {
 .hide-nav__link {
     padding: 10px 20px;
     display: block;
-    color: #000;
+    color: #666;
     font: 500 14px/22px 'Poppins', sans-serif;
-    border-bottom: 1px solid rgba(68, 68, 68, .1);
     white-space: nowrap;
-    text-transform: capitalize
+    text-transform: capitalize;
+}
+
+.hide-nav .hide-nav__item label {
+    padding: 10px 20px 10px;
+    display: block;
+    color: #2b2b2b;
+    font: 600 16px/22px 'Eina', sans-serif;
+    text-transform: capitalize;
 }
 
 .desktop .hide-nav__link:hover, .hide-nav__item.active .hide-nav__link {
@@ -1363,7 +1465,7 @@ button {
 .mob-nav__link {
     padding: 10px 20px;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     text-align: center;
     color: #000
@@ -1654,7 +1756,7 @@ button {
 .footer-title {
     padding: 3px 0 17px;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -1925,7 +2027,7 @@ button {
     bottom: 50px;
     left: 0;
     text-align: center;
-    font: 600 16px/1 'Montserrat', sans-serif;
+    font: 600 16px/1 "Eina", sans-serif;
     color: #000
 }
 
@@ -2152,7 +2254,7 @@ button {
     display: block;
     position: relative;
     right: 12px;
-    font: 500 120px/1 'Montserrat', sans-serif;
+    font: 500 120px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2390,7 +2492,7 @@ button {
 
 .collection__title {
     padding: 0 0 35px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize;
     position: relative;
     right: 2px;
@@ -2622,7 +2724,7 @@ button {
 
 .main-block__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2809,14 +2911,14 @@ button {
     padding: 0 12px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 20px/22px 'Montserrat', sans-serif;
+    font: 20px/22px "Eina", sans-serif;
     color: #000
 }
 
 .short-item__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/22px 'Montserrat', sans-serif;
+    font: 300 16px/22px "Eina", sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -2901,7 +3003,7 @@ button {
     padding: 0 0 24px;
     position: relative;
     right: 11px;
-    font: 500 120px/1 'Montserrat', sans-serif;
+    font: 500 120px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2940,7 +3042,7 @@ button {
     position: absolute;
     top: 0;
     right: -5px;
-    font: 36px/26px 'Montserrat', sans-serif;
+    font: 36px/26px "Eina", sans-serif;
     color: #000
 }
 
@@ -3014,7 +3116,7 @@ button {
 
 .advantage__title {
     padding: 0 0 14px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3184,7 +3286,7 @@ button {
     padding: 0;
     display: table-cell;
     vertical-align: bottom;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3330,7 +3432,7 @@ button {
 
 .inner-top__title {
     padding: 0 0 21px;
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3420,7 +3522,7 @@ button {
 
 .newsletter__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3552,7 +3654,7 @@ button {
 
 .about-company__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3623,7 +3725,7 @@ button {
 .about-section__title {
     margin: 0 0 0 -67px;
     padding: 0 0 21px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3715,7 +3817,7 @@ button {
 
 .inner-deal__title {
     padding: 0 0 20px;
-    font: 70px/1 'Montserrat', sans-serif;
+    font: 70px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3851,7 +3953,7 @@ button {
 .widget__title {
     margin: 0 0 19px;
     padding: 0 0 14px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -3862,7 +3964,7 @@ button {
     padding: 0 30px 14px 0;
     display: none;
     position: relative;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -4118,14 +4220,14 @@ button {
     padding: 0 6px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Montserrat', sans-serif;
+    font: 14px/20px "Eina", sans-serif;
     color: #000
 }
 
 .reviewed__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 12px/20px 'Montserrat', sans-serif;
+    font: 12px/20px "Eina", sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -4465,7 +4567,7 @@ button {
 
 .product__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -4485,7 +4587,7 @@ button {
     padding: 3px 16px 3px 0;
     display: inline-block;
     vertical-align: middle;
-    font: 30px/1 'Montserrat', sans-serif;
+    font: 30px/1 "Eina", sans-serif;
     color: #000
 }
 
@@ -4494,7 +4596,7 @@ button {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    font: 300 20px/1 'Montserrat', sans-serif;
+    font: 300 20px/1 "Eina", sans-serif;
     color: #444
 }
 
@@ -4873,7 +4975,7 @@ button {
 
 .review__author {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -4903,7 +5005,7 @@ button {
 
 .add-review__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -4974,7 +5076,7 @@ button {
 
 .post-header__title {
     padding: 0 0 60px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5178,7 +5280,7 @@ button {
 
 .about-author__title {
     padding: 0 0 20px;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5265,7 +5367,7 @@ button {
 
 .post-mini__title {
     padding: 0;
-    font: 300 14px/17px 'Montserrat', sans-serif;
+    font: 300 14px/17px "Eina", sans-serif;
     text-transform: capitalize;
     text-shadow: 0 0
 }
@@ -5313,7 +5415,7 @@ button {
 
 .add-comment__title {
     padding: 0 0 15px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5375,7 +5477,7 @@ button {
 
 .popular__title {
     padding: 0 0 4px;
-    font: 16px/19px 'Montserrat', sans-serif;
+    font: 16px/19px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5432,7 +5534,7 @@ button {
 
 .newsletter-block__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5499,7 +5601,7 @@ button {
 
 .faq__title {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     position: relative
 }
@@ -5628,7 +5730,7 @@ button {
 
 .login-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5863,7 +5965,7 @@ button {
 
 .page-404__subtitle {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5945,7 +6047,7 @@ button {
 
 .contacts-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6000,7 +6102,7 @@ button {
 .contacts__title {
     padding: 0;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6215,7 +6317,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .wishlist__title {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6231,7 +6333,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 7px 5px 0;
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/20px 'Montserrat', sans-serif;
+    font: 300 16px/20px "Eina", sans-serif;
     text-decoration: line-through
 }
 
@@ -6676,7 +6778,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .order-table__price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/24px 'Montserrat', sans-serif;
+    font: 300 16px/24px "Eina", sans-serif;
     text-shadow: 0 0
 }
 
@@ -6712,7 +6814,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .order-total__price {
     display: block;
-    font: 20px/26px 'Montserrat', sans-serif;
+    font: 20px/26px "Eina", sans-serif;
     color: #000
 }
 
@@ -6764,7 +6866,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .promo__title {
     padding: 0 0 20px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6813,7 +6915,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .your-order__title {
     padding: 0;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6895,7 +6997,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     display: block;
     position: relative;
     top: 2px;
-    font: 25px/28px 'Montserrat', sans-serif;
+    font: 25px/28px "Eina", sans-serif;
     color: #000
 }
 
@@ -6956,7 +7058,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 4px 60px;
     position: relative;
     text-align: center;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: rgba(0, 0, 0, .5);
     border-bottom: 2px solid rgba(68, 68, 68, .1)
@@ -7087,14 +7189,14 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 8px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Montserrat', sans-serif;
+    font: 14px/20px "Eina", sans-serif;
     color: #000
 }
 
 .side-cart__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 12px/20px 'Montserrat', sans-serif;
+    font: 300 12px/20px "Eina", sans-serif;
     text-shadow: 0 0;
     text-decoration: line-through;
     color: #444
@@ -7106,7 +7208,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .checkout-form__title {
     padding: 0 0 30px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -7200,7 +7302,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 0 0 31px;
     display: block;
     position: relative;
-    font: 20px/24px 'Montserrat', sans-serif;
+    font: 20px/24px "Eina", sans-serif;
     color: rgba(0, 0, 0, .5);
     text-transform: capitalize;
     cursor: pointer;
@@ -7347,7 +7449,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .thanks__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -9453,9 +9555,9 @@ body.compensate-for-scrollbar .header {
         margin: 0 -15px
     }
 
-    .header-nav__item {
+    /* .header-nav__item {
         padding: 0 15px
-    }
+    } */
 
     .user-nav {
         margin: 0 -15px
@@ -10329,7 +10431,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .review__author {
-        font: 400 20px/24px 'Montserrat', sans-serif;
+        font: 400 20px/24px "Eina", sans-serif;
         text-transform: capitalize
     }
 
@@ -10389,7 +10491,7 @@ body.compensate-for-scrollbar .header {
 
     .popular__title {
         padding: 0;
-        font: 300 14px/17px 'Montserrat', sans-serif;
+        font: 300 14px/17px "Eina", sans-serif;
         text-shadow: 0 0
     }
 
@@ -11388,7 +11490,7 @@ body.compensate-for-scrollbar .header {
     .collection-title {
         padding: 0 0 20px;
         display: inline-block;
-        font: 60px/1 'Montserrat', sans-serif;
+        font: 60px/1 "Eina", sans-serif;
         text-align: left
     }
 
