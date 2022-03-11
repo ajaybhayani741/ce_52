@@ -95,8 +95,37 @@ img {
 }
 
 html.hidden, html.hidden body {
-    height: auto !important;
-    overflow: hidden
+    height: 100% !important;
+    /* overflow: hidden */
+}
+
+body {
+    transition: transform .4s ease;
+}
+
+body.pushmenu-push-toleft {
+    transform: translate(320px, 0);
+    transform: translate3d(320px, 0, 0);
+    transition: transform .4s ease;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.pushmenu-push-toleft .main:after {
+    background: rgba(29, 29, 31, 0.6);
+    content: "";
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
 }
 
 .desktop.remove-scroll {
@@ -127,7 +156,7 @@ body {
     min-width: 320px;
     height: 100% !important;
     position: relative;
-    font: 16px/27px 'Poppins', sans-serif;
+    font: 16px/27px "Eina", sans-serif;
     background: #fff;
     color: #444
 }
@@ -156,17 +185,17 @@ body {
 }
 
 .title-1 {
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-2 {
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-3 {
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -175,48 +204,48 @@ body {
 }
 
 .title-5 {
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .title-6 {
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 h1 {
     padding: 0 0 30px;
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     color: #000
 }
 
 h2 {
     padding: 0 0 30px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     color: #000
 }
 
 h3 {
     padding: 0 0 30px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     color: #000
 }
 
 h4 {
     padding: 0 0 30px;
-    font: 400 28px/31px 'Montserrat', sans-serif;
+    font: 400 28px/31px "Eina", sans-serif;
     color: #000
 }
 
 h5 {
     padding: 0 0 30px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     color: #000
 }
 
 h6 {
     padding: 0 0 30px;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     color: #000
 }
 
@@ -293,7 +322,7 @@ a {
     margin: 0 0 20px;
     padding: 7px 0 13px;
     display: block;
-    font: 14px/1 'Poppins', sans-serif;
+    font: 14px/1 "Eina", sans-serif;
     background: #fff;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
@@ -314,7 +343,7 @@ a {
     margin: 0 0 20px;
     padding: 12px 0;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -333,7 +362,7 @@ a {
     margin: 0 0 20px;
     padding: 0 19px;
     display: block;
-    font: 16px/1 'Poppins', sans-serif;
+    font: 16px/1 "Eina", sans-serif;
     background: #fff;
     color: #000;
     border-radius: 10px
@@ -363,7 +392,7 @@ blockquote p {
     padding: 0 0 13px;
     position: relative;
     z-index: 1;
-    font: 20px/34px 'Poppins', sans-serif;
+    font: 20px/34px "Eina", sans-serif;
     color: #444
 }
 
@@ -374,7 +403,7 @@ blockquote p:after, blockquote p:before {
 blockquote footer {
     position: relative;
     z-index: 1;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -395,7 +424,7 @@ button {
     vertical-align: top;
     position: relative;
     border: none;
-    font: 600 16px/52px 'Poppins', sans-serif;
+    font: 600 16px/52px "Eina", sans-serif;
     color: #fff;
     text-align: center;
     text-transform: capitalize;
@@ -629,7 +658,7 @@ button {
     padding: 0 0 0 39px;
     display: inline-block;
     position: relative;
-    font: 600 16px/1 'Poppins', sans-serif;
+    font: 600 16px/1 "Eina", sans-serif;
     color: #000;
     text-transform: capitalize
 }
@@ -660,7 +689,7 @@ button {
     padding: 0 0 0 30px;
     display: inline-block;
     position: relative;
-    font: 600 16px/24px 'Poppins', sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     color: #ff8e8e
 }
 
@@ -796,7 +825,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px 'Poppins', sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     color: #000;
     text-transform: capitalize;
     overflow: hidden
@@ -862,7 +891,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px 'Poppins', sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     white-space: nowrap;
     color: #000;
     text-transform: capitalize
@@ -916,7 +945,7 @@ button {
 .remove-button:before {
     content: "X";
     display: block;
-    font: 600 10px/24px 'Poppins', sans-serif;
+    font: 600 10px/24px "Eina", sans-serif;
     text-align: center
 }
 
@@ -932,7 +961,7 @@ button {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 600 16px/24px 'Poppins', sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     color: #000;
     text-transform: capitalize;
     overflow: hidden
@@ -980,23 +1009,20 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 150;
     background: #fff;
 }
 
 .header.scrolled {
     position: fixed;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
-}
-
-.header.scrolled .header__main {
-    padding-top: 27px
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    z-index: 100000;
 }
 
 .header__main {
-    max-width: 1920px;
+    max-width: 1790px;
     margin: auto;
-    padding: 25px 60px;
+    padding: 0px 15px;
 }
 
 .header__cols {
@@ -1018,15 +1044,13 @@ button {
     padding: 0 20px
 }
 
-.header__left {
-    flex: 1 1;
-    -webkit-flex: 1 1;
-    -ms-flex: 1 1;
+.header__left, .header__right {
+    width: 16.666667%;
 }
 
-.header__right {
-    position: absolute;
-    right: 0;
+.header__center {
+    width: 66.666667%;
+    position: relative;
 }
 
 .logo h3 {
@@ -1056,8 +1080,16 @@ button {
 }
 
 .header-nav__item {
-    padding: 0 20px;
-    position: relative
+    padding: 34px 24px;
+    position: static;
+}
+
+.header-nav__item.header-nav_dropdown__item {
+    position: relative;
+}
+
+.header-nav__item.logo_nav {
+    padding: 0 24px;
 }
 
 .header-nav__item:before {
@@ -1080,44 +1112,15 @@ button {
     display: block;
     position: relative;
     top: 2px;
-    font: 500 14px/22px Roboto, sans-serif;
-    color: #444
+    font: 700 13px/22px "Eina", sans-serif;
+    letter-spacing: 0.1em;
+    color: #2b2b2b;
+    text-transform: uppercase;
 }
 
 .desktop .header-nav__link:hover {
     color: #ff8e8e;
     text-decoration: none
-}
-
-.header-nav__link_arrow {
-    padding: 0 18px 0 0
-}
-
-.header-nav__link_arrow:after, .header-nav__link_arrow:before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    margin: -7px 0 0;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    -webkit-transition: .3s ease-out;
-    -ms-transition: .3s ease-out;
-    transition: .3s ease-out
-}
-
-.header-nav__link_arrow:before {
-    background: url(../img/svg/chevron-down.svg) 0 0/100% 100% no-repeat
-}
-
-.header-nav__link_arrow:after {
-    opacity: 0;
-    z-index: 1;
-    background: url(../img/svg/chevron-down__red.svg) 0 0/100% 100% no-repeat
-}
-
-.desktop .header-nav__link_arrow:hover:before {
-    opacity: 0
 }
 
 .desktop .header-nav__link_arrow:hover:after {
@@ -1129,14 +1132,116 @@ button {
     padding: 20px 0 0;
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0
+    top: 90px;
+    left: unset;
+    width: 75%;
+    right: 0;
+    transform: translateX(-40px);
+}
+
+.hide-nav.dropdown-hide__nav {
+    width: 200px;
+    right: 0;
+    transform: translateX(0px);
+    left: 0;
+}
+
+.hide-nav .clearfix {
+    padding: 36px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    -moz-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.hide-nav.dropdown-hide__nav .clearfix {
+    padding: 16px;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image::before, .hide-nav .clearfix .hide-nav-collecton__image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    z-index: 1;
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image:hover::before {
+    right: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image:hover::after {
+    top: 50%;
+    bottom: 50%;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hide-nav .clearfix .hide-nav-collecton__image img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.hide-nav .clearfix .hide-nav__image__wrap label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0;
+    font: 600 14px/16px "Eina", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hide-nav .clearfix .hide-nav__list.hide-nav__list_wrap+.hide-nav__list.hide-nav__list_wrap {
+    position: relative;
+}
+
+.hide-nav .clearfix .hide-nav__list.hide-nav__list_wrap+.hide-nav__list.hide-nav__list_wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #eee;
 }
 
 .hide-nav__list {
     padding: 0;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+    flex-grow: 1;
 }
 
 .hide-nav__item:before {
@@ -1150,11 +1255,18 @@ button {
 .hide-nav__link {
     padding: 10px 20px;
     display: block;
-    color: #000;
-    font: 500 14px/22px 'Poppins', sans-serif;
-    border-bottom: 1px solid rgba(68, 68, 68, .1);
+    color: #666;
+    font: 500 14px/22px "Eina", sans-serif;
     white-space: nowrap;
-    text-transform: capitalize
+    text-transform: capitalize;
+}
+
+.hide-nav .hide-nav__item label {
+    padding: 10px 20px 10px;
+    display: block;
+    color: #2b2b2b;
+    font: 600 16px/22px 'Eina', sans-serif;
+    text-transform: capitalize;
 }
 
 .desktop .hide-nav__link:hover, .hide-nav__item.active .hide-nav__link {
@@ -1292,7 +1404,7 @@ button {
     display: inline-block;
     vertical-align: top;
     background: #000;
-    font: bold 14px/16px 'Poppins', sans-serif;
+    font: bold 14px/16px "Eina", sans-serif;
     color: #fff;
     text-align: center;
     -webkit-transition: .2s ease-out;
@@ -1302,28 +1414,24 @@ button {
 }
 
 .hide-mob {
-    width: 100%;
+    width: 320px;
     height: 100%;
-    display: none;
+    top: 0;
     position: fixed;
-    max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 999;
-    background: rgba(0, 0, 0, .7)
+    transform: translate(-100%, 0);
+    transform-origin: top left;
+    transform: translate3d(-100%, 0, 0);
 }
 
-.hide-mob.active .hide-mob__bg {
+/* .hide-mob.active .hide-mob__bg {
     left: 0
-}
+} */
 
 .hide-mob__bg {
-    width: 270px;
-    min-height: 100%;
     padding: 70px 20px 60px;
-    position: relative;
-    left: -271px;
-    background: #fff;
     -webkit-transition: .3s ease-out;
     -ms-transition: .3s ease-out;
     transition: .3s ease-out
@@ -1347,9 +1455,15 @@ button {
 .hide-mob__socials {
     width: 100%;
     padding: 0 !important;
-    position: absolute;
-    bottom: 10px;
-    left: 0
+    position: sticky;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+
+.hide-mob__socials .socials__list {
+    padding: 20px 0;
 }
 
 .mob-nav {
@@ -1363,9 +1477,9 @@ button {
 .mob-nav__link {
     padding: 10px 20px;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
-    text-align: center;
+    /* text-align: center; */
     color: #000
 }
 
@@ -1422,36 +1536,44 @@ button {
 
 .slide-nav__list {
     margin: 10px 0;
-    padding: 0;
-    background: #fafafa
+    padding: 10px 0;
+    background: #fafafa;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgba(68, 68, 68, .1) transparent;
 }
 
 .slide-nav__item:before {
     display: none
 }
 
-.slide-nav__item:first-child {
-    border-top: 1px solid rgba(68, 68, 68, .1)
-}
 
-.slide-nav__item:first-child .slide-nav__link {
-    padding-top: 15px
-}
-
-.slide-nav__item:last-child {
-    border-bottom: 1px solid rgba(68, 68, 68, .1)
-}
-
-.slide-nav__item:last-child .slide-nav__link {
-    padding-bottom: 15px
+.slide-nav__item .slide-nav__title_label {
+    padding: 10px 20px 10px;
+    display: block;
+    color: #2b2b2b;
+    font: 600 16px/22px 'Eina', sans-serif;
+    text-transform: capitalize;
 }
 
 .slide-nav__link {
-    padding: 5px 20px;
+    padding: 5px 20px 5px 45px;
     display: block;
-    text-align: center;
-    font: 14px/24px 'Poppins', sans-serif;
-    color: #444
+    font: 14px/24px "Eina", sans-serif;
+    color: #444;
+    position: relative;
+}
+
+a.slide-nav__link::after {
+    content: '';
+    width: 11px;
+    height: 2px;
+    background: #444;
+    display: block;
+    top: 50%;
+    position: absolute;
+    left: 22px;
+    opacity: 0.5;
 }
 
 .desktop .slide-nav__link:hover, .slide-nav__item.active .slide-nav__link {
@@ -1498,9 +1620,6 @@ button {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between
 }
 
 .footer__col, .footer__left, .footer__right {
@@ -1559,8 +1678,10 @@ button {
 
 .footer-description {
     padding: 0 0 19px;
-    display: block;
-    font: 14px/24px Raleway, sans-serif
+    display: inline-block;
+    font: 14px/24px "Eina", sans-serif;
+    border-bottom: 1px solid rgba(68, 68, 68, .2);
+    margin-bottom: 35px;
 }
 
 .footer-line {
@@ -1643,7 +1764,7 @@ button {
 .socials__link {
     display: block;
     color: #444;
-    font: 600 12px/20px 'Poppins', sans-serif;
+    font: 600 12px/20px "Eina", sans-serif;
     text-transform: uppercase
 }
 
@@ -1655,7 +1776,7 @@ button {
 .footer-title {
     padding: 3px 0 17px;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
@@ -1692,7 +1813,7 @@ button {
     padding: 0 0 0 15px;
     display: block;
     position: relative;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     color: #444
 }
 
@@ -1728,7 +1849,7 @@ button {
     height: 56px;
     padding: 10px 30px 10px 0;
     display: block;
-    font: 14px/1 'Poppins', sans-serif;
+    font: 14px/1 "Eina", sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -1780,7 +1901,7 @@ button {
 
 .copyrights {
     display: block;
-    font: 14px/20px Raleway, sans-serif
+    font: 14px/20px "Eina", sans-serif
 }
 
 .payments {
@@ -1797,7 +1918,7 @@ button {
 
 .payments__text {
     display: block;
-    font: 14px/20px Raleway, sans-serif
+    font: 14px/20px "Eina", sans-serif
 }
 
 .payments__list {
@@ -1826,7 +1947,7 @@ button {
 .main {
     min-width: 0;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 100px;
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto
@@ -1911,7 +2032,7 @@ button {
 .side-socials__link {
     display: block;
     text-align: center;
-    font: 600 12px/20px 'Poppins', sans-serif;
+    font: 600 12px/20px "Eina", sans-serif;
     color: #444
 }
 
@@ -1926,7 +2047,7 @@ button {
     bottom: 50px;
     left: 0;
     text-align: center;
-    font: 600 16px/1 'Montserrat', sans-serif;
+    font: 600 16px/1 "Eina", sans-serif;
     color: #000
 }
 
@@ -1974,7 +2095,7 @@ button {
     position: absolute;
     top: -78px;
     left: -50px;
-    font: 500 14px/16px 'Poppins', sans-serif;
+    font: 500 14px/16px "Eina", sans-serif;
     color: #444;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -2017,7 +2138,7 @@ button {
 .category-subtitle {
     padding: 0 0 20px;
     display: block;
-    font: 20px/20px 'Poppins', sans-serif;
+    font: 20px/20px "Eina", sans-serif;
     color: #444;
     text-transform: uppercase;
     letter-spacing: .2em
@@ -2153,7 +2274,7 @@ button {
     display: block;
     position: relative;
     right: 12px;
-    font: 500 120px/1 'Montserrat', sans-serif;
+    font: 500 120px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2208,7 +2329,7 @@ button {
 
 .collection-title__text {
     display: block;
-    font: 28px/48px Raleway, sans-serif
+    font: 28px/48px "Eina", sans-serif
 }
 
 .collections {
@@ -2391,7 +2512,7 @@ button {
 
 .collection__title {
     padding: 0 0 35px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize;
     position: relative;
     right: 2px;
@@ -2410,7 +2531,7 @@ button {
     top: 100%;
     left: 0;
     z-index: 1;
-    font: 900 80px/1 'Poppins', sans-serif;
+    font: 900 80px/1 "Eina", sans-serif;
     text-shadow: 0 -4px 7px rgba(0, 0, 0, .15);
     color: #fff;
     text-transform: uppercase;
@@ -2505,7 +2626,7 @@ button {
     padding: 0 0 10px;
     position: relative;
     z-index: 1;
-    font: 600 40px/1 'Poppins', sans-serif;
+    font: 600 40px/1 "Eina", sans-serif;
     text-transform: uppercase;
     letter-spacing: .41em;
     color: #fff
@@ -2514,7 +2635,7 @@ button {
 .season-sale__title span {
     padding: 9px 0;
     display: block;
-    font: 800 100px/1 'Poppins', sans-serif;
+    font: 800 100px/1 "Eina", sans-serif;
     letter-spacing: normal
 }
 
@@ -2523,7 +2644,7 @@ button {
     padding: 0 0 25px;
     position: relative;
     z-index: 1;
-    font: 500 20px/30px Raleway, sans-serif
+    font: 500 20px/30px "Eina", sans-serif
 }
 
 .season-sale__more {
@@ -2565,18 +2686,18 @@ button {
 
 .season-sale_small .season-sale__title {
     padding: 0 0 8px;
-    font: 600 28px/1 Raleway, sans-serif
+    font: 600 28px/1 "Eina", sans-serif
 }
 
 .season-sale_small .season-sale__title span {
     padding: 5px 0;
-    font: 800 70px/1 Raleway, sans-serif
+    font: 800 70px/1 "Eina", sans-serif
 }
 
 .season-sale_small .season-sale__text {
     max-width: 250px;
     padding: 0 0 3px;
-    font: 500 16px/24px Raleway, sans-serif
+    font: 500 16px/24px "Eina", sans-serif
 }
 
 .season-sale_small .season-sale__content {
@@ -2623,7 +2744,7 @@ button {
 
 .main-block__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2677,7 +2798,7 @@ button {
 
 .tabs-nav__link {
     display: block;
-    font: 500 16px/24px 'Poppins', sans-serif;
+    font: 500 16px/24px "Eina", sans-serif;
     color: rgba(0, 0, 0, .5);
     text-transform: capitalize
 }
@@ -2793,7 +2914,7 @@ button {
 
 .short-item__title {
     padding: 0 0 8px;
-    font: 16px/27px Raleway, sans-serif
+    font: 16px/27px "Eina", sans-serif
 }
 
 .short-item__link {
@@ -2810,14 +2931,14 @@ button {
     padding: 0 12px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 20px/22px 'Montserrat', sans-serif;
+    font: 20px/22px "Eina", sans-serif;
     color: #000
 }
 
 .short-item__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/22px 'Montserrat', sans-serif;
+    font: 300 16px/22px "Eina", sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -2829,7 +2950,7 @@ button {
     display: inline-block;
     vertical-align: top;
     background: #000;
-    font: 800 10px/22px 'Poppins', sans-serif;
+    font: 800 10px/22px "Eina", sans-serif;
     text-transform: uppercase;
     color: #fff
 }
@@ -2902,7 +3023,7 @@ button {
     padding: 0 0 24px;
     position: relative;
     right: 11px;
-    font: 500 120px/1 'Montserrat', sans-serif;
+    font: 500 120px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -2941,7 +3062,7 @@ button {
     position: absolute;
     top: 0;
     right: -5px;
-    font: 36px/26px 'Montserrat', sans-serif;
+    font: 36px/26px "Eina", sans-serif;
     color: #000
 }
 
@@ -2956,7 +3077,7 @@ button {
 
 .syotimer-cell__unit {
     display: block;
-    font: 16px/27px Raleway, sans-serif
+    font: 16px/27px "Eina", sans-serif
 }
 
 .advantages {
@@ -3015,7 +3136,7 @@ button {
 
 .advantage__title {
     padding: 0 0 14px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3185,7 +3306,7 @@ button {
     padding: 0;
     display: table-cell;
     vertical-align: bottom;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3202,7 +3323,7 @@ button {
 .short-post__date {
     padding: 0 0 22px;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3331,14 +3452,14 @@ button {
 
 .inner-top__title {
     padding: 0 0 21px;
-    font: 400 80px/1 'Montserrat', sans-serif;
+    font: 400 80px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .breadcrumbs {
     padding: 0 0 0 13px;
     position: relative;
-    font: 14px/24px Raleway, sans-serif
+    font: 14px/24px "Eina", sans-serif
 }
 
 .breadcrumbs:before {
@@ -3421,13 +3542,13 @@ button {
 
 .newsletter__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .newsletter__text {
     padding: 0 0 40px;
-    font: 14px/24px Raleway, sans-serif
+    font: 14px/24px "Eina", sans-serif
 }
 
 .newsletter-form {
@@ -3553,14 +3674,14 @@ button {
 
 .about-company__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .about-company__text {
     max-width: 475px;
     padding: 0 0 20px;
-    font: 20px/34px Raleway, sans-serif
+    font: 20px/34px "Eina", sans-serif
 }
 
 .about-company__cols {
@@ -3624,7 +3745,7 @@ button {
 .about-section__title {
     margin: 0 0 0 -67px;
     padding: 0 0 21px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3643,7 +3764,7 @@ button {
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     white-space: nowrap;
-    font: 500 14px/1 Raleway, sans-serif
+    font: 500 14px/1 "Eina", sans-serif
 }
 
 .about-section__year:before {
@@ -3716,7 +3837,7 @@ button {
 
 .inner-deal__title {
     padding: 0 0 20px;
-    font: 70px/1 'Montserrat', sans-serif;
+    font: 70px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -3794,7 +3915,7 @@ button {
     height: 56px;
     padding: 10px 30px 10px 0;
     display: block;
-    font: 14px/1 'Poppins', sans-serif;
+    font: 14px/1 "Eina", sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -3852,7 +3973,7 @@ button {
 .widget__title {
     margin: 0 0 19px;
     padding: 0 0 14px;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -3863,7 +3984,7 @@ button {
     padding: 0 30px 14px 0;
     display: none;
     position: relative;
-    font: 400 24px/28px 'Montserrat', sans-serif;
+    font: 400 24px/28px "Eina", sans-serif;
     text-transform: capitalize;
     border-bottom: 2px solid #000;
     color: #000
@@ -3938,7 +4059,7 @@ button {
     padding: 6px 0 5px 17px;
     display: block;
     position: relative;
-    font: 16px/28px 'Poppins', sans-serif;
+    font: 16px/28px "Eina", sans-serif;
     color: #444
 }
 
@@ -4005,7 +4126,7 @@ button {
     padding: 0 0 0 30px;
     display: block;
     position: relative;
-    font: 14px/16px 'Poppins', sans-serif;
+    font: 14px/16px "Eina", sans-serif;
     color: #444;
     cursor: pointer
 }
@@ -4103,7 +4224,7 @@ button {
 
 .reviewed__title {
     padding: 0 0 2px;
-    font: 14px/20px Raleway, sans-serif
+    font: 14px/20px "Eina", sans-serif
 }
 
 .reviewed__link {
@@ -4119,14 +4240,14 @@ button {
     padding: 0 6px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Montserrat', sans-serif;
+    font: 14px/20px "Eina", sans-serif;
     color: #000
 }
 
 .reviewed__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 12px/20px 'Montserrat', sans-serif;
+    font: 12px/20px "Eina", sans-serif;
     color: #444;
     text-decoration: line-through
 }
@@ -4142,7 +4263,7 @@ button {
 
     .short-reviews_full .reviewed__title {
         padding: 0 0 4px;
-        font: 16px/27px Raleway, sans-serif
+        font: 16px/27px "Eina", sans-serif
     }
 
     .short-reviews_full .reviewed__price {
@@ -4237,7 +4358,7 @@ button {
     padding: 0 0 24px;
     position: relative;
     z-index: 1;
-    font: 600 24px/1 'Poppins', sans-serif;
+    font: 600 24px/1 "Eina", sans-serif;
     text-transform: uppercase;
     letter-spacing: .41em;
     color: #fff
@@ -4246,7 +4367,7 @@ button {
 .sale-banner__title span {
     padding: 6px 0;
     display: block;
-    font: 800 60px/1 'Poppins', sans-serif;
+    font: 800 60px/1 "Eina", sans-serif;
     letter-spacing: normal
 }
 
@@ -4254,7 +4375,7 @@ button {
     padding: 0 0 25px;
     position: relative;
     z-index: 1;
-    font: 500 14px/21px Raleway, sans-serif
+    font: 500 14px/21px "Eina", sans-serif
 }
 
 .sale-banner__more {
@@ -4378,7 +4499,7 @@ button {
 
 .page-nav__item {
     padding: 0 10px 10px;
-    font: 16px/28px Raleway, sans-serif
+    font: 16px/28px "Eina", sans-serif
 }
 
 .page-nav__item.active {
@@ -4466,7 +4587,7 @@ button {
 
 .product__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -4486,7 +4607,7 @@ button {
     padding: 3px 16px 3px 0;
     display: inline-block;
     vertical-align: middle;
-    font: 30px/1 'Montserrat', sans-serif;
+    font: 30px/1 "Eina", sans-serif;
     color: #000
 }
 
@@ -4495,7 +4616,7 @@ button {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    font: 300 20px/1 'Montserrat', sans-serif;
+    font: 300 20px/1 "Eina", sans-serif;
     color: #444
 }
 
@@ -4526,7 +4647,7 @@ button {
 
 .product-rating__text {
     display: block;
-    font: 12px/20px 'Poppins', sans-serif;
+    font: 12px/20px "Eina", sans-serif;
     color: #999
 }
 
@@ -4538,7 +4659,7 @@ button {
     width: 100%;
     padding: 0 0 29px;
     display: table;
-    font: 500 14px/24px Raleway, sans-serif
+    font: 500 14px/24px "Eina", sans-serif
 }
 
 .chars__item {
@@ -4627,7 +4748,7 @@ button {
     display: block;
     position: relative;
     z-index: 1;
-    font: 12px/40px 'Poppins', sans-serif;
+    font: 12px/40px "Eina", sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: #444;
@@ -4648,7 +4769,7 @@ button {
     padding: 0 36px;
     display: block;
     background: #f8f8fb;
-    font: 16px/1 'Poppins', sans-serif;
+    font: 16px/1 "Eina", sans-serif;
     color: #000;
     text-align: center
 }
@@ -4874,14 +4995,14 @@ button {
 
 .review__author {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: #000
 }
 
 .review__date {
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     white-space: nowrap
 }
 
@@ -4904,7 +5025,7 @@ button {
 
 .add-review__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -4975,7 +5096,7 @@ button {
 
 .post-header__title {
     padding: 0 0 60px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5029,13 +5150,13 @@ button {
     padding: 0;
     position: relative;
     bottom: 2px;
-    font: 500 16px/24px 'Poppins', sans-serif;
+    font: 500 16px/24px "Eina", sans-serif;
     color: #000
 }
 
 .post-info__date {
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     white-space: nowrap
 }
 
@@ -5055,7 +5176,7 @@ button {
     padding: 0 0 0 22px;
     display: block;
     position: relative;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     color: #444
 }
 
@@ -5128,7 +5249,7 @@ button {
 .post-nav__item {
     padding: 3px 25px 3px 8px;
     position: relative;
-    font: 500 14px/20px 'Poppins', sans-serif;
+    font: 500 14px/20px "Eina", sans-serif;
     color: #ff8e8e
 }
 
@@ -5179,7 +5300,7 @@ button {
 
 .about-author__title {
     padding: 0 0 20px;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5266,7 +5387,7 @@ button {
 
 .post-mini__title {
     padding: 0;
-    font: 300 14px/17px 'Montserrat', sans-serif;
+    font: 300 14px/17px "Eina", sans-serif;
     text-transform: capitalize;
     text-shadow: 0 0
 }
@@ -5314,7 +5435,7 @@ button {
 
 .add-comment__title {
     padding: 0 0 15px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5376,7 +5497,7 @@ button {
 
 .popular__title {
     padding: 0 0 4px;
-    font: 16px/19px 'Montserrat', sans-serif;
+    font: 16px/19px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5393,7 +5514,7 @@ button {
 .popular__date {
     padding: 0 0 15px;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     color: #444
 }
 
@@ -5433,14 +5554,14 @@ button {
 
 .newsletter-block__title {
     padding: 0 0 16px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .newsletter-block__text {
     margin: 0 -5px 0 0;
     padding: 0 0 20px;
-    font: 14px/24px Raleway, sans-serif
+    font: 14px/24px "Eina", sans-serif
 }
 
 .newsletter-block__input {
@@ -5500,7 +5621,7 @@ button {
 
 .faq__title {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     position: relative
 }
@@ -5629,7 +5750,7 @@ button {
 
 .login-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -5647,7 +5768,7 @@ button {
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    font: 14px/16px Raleway, sans-serif
+    font: 14px/16px "Eina", sans-serif
 }
 
 .login-form__bottom .login-form__col {
@@ -5675,7 +5796,7 @@ button {
 .login-form__small-text {
     padding: 0 0 12px;
     display: block;
-    font: 14px/16px Raleway, sans-serif
+    font: 14px/16px "Eina", sans-serif
 }
 
 .login-form__button {
@@ -5685,7 +5806,7 @@ button {
 .login-form__label {
     padding: 10px 0 5px;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     color: #000
 }
 
@@ -5864,13 +5985,13 @@ button {
 
 .page-404__subtitle {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
 .page-404__text {
     padding: 0 0 37px;
-    font: 20px/34px Raleway, sans-serif
+    font: 20px/34px "Eina", sans-serif
 }
 
 .contacts-page {
@@ -5946,7 +6067,7 @@ button {
 
 .contacts-form__title {
     padding: 0 0 16px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6001,7 +6122,7 @@ button {
 .contacts__title {
     padding: 0;
     display: block;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6216,7 +6337,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .wishlist__title {
     padding: 0;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6232,7 +6353,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 7px 5px 0;
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/20px 'Montserrat', sans-serif;
+    font: 300 16px/20px "Eina", sans-serif;
     text-decoration: line-through
 }
 
@@ -6301,7 +6422,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    font: 500 12px/20px 'Poppins', sans-serif;
+    font: 500 12px/20px "Eina", sans-serif;
     color: #999
 }
 
@@ -6531,13 +6652,13 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .order-header__number {
     padding: 0;
     display: block;
-    font: 500 16px/24px 'Poppins', sans-serif;
+    font: 500 16px/24px "Eina", sans-serif;
     color: #000
 }
 
 .order-header__date {
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     white-space: nowrap
 }
 
@@ -6545,7 +6666,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     height: 24px;
     display: block;
     position: relative;
-    font: 600 16px/24px 'Poppins', sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     white-space: nowrap
 }
 
@@ -6578,7 +6699,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     margin: 0 0 17px;
     padding: 0 0 14px;
     border-bottom: 1px solid rgba(68, 68, 68, .1);
-    font: 16px/24px Raleway, sans-serif
+    font: 16px/24px "Eina", sans-serif
 }
 
 .order-table__cols {
@@ -6657,7 +6778,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 6px 0 0;
     display: inline;
     vertical-align: top;
-    font: 16px/24px Raleway, sans-serif
+    font: 16px/24px "Eina", sans-serif
 }
 
 .order-table__link {
@@ -6677,7 +6798,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .order-table__price {
     display: inline-block;
     vertical-align: top;
-    font: 300 16px/24px 'Montserrat', sans-serif;
+    font: 300 16px/24px "Eina", sans-serif;
     text-shadow: 0 0
 }
 
@@ -6713,7 +6834,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .order-total__price {
     display: block;
-    font: 20px/26px 'Montserrat', sans-serif;
+    font: 20px/26px "Eina", sans-serif;
     color: #000
 }
 
@@ -6765,7 +6886,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .promo__title {
     padding: 0 0 20px;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6814,7 +6935,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .your-order__title {
     padding: 0;
-    font: 400 32px/38px 'Montserrat', sans-serif;
+    font: 400 32px/38px "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -6889,14 +7010,14 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .your-order__bottom-text {
     display: block;
-    font: 20px/28px Raleway, sans-serif
+    font: 20px/28px "Eina", sans-serif
 }
 
 .your-order__bottom-price {
     display: block;
     position: relative;
     top: 2px;
-    font: 25px/28px 'Montserrat', sans-serif;
+    font: 25px/28px "Eina", sans-serif;
     color: #000
 }
 
@@ -6957,7 +7078,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 4px 60px;
     position: relative;
     text-align: center;
-    font: 400 20px/24px 'Montserrat', sans-serif;
+    font: 400 20px/24px "Eina", sans-serif;
     text-transform: capitalize;
     color: rgba(0, 0, 0, .5);
     border-bottom: 2px solid rgba(68, 68, 68, .1)
@@ -6991,7 +7112,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     margin: 0 0 20px;
     padding: 0 0 19px;
     border-bottom: 1px solid rgba(68, 68, 68, .1);
-    font: 14px/20px Raleway, sans-serif
+    font: 14px/20px "Eina", sans-serif
 }
 
 .side-cart__item:last-child {
@@ -7063,7 +7184,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 2px 0 0;
     display: inline;
     vertical-align: top;
-    font: 14px/20px Raleway, sans-serif
+    font: 14px/20px "Eina", sans-serif
 }
 
 .side-cart__link {
@@ -7088,14 +7209,14 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 8px 0 0;
     display: inline-block;
     vertical-align: top;
-    font: 14px/20px 'Montserrat', sans-serif;
+    font: 14px/20px "Eina", sans-serif;
     color: #000
 }
 
 .side-cart__old-price {
     display: inline-block;
     vertical-align: top;
-    font: 300 12px/20px 'Montserrat', sans-serif;
+    font: 300 12px/20px "Eina", sans-serif;
     text-shadow: 0 0;
     text-decoration: line-through;
     color: #444
@@ -7107,7 +7228,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .checkout-form__title {
     padding: 0 0 30px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -7201,7 +7322,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 0 0 31px;
     display: block;
     position: relative;
-    font: 20px/24px 'Montserrat', sans-serif;
+    font: 20px/24px "Eina", sans-serif;
     color: rgba(0, 0, 0, .5);
     text-transform: capitalize;
     cursor: pointer;
@@ -7348,7 +7469,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 
 .thanks__title {
     padding: 0 0 20px;
-    font: 400 40px/1 'Montserrat', sans-serif;
+    font: 400 40px/1 "Eina", sans-serif;
     text-transform: capitalize
 }
 
@@ -7359,7 +7480,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 .thanks__top-text {
     max-width: 400px;
     padding: 0 0 20px;
-    font: 20px/34px Raleway, sans-serif
+    font: 20px/34px "Eina", sans-serif
 }
 
 .thanks__text {
@@ -7790,7 +7911,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     margin: 0;
     padding: 3px 20px;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     overflow: hidden;
     color: #000;
     word-break: break-all;
@@ -7836,7 +7957,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
     padding: 0 30px 0 0;
     display: block;
     position: relative;
-    font: 14px/40px 'Poppins', sans-serif;
+    font: 14px/40px "Eina", sans-serif;
     color: #000;
     border-bottom: 1px solid rgba(68, 68, 68, .2);
     -webkit-transition: .3s ease-out;
@@ -9288,7 +9409,7 @@ body.compensate-for-scrollbar .header {
     -webkit-transition: .3s ease-out;
     -ms-transition: .3s ease-out;
     transition: .3s ease-out;
-    font: 14px/40px 'Poppins', sans-serif;
+    font: 14px/40px "Eina", sans-serif;
     color: #000
 }
 
@@ -9330,7 +9451,7 @@ body.compensate-for-scrollbar .header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 14px/1 'Poppins', sans-serif;
+    font: 14px/1 "Eina", sans-serif;
     color: #000
 }
 
@@ -9340,7 +9461,7 @@ body.compensate-for-scrollbar .header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    font: 14px/40px 'Poppins', sans-serif;
+    font: 14px/40px "Eina", sans-serif;
     color: #000
 }
 
@@ -9365,7 +9486,7 @@ body.compensate-for-scrollbar .header {
     margin: 0;
     padding: 3px 20px;
     display: block;
-    font: 14px/24px 'Poppins', sans-serif;
+    font: 14px/24px "Eina", sans-serif;
     overflow: hidden;
     color: #000;
     word-break: break-all;
@@ -9405,6 +9526,12 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:1450px) {
+
+    .hide-nav {
+        width: 85%;
+        transform: translateX(-20px);
+    }
+
     .first-screen, .main-slider__cell, .main-slider__list.loaded {
         height: 650px
     }
@@ -9447,15 +9574,11 @@ body.compensate-for-scrollbar .header {
 @media screen and (max-width:1279px) {
 
     .header-nav {
-        padding: 0 40px
+        padding: 0 40px;
     }
 
     .header-nav__list {
         margin: 0 -15px
-    }
-
-    .header-nav__item {
-        padding: 0 15px
     }
 
     .user-nav {
@@ -10062,6 +10185,30 @@ body.compensate-for-scrollbar .header {
     }
 }
 
+@media screen and (min-width:991px) and (max-width:1279px) {
+    .header__left {
+        display: none;
+    }
+
+    .header__center {
+        width: 74%;
+    }
+
+    .header__right {
+        width: 26%;
+    }
+
+    .header__cols {
+        -webkit-justify-content: flex-start;
+        -ms-justify-content: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header-nav__item {
+        padding: 34px 14px;
+    }
+}
+
 @media screen and (max-width:1200px) {
     .short-item__image-bg {
         height: 330px
@@ -10114,7 +10261,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .collection-title__text {
-        font: 22px/42px Raleway, sans-serif
+        font: 22px/42px "Eina", sans-serif
     }
 
     .collections {
@@ -10199,7 +10346,7 @@ body.compensate-for-scrollbar .header {
         bottom: 100% !important;
         left: 0 !important;
         right: auto !important;
-        font: 900 40px/1 'Poppins', sans-serif;
+        font: 900 40px/1 "Eina", sans-serif;
         text-shadow: 0 2px 7px rgba(0, 0, 0, .15) !important;
         text-align: center !important
     }
@@ -10230,18 +10377,18 @@ body.compensate-for-scrollbar .header {
 
     .season-sale__title {
         padding: 0 0 17px;
-        font: 600 32px/1 Raleway, sans-serif
+        font: 600 32px/1 "Eina", sans-serif
     }
 
     .season-sale__title span {
         padding: 6px 0;
-        font: 800 80px/1 Raleway, sans-serif
+        font: 800 80px/1 "Eina", sans-serif
     }
 
     .season-sale__text {
         max-width: 280px;
         padding: 0 0 25px;
-        font: 500 16px/27px Raleway, sans-serif
+        font: 500 16px/27px "Eina", sans-serif
     }
 
     .main-block__title {
@@ -10330,7 +10477,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .review__author {
-        font: 400 20px/24px 'Montserrat', sans-serif;
+        font: 400 20px/24px "Eina", sans-serif;
         text-transform: capitalize
     }
 
@@ -10390,7 +10537,7 @@ body.compensate-for-scrollbar .header {
 
     .popular__title {
         padding: 0;
-        font: 300 14px/17px 'Montserrat', sans-serif;
+        font: 300 14px/17px "Eina", sans-serif;
         text-shadow: 0 0
     }
 
@@ -10557,7 +10704,7 @@ body.compensate-for-scrollbar .header {
 
     blockquote p {
         max-width: 590px;
-        font: 18px/32px Raleway, sans-serif
+        font: 18px/32px "Eina", sans-serif
     }
 
     .main-catalog__list {
@@ -10596,7 +10743,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .shop-panel__text {
-        font: 14px/24px Raleway, sans-serif
+        font: 14px/24px "Eina", sans-serif
     }
 
     .inner-catalog {
@@ -10619,9 +10766,20 @@ body.compensate-for-scrollbar .header {
         display: none
     }
 
+    .header__main {
+        padding: 30px 0;
+    }
+
     .header__left {
         flex: none;
         -webkit-flex: none;
+        -moz-display: flex;
+        -ms-display: flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
     }
 
     .header__right {
@@ -10765,7 +10923,7 @@ body.compensate-for-scrollbar .header {
 
     .newsletter__text {
         padding: 0 0 30px;
-        font: 14px/24px Raleway, sans-serif
+        font: 14px/24px "Eina", sans-serif
     }
 
     .newsletter-form__left {
@@ -11188,7 +11346,7 @@ body.compensate-for-scrollbar .header {
 
     blockquote p {
         max-width: none;
-        font: 16px/27px Raleway, sans-serif
+        font: 16px/27px "Eina", sans-serif
     }
 
     blockquote footer {
@@ -11389,7 +11547,7 @@ body.compensate-for-scrollbar .header {
     .collection-title {
         padding: 0 0 20px;
         display: inline-block;
-        font: 60px/1 'Montserrat', sans-serif;
+        font: 60px/1 "Eina", sans-serif;
         text-align: left
     }
 
@@ -11398,7 +11556,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .collection-title__text {
-        font: 18px/32px Raleway, sans-serif
+        font: 18px/32px "Eina", sans-serif
     }
 
     .collections {
@@ -11472,7 +11630,7 @@ body.compensate-for-scrollbar .header {
 
     .collection__category {
         margin: 0 0 -18px;
-        font: 900 36px/1 Raleway, sans-serif
+        font: 900 36px/1 "Eina", sans-serif
     }
 
     .collection__title {
@@ -11504,11 +11662,11 @@ body.compensate-for-scrollbar .header {
     }
 
     .season-sale__title {
-        font: 600 28px/1 Raleway, sans-serif
+        font: 600 28px/1 "Eina", sans-serif
     }
 
     .season-sale__title span {
-        font: 800 70px/1 Raleway, sans-serif
+        font: 800 70px/1 "Eina", sans-serif
     }
 
     .season-sale_small .season-sale__text {
@@ -12648,7 +12806,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .your-order__bottom-text {
-        font: 18px/26px Raleway, sans-serif
+        font: 18px/26px "Eina", sans-serif
     }
 
     .your-order__bottom-price {
@@ -12924,7 +13082,7 @@ body.compensate-for-scrollbar .header {
 
     .shop-panel__text {
         padding: 0 0 10px;
-        font: 16px/24px 'Poppins', sans-serif;
+        font: 16px/24px "Eina", sans-serif;
         text-align: center
     }
 
@@ -13011,7 +13169,7 @@ body.compensate-for-scrollbar .header {
         margin: 0 15px 10px;
         padding: 0 0 4px !important;
         border: none;
-        font: 18px/24px Raleway, sans-serif
+        font: 18px/24px "Eina", sans-serif
     }
 
     .checkout-nav__item:after {
@@ -13034,7 +13192,7 @@ body.compensate-for-scrollbar .header {
         position: absolute;
         top: -8px;
         right: -10px;
-        font: bold 12px/16px 'Poppins', sans-serif;
+        font: bold 12px/16px "Eina", sans-serif;
         border-radius: 8px
     }
 
@@ -13390,7 +13548,7 @@ body.compensate-for-scrollbar .header {
 
     .payments__text {
         padding: 0 0 12px;
-        font: 14px/20px Raleway, sans-serif
+        font: 14px/20px "Eina", sans-serif
     }
 
     .payments__list {

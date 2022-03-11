@@ -46,7 +46,7 @@
       }
     </style>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/comman.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
   <body class="loaded">
     <div class="load-icon"></div>
@@ -57,80 +57,94 @@
         <div class="header__main">
           <div class="header__cols">
             <div class="header__left">
+              <div class="header__col">
+                <button class="mob-button js-mob-open">
+                  <span class="mob-button__icon"></span>
+                </button>
+              </div>
+              <div class="header__col">
+                <a class="mob__logo logo" href="#">
+                  <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="header__center">
               <div class="header__cols">
-                <div class="header__col">
-                  <button class="mob-button js-mob-open">
-                    <span class="mob-button__icon"></span>
-                  </button>
-                </div>
-                <div class="header__col">
-                  <a class="mob__logo logo" href="#">
-                    <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
-                  </a>
-                </div>
                 <div class="header__col header__col_hide-mob">
                   <nav class="header-nav">
                     <ul class="header-nav__list">
-                      <li class="header-nav__item">
+                      <li class="header-nav__item active">
                         <a class="header-nav__link" href="index.html">Home</a>
-                      </li>
-                      <li class="header-nav__item js-nav-item">
-                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="about.html">Pages</a>
-                        <div class="hide-nav js-nav-hide">
-                          <ul class="hide-nav__list">
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="login.html">Login</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="registration.html">Registration</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="about.html">About us</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="collections.html">Collections</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="faq.html">FAQ</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="post.html">Post</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="404.html">404</a>
-                            </li>
-                          </ul>
-                        </div>
                       </li>
                       <li class="header-nav__item js-nav-item">
                         <a class="header-nav__link header-nav__link_arrow js-nav-button" href="shop.html">Shop</a>
                         <div class="hide-nav js-nav-hide">
-                          <ul class="hide-nav__list">
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="my_profile.html">Profile</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="shop.html">Catalog</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="product_page.html">Product page</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="cart.html">Cart</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="checkout-1.html">Checkout 1</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="checkout-2.html">Checkout 2</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="checkout-3.html">Checkout 3</a>
-                            </li>
-                            <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="wishlist.html">Wishlist</a>
-                            </li>
-                          </ul>
+                          <div class="clearfix">
+                            <ul class="hide-nav__list hide-nav__list_wrap">
+                              <li class="hide-nav__item">
+                                <label>Shop Pages</label>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Shop Page V1</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Shop Page V2</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Shop Page V3</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Shop Page V4</a>
+                              </li>
+                            </ul>
+                            <ul class="hide-nav__list hide-nav__list_wrap">
+                              <li class="hide-nav__item">
+                                <label>Procut Pages</label>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="cart.html">Single Product V1</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Single Product V2</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Single Product V3</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="#">Single Product V4</a>
+                              </li>
+                            </ul>
+                            <div class="hide-nav__list hide-nav__image__wrap text-right">
+                              <a href="" class="hide-nav-collecton__image">
+                                <img src="assets/img/collection/collection.jpeg" alt="" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-nav__item js-nav-item">
+                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="collections.html">Collection</a>
+                        <div class="hide-nav js-nav-hide">
+                          <div class="clearfix">
+                            <div class="hide-nav__list hide-nav__image__wrap text-center">
+                              <a href="" class="hide-nav-collecton__image">
+                                <img src="assets/img/collection/collection.jpeg" alt="" />
+                              </a>
+                              <label for="">New Trending '18</label>
+                            </div>
+                            <div class="hide-nav__list hide-nav__image__wrap text-center">
+                              <a href="" class="hide-nav-collecton__image">
+                                <img src="assets/img/collection/collection.jpeg" alt="" />
+                              </a>
+                              <label for="">New Lookbooks</label>
+                            </div>
+                            <div class="hide-nav__list hide-nav__image__wrap text-center">
+                              <a href="" class="hide-nav-collecton__image">
+                                <img src="assets/img/collection/collection.jpeg" alt="" />
+                              </a>
+                              <label for="">Onsale</label>
+                            </div>
+                          </div>
                         </div>
                       </li>
                       <li class="header-nav__item logo_nav">
@@ -140,8 +154,82 @@
                           </a>
                         </div>
                       </li>
-                      <li class="header-nav__item">
-                        <a class="header-nav__link" href="blog.html">Blog</a>
+                      <li class="header-nav__item js-nav-item">
+                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="about.html">Pages</a>
+                        <div class="hide-nav js-nav-hide">
+                          <div class="clearfix">
+                            <ul class="hide-nav__list hide-nav__list_wrap">
+                              <li class="hide-nav__item">
+                                <label>Page Set 1</label>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="about.html">About us</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="shop.html">Catalog</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="product_page.html">Product page</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="wishlist.html">Wishlist</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="my_profile.html">My Profile</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="404.html">404</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="privacy_policy.html">Privacy Policy</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="terms_of_use.html">Terms of Use</a>
+                              </li>
+                            </ul>
+                            <ul class="hide-nav__list hide-nav__list_wrap">
+                              <li class="hide-nav__item">
+                                <label>Page Set 2</label>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="login.html">Login</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="registration.html">Registration</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="faq.html">FAQ's</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="cart.html">Cart</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="checkout-1.html">Checkout 1</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="checkout-2.html">Checkout 2</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="checkout-3.html">Checkout 3</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-nav__item header-nav_dropdown__item js-nav-item">
+                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="blog.html">Blog</a>
+                        <div class="hide-nav dropdown-hide__nav js-nav-hide">
+                          <div class="clearfix">
+                            <ul class="hide-nav__list hide-nav__list_wrap">
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="blog.html">Blog</a>
+                              </li>
+                              <li class="hide-nav__item">
+                                <a class="hide-nav__link" href="post.html">Blog Post</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </li>
                       <li class="header-nav__item">
                         <a class="header-nav__link" href="contacts.html">Contact</a>
@@ -188,8 +276,52 @@
           <button class="hide-mob__close close-button js-mob-close"></button>
           <div class="hide-mob__mask js-mob-close"></div>
           <ul class="mob-nav">
-            <li class="mob-nav__item">
+            <li class="mob-nav__item active">
               <a class="mob-nav__link" href="index.html">Home</a>
+            </li>
+            <li class="mob-nav__item js-slidedown">
+              <a class="mob-nav__link js-slidedown-button" href="shop.html">
+                <span class="mob-nav__arrow">Shop</span>
+              </a>
+              <div class="slide-nav js-slidedown-hide">
+                <ul class="slide-nav__list">
+                  <li class="slide-nav__item">
+                    <label class="slide-nav__title_label">Shop Pages</label>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Shop Page V1</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Shop Page V2</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Shop Page V3</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Shop Page V4</a>
+                  </li>
+                </ul>
+                <ul class="slide-nav__list">
+                  <li class="slide-nav__item">
+                    <label class="slide-nav__title_label">Prodcut Pages</label>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Prodcut Page V1</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Prodcut Page V2</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Prodcut Page V3</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="#">Prodcut Page V4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mob-nav__item">
+              <a class="mob-nav__link" href="shop.html">Collection</a>
             </li>
             <li class="mob-nav__item js-slidedown">
               <a class="mob-nav__link js-slidedown-button" href="about.html">
@@ -198,43 +330,45 @@
               <div class="slide-nav js-slidedown-hide">
                 <ul class="slide-nav__list">
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="login.html">Login</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="registration.html">Registration</a>
+                    <label class="slide-nav__title_label">Page Set 1</label>
                   </li>
                   <li class="slide-nav__item">
                     <a class="slide-nav__link" href="about.html">About us</a>
                   </li>
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="collections.html">Collections</a>
+                    <a class="slide-nav__link" href="shop.html">Catalog</a>
                   </li>
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="faq.html">FAQ</a>
+                    <a class="slide-nav__link" href="product_page.html">Product Page</a>
                   </li>
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="post.html">Post</a>
+                    <a class="slide-nav__link" href="wishlist.html">Wishlist</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="my_profile.html">My Profile</a>
                   </li>
                   <li class="slide-nav__item">
                     <a class="slide-nav__link" href="404.html">404</a>
                   </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="privacy_policy.html">Privacy Policy</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="terms_of_use.html">Terms of Use</a>
+                  </li>
                 </ul>
-              </div>
-            </li>
-            <li class="mob-nav__item js-slidedown">
-              <a class="mob-nav__link js-slidedown-button" href="#">
-                <span class="mob-nav__arrow">Shop</span>
-              </a>
-              <div class="slide-nav js-slidedown-hide">
                 <ul class="slide-nav__list">
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="my_profile.html">Profile</a>
+                    <label class="slide-nav__title_label">Page Set 2</label>
                   </li>
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="shop.html">Catalog</a>
+                    <a class="slide-nav__link" href="Login.html">Login</a>
                   </li>
                   <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="product_page.html">Product page</a>
+                    <a class="slide-nav__link" href="registration.html">Registration</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="faq.html">FAQ's</a>
                   </li>
                   <li class="slide-nav__item">
                     <a class="slide-nav__link" href="cart.html">Cart</a>
@@ -248,14 +382,23 @@
                   <li class="slide-nav__item">
                     <a class="slide-nav__link" href="checkout-3.html">Checkout 3</a>
                   </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="wishlist.html">Wishlist</a>
-                  </li>
                 </ul>
               </div>
             </li>
-            <li class="mob-nav__item">
-              <a class="mob-nav__link" href="blog.html">Blog</a>
+            <li class="mob-nav__item js-slidedown">
+              <a class="mob-nav__link js-slidedown-button" href="blog.html">
+                <span class="mob-nav__arrow">Blog</span>
+              </a>
+              <div class="slide-nav js-slidedown-hide">
+                <ul class="slide-nav__list">
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="slide-nav__item">
+                    <a class="slide-nav__link" href="post.html">Blog Post</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="mob-nav__item">
               <a class="mob-nav__link" href="contacts.html">Contact</a>
@@ -289,7 +432,7 @@
             <div class="first-screen__mob-cols">
               <div class="first-screen__mob-col">
                 <div class="slider-count">
-                  <span class="slider-count__text js-main-count"><span>1</span>/3</span>
+                  <span class="slider-count__text js-main-count"></span>
                 </div>
               </div>
               <div class="first-screen__mob-col">
@@ -314,62 +457,7 @@
           <div class="first-screen__center">
             <div class="main-slider">
               <div class="main-slider__list-wrap">
-                <div class="main-slider__list js-main-slider loaded">
-                  <div class="main-slider__item js-slide active">
-                    <div class="main-slider__max">
-                      <div class="main-slider__row">
-                        <div class="main-slider__cell">
-                          <div class="main-slider__content">
-                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
-                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
-                            <a class="main-slider__button button" href="shop.html">
-                              <span class="button__text">Shop now</span>
-                            </a>
-                          </div>
-                          <div class="main-slider__image-wrap">
-                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="main-slider__item js-slide">
-                    <div class="main-slider__max">
-                      <div class="main-slider__row">
-                        <div class="main-slider__cell">
-                          <div class="main-slider__content">
-                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
-                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
-                            <a class="main-slider__button button" href="shop.html">
-                              <span class="button__text">Shop now</span>
-                            </a>
-                          </div>
-                          <div class="main-slider__image-wrap">
-                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="main-slider__item js-slide">
-                    <div class="main-slider__max">
-                      <div class="main-slider__row">
-                        <div class="main-slider__cell">
-                          <div class="main-slider__content">
-                            <span class="main-slider__subtitle category-subtitle"><b>new</b> collection</span>
-                            <h2 class="main-slider__title">meet New <br />Fashion week</h2>
-                            <a class="main-slider__button button" href="shop.html">
-                              <span class="button__text">Shop now</span>
-                            </a>
-                          </div>
-                          <div class="main-slider__image-wrap">
-                            <div class="main-slider__image" data-bg="https://via.placeholder.com/1040x800"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="main-slider__list js-main-slider loaded" id="heroSlider"></div>
               </div>
               <div class="main-slider__bg-wrap">
                 <img class="main-slider__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
@@ -501,16 +589,13 @@
                 <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-1">All</a>
               </li>
               <li class="tabs-nav__item js-line-item js-tabs-item">
-                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-2">Men</a>
+                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-2">Carpet</a>
               </li>
               <li class="tabs-nav__item js-line-item js-tabs-item">
-                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-3">Women</a>
+                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-3">Home Decor</a>
               </li>
               <li class="tabs-nav__item js-line-item js-tabs-item">
-                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-4">Accessories</a>
-              </li>
-              <li class="tabs-nav__item js-line-item js-tabs-item">
-                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-5">New arrivals</a>
+                <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-4">Kitchen</a>
               </li>
             </ul>
             <div class="tabs-nav__line js-line-element"></div>
@@ -519,214 +604,7 @@
           <!-- BEGIN TAB 1 -->
           <div class="product-tab js-tabs-content active" id="products-1">
             <div class="main-catalog">
-              <div class="main-catalog__list">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-              </div>
+              <div class="main-catalog__list" id="shortItemAll"></div>
               <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
@@ -735,214 +613,7 @@
           <!-- BEGIN TAB 2 -->
           <div class="product-tab js-tabs-content" id="products-2">
             <div class="main-catalog">
-              <div class="main-catalog__list">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-              </div>
+              <div class="main-catalog__list" id="carpetData"></div>
               <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
@@ -951,214 +622,7 @@
           <!-- BEGIN TAB 3 -->
           <div class="product-tab js-tabs-content" id="products-3">
             <div class="main-catalog">
-              <div class="main-catalog__list">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-              </div>
+              <div class="main-catalog__list" id="homeDecoreData"></div>
               <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
@@ -1167,434 +631,11 @@
           <!-- BEGIN TAB 4 -->
           <div class="product-tab js-tabs-content" id="products-4">
             <div class="main-catalog">
-              <div class="main-catalog__list">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-              </div>
+              <div class="main-catalog__list" id="kitchenData"></div>
               <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
             </div>
           </div>
           <!-- TAB 4 END -->
-
-          <!-- BEGIN TAB 5 -->
-          <div class="product-tab js-tabs-content" id="products-5">
-            <div class="main-catalog">
-              <div class="main-catalog__list">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-              </div>
-              <img class="main-catalog__bg" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
-            </div>
-          </div>
-          <!-- TAB 5 END -->
 
           <div class="load-more">
             <a class="button" href="shop.html">
@@ -1688,303 +729,7 @@
           </div>
           <div class="catalog-slider js-catalog loaded">
             <div class="catalog-slider__list-wrap">
-              <div class="catalog-slider__list js-catalog-carousel">
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img class="short-item__image" src="https://via.placeholder.com/262x360" alt="" />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Long oversized T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$15.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img class="short-item__image" src="https://via.placeholder.com/262x360" alt="" />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Retro style handbag</a>
-                    </h4>
-                    <span class="short-item__price">$98.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$38.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_green">New</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$35.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col">
-                          <span class="item-tag item-tag_red">Sale</span>
-                        </div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Textured turtleneck with zip</a>
-                    </h4>
-                    <span class="short-item__price">$25.99</span>
-                    <span class="short-item__old-price">$52.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Spray wrap skirt</a>
-                    </h4>
-                    <span class="short-item__price">$29.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$63.99</span>
-                  </div>
-                </article>
-                <article class="short-item">
-                  <div class="short-item__all">
-                    <a class="short-item__image-bg" href="product_page.html">
-                      <img
-                        class="short-item__image"
-                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                        data-lazy="https://via.placeholder.com/262x360"
-                        alt=""
-                      />
-                    </a>
-                    <div class="short-item__top">
-                      <div class="short-item__cols">
-                        <div class="short-item__col"></div>
-                        <div class="short-item__col">
-                          <button class="heart-button js-toggle-active"></button>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="short-item__title">
-                      <a class="short-item__link" href="product_page.html">Cotton T-shirt</a>
-                    </h4>
-                    <span class="short-item__price">$47.99</span>
-                  </div>
-                </article>
-              </div>
+              <div class="catalog-slider__list js-catalog-carousel" id="bestPrdouctSlider"></div>
             </div>
             <div class="catalog-slider__cols">
               <div class="catalog-slider__col">
@@ -2000,69 +745,6 @@
           </div>
         </section>
         <!-- BEST SELLERS END -->
-
-        <!-- BEGIN BLOG -->
-        <section class="main-block wrapper">
-          <div class="main-block__top">
-            <span class="main-block__subtitle category-subtitle">our <b>blog</b></span>
-            <h3 class="main-block__title">the last in Mollee</h3>
-            <p class="main-block__text">
-              Cillum eu id enim aliquip aute ullamco anim. Culpa deserunt nostrud excepteur voluptate velit ipsum esse enim.
-            </p>
-          </div>
-          <div class="blog">
-            <article class="short-post">
-              <div class="short-post__all">
-                <a class="short-post__image-link" href="post.html">
-                  <div class="short-post__image" data-bg="https://via.placeholder.com/555x300"></div>
-                </a>
-                <div class="short-post__row">
-                  <div class="short-post__cell">
-                    <div class="short-post__bg">
-                      <div class="short-post__content">
-                        <div class="short-post__title-wrap">
-                          <h4 class="short-post__title">
-                            <a class="short-post__link" href="post.html">Fashion trends in 2020: style, colors, accessories</a>
-                          </h4>
-                        </div>
-                        <span class="short-post__date">Aug 02, 2020</span>
-                        <a class="short-post__more read-more" href="post.html">read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="short-post">
-              <div class="short-post__all">
-                <a class="short-post__image-link" href="post.html">
-                  <div class="short-post__image" data-bg="https://via.placeholder.com/555x300"></div>
-                </a>
-                <div class="short-post__row">
-                  <div class="short-post__cell">
-                    <div class="short-post__bg">
-                      <div class="short-post__content">
-                        <div class="short-post__title-wrap">
-                          <h4 class="short-post__title">
-                            <a class="short-post__link" href="post.html">The most popular brand that people use in USA</a>
-                          </h4>
-                        </div>
-                        <span class="short-post__date">Aug 02, 2020</span>
-                        <a class="short-post__more read-more" href="post.html">read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="load-more">
-            <a class="button" href="blog.html">
-              <span class="button__text">Read blog</span>
-            </a>
-          </div>
-        </section>
-        <!-- BLOG END -->
       </main>
       <!-- MAIN END -->
 
@@ -2076,7 +758,6 @@
                   <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
                 </a>
                 <span class="footer-description">Cillum eu id enim aliquip aute ullamco anim. <br />Culpa deserunt nostrud excepteur voluptate.</span>
-                <div class="footer-line"></div>
                 <div class="socials">
                   <span class="socials__text">Find us here:</span>
                   <ul class="socials__list">
@@ -2138,16 +819,6 @@
                     </ul>
                   </div>
                 </nav>
-              </div>
-              <div class="footer__col">
-                <span class="footer-title">Newsletter</span>
-                <span class="footer-description">Subscribe to be the first to hear about deals,&nbsp;&nbsp;offers and upcoming collections.</span>
-                <form>
-                  <div class="subscription">
-                    <input class="subscription__input" type="email" placeholder="Enter your email" />
-                    <button class="subscription__button" type="submit"></button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
@@ -2212,6 +883,146 @@
     <script src="assets/js/libs/jquery-migrate-1.4.1.min.js"></script>
     <script src="assets/js/components/slick.js"></script>
     <script src="assets/js/components/syotimer.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" data-track="reload"></script>
+    <main_js></main_js>
+    <script>
+      var productList = [];
+      var allMyArray = [];
+      var heroSliderList = [];
+
+      var request = new XMLHttpRequest();
+
+      function include(file) {
+        var script = document.createElement("script");
+        script.src = file;
+        script.type = "text/javascript";
+        script.defer = true;
+
+        document.getElementsByTagName("main_js").item(0).appendChild(script);
+      }
+
+      request.open("GET", "https://theme-app-thomas.herokuapp.com/go", true);
+      request.onload = function () {
+        var data = JSON.parse(this.response);
+        this.allMyArray = data.data;
+
+        this.allMyArray.forEach((data1) => {
+          if (data1.title === "Product List") {
+            this.productList = data1.data;
+          }
+        });
+        createData(this.productList, "shortItemAll");
+
+        const carpetData = this.productList.filter((element) => element.collections === "Carpet");
+        createData(carpetData, "carpetData");
+
+        const homeDecoreData = this.productList.filter((element) => element.collections === "Home Decor");
+        createData(homeDecoreData, "homeDecoreData");
+
+        const kitchenData = this.productList.filter((element) => element.collections === "Kitchen");
+        createData(kitchenData, "kitchenData");
+
+        function createData(myArray, id) {
+          var shortItemAllCreate = "";
+          shortItemAll = document.getElementById(id);
+          for (var i in myArray) {
+            shortItemAllCreate += "<article class='short-item'>";
+            shortItemAllCreate += "<div class='short-item__all'>";
+            shortItemAllCreate += "<a class='short-item__image-bg' href='product_page.html'>";
+            shortItemAllCreate +=
+              "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' data-lazy='https://via.placeholder.com/262x360' alt='' />";
+            shortItemAllCreate += "</a>";
+            shortItemAllCreate += "<div class='short-item__top'>";
+            shortItemAllCreate += "<div class='short-item__cols'>";
+            shortItemAllCreate += "<div class='short-item__col'>";
+            shortItemAllCreate += "<span class='item-tag item-tag_green'>New</span>";
+            shortItemAllCreate += "</div>";
+            shortItemAllCreate += "<div class='short-item__col'>";
+            shortItemAllCreate += "<button class='heart-button js-toggle-active'></button>";
+            shortItemAllCreate += "</div>";
+            shortItemAllCreate += "</div>";
+            shortItemAllCreate += "</div>";
+            shortItemAllCreate += "<h4 class='short-item__title'>";
+            shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
+            shortItemAllCreate += "</h4>";
+            shortItemAllCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
+            shortItemAllCreate += "</div>";
+            shortItemAllCreate += "</article>";
+          }
+          shortItemAll.innerHTML = shortItemAllCreate;
+        }
+
+        this.allMyArray.forEach((data1) => {
+          if (data1.title === "Hero Slider") {
+            this.heroSliderList = data1.data;
+          }
+        });
+
+        heroSliderData(this.heroSliderList, "heroSlider");
+
+        function heroSliderData(myArray, id) {
+          var heroSliderCreate = "";
+          heroSliderDataList = document.getElementById(id);
+          for (var i in myArray) {
+            heroSliderCreate += "<div class='main-slider__item js-slide active'>";
+            heroSliderCreate += "<div class='main-slider__max'>";
+            heroSliderCreate += "<div class='main-slider__row'>";
+            heroSliderCreate += "<div class='main-slider__cell'>";
+            heroSliderCreate += "<div class='main-slider__content'>";
+            heroSliderCreate += "<span class='main-slider__subtitle category-subtitle'><b>new</b> collection</span>";
+            heroSliderCreate += "<h2 class='main-slider__title'>" + myArray[i].text + " </h2>";
+            heroSliderCreate += "<a class='main-slider__button button' href='shop.html'>";
+            heroSliderCreate += "<span class='button__text'>Shop now</span>";
+            heroSliderCreate += "</a>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "<div class='main-slider__image-wrap'>";
+            heroSliderCreate += "<div class='main-slider__image'  data-bg='" + myArray[i]["image-link"] + "'></div>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "</div>";
+            heroSliderCreate += "</div>";
+          }
+          heroSliderDataList.innerHTML = heroSliderCreate;
+        }
+
+        bestPrdouctSliderData(this.productList, "bestPrdouctSlider");
+
+        function bestPrdouctSliderData(myArray, id) {
+          var bestProductSliderCreate = "";
+          bestProductSliderList = document.getElementById(id);
+          for (var i in myArray) {
+            bestProductSliderCreate += "<article class='short-item'>";
+            bestProductSliderCreate += "<div class='short-item__all'>";
+            bestProductSliderCreate += "<a class='short-item__image-bg' href='product_page.html'>";
+            bestProductSliderCreate += "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' alt='' />";
+            bestProductSliderCreate += "</a>";
+            bestProductSliderCreate += "<div class='short-item__top'>";
+            bestProductSliderCreate += "<div class='short-item__cols'>";
+            bestProductSliderCreate += "<div class='short-item__col'>";
+            bestProductSliderCreate += "<span class='item-tag item-tag_red'>Sale</span>";
+            bestProductSliderCreate += "<span class='item-tag item-tag_green'>New</span>";
+            bestProductSliderCreate += "</div>";
+            bestProductSliderCreate += "<div class='short-item__col'>";
+            bestProductSliderCreate += "<button class='heart-button js-toggle-active'></button>";
+            bestProductSliderCreate += "</div>";
+            bestProductSliderCreate += "</div>";
+            bestProductSliderCreate += "</div>";
+            bestProductSliderCreate += "<h4 class='short-item__title'>";
+            bestProductSliderCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
+            bestProductSliderCreate += "</h4>";
+            bestProductSliderCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
+            bestProductSliderCreate += "<span class='short-item__old-price'>" + myArray[i]["strikethrough-price"] + "</span>";
+            bestProductSliderCreate += "</div>";
+            bestProductSliderCreate += "</article>";
+          }
+          bestProductSliderList.innerHTML = bestProductSliderCreate;
+        }
+
+        include("assets/js/slider_script.js");
+      };
+      request.send();
+    </script>
   </body>
 </html>
