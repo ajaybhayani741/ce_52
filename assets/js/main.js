@@ -377,17 +377,22 @@ window.onload = function () {
         });
       if (document.body.scrollHeight > document.body.clientHeight) {
         $("html").addClass("remove-scroll");
+        $("body").addClass("pushmenu-push-toleft");
       }
       $("html").addClass("hidden");
     });
 
     $(".js-mob-close").live("click", function () {
       timerOut(navTimer);
-      $(this).removeClass("active");
-      $(".js-mob-hide").removeClass("active").stop().fadeOut(300);
+      $("body").removeClass("pushmenu-push-toleft").stop();
       navTimer = setTimeout(function () {
         $("html").removeClass("hidden remove-scroll");
+        $("body").removeClass("pushmenu-push-toleft");
       }, 301);
+    });
+
+    $(".main").on("click", function () {
+      $("body").removeClass("pushmenu-push-toleft");
     });
 
     // slidedown
