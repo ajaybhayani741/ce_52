@@ -145,6 +145,29 @@ window.onload = function () {
 
   // sliders
   (function () {
+    if ($(".js-brand-carousel").length) {
+      $(".js-brand-carousel").on("init", function () {
+        $(".js-brand-carousel").removeClass("loaded");
+      });
+      $(".js-brand-carousel").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 6,
+        slidesToScroll: 4,
+        touchThreshold: 200,
+        speed: 500,
+        waitForAnimate: false,
+        adaptiveHeight: true,
+        responsive: [
+          { breakpoint: 992, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+          { breakpoint: 701, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+          { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+        ],
+      });
+    }
+
     if ($(".js-product-slider").length) {
       $(".js-product-slider").on("init", function () {
         $(".js-product-slider").removeClass("loaded");
@@ -665,8 +688,8 @@ jQuery(window).on("scroll load", function () {
 
 // Side Nav Jquery
 $(function () {
-  $(".side-nav__item").on("click", function () {
-    $(".side-nav__item").removeClass("active");
+  $(".short-item__color-group .circle").on("click", function () {
+    $(".circle").removeClass("active");
     $(this).addClass("active");
   });
 });

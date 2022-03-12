@@ -455,23 +455,16 @@
         <!-- INNER TOP END -->
 
         <!-- BEGIN SHOP -->
-        <div class="shop wrapper">
+        <div class="shop wrapper container-content">
           <div class="shop__cols">
             <!-- BEGIN LEFT COLUMN -->
             <aside class="shop__left">
-              <form>
-                <div class="search-form">
-                  <input class="search-form__input" type="email" placeholder="Search" />
-                  <button class="search-form__button" type="submit"></button>
-                </div>
-              </form>
-
               <div class="filters">
                 <section class="widget js-slidedown">
                   <h2 class="widget__title widget__title_hide-mob">Categories</h2>
                   <a class="widget__button js-slidedown-button" href="javascript:void(0);">Categories</a>
                   <div class="widget__hide js-slidedown-hide">
-                    <ul class="side-nav" id="sideNavForCategories"></ul>
+                    <ul class="side-nav__radio" id="sideNavForCategories"></ul>
                   </div>
                 </section>
 
@@ -652,15 +645,15 @@
                 <div class="shop-panel__right">
                   <div class="shop-panel__select select select_1">
                     <select class="js-formstyler">
-                      <option>All</option>
-                      <option>Carpet</option>
-                      <option>Home decore</option>
-                      <option>Kitchen</option>
+                      <option>Best Selling</option>
+                      <option>Price high to low</option>
+                      <option>Price low to high</option>
+                      <option>Date, old to new</option>
+                      <option>Date, new to old</option>
                     </select>
                   </div>
                 </div>
               </div>
-
               <div class="inner-catalog" id="shortItemAll"></div>
 
               <div class="page-nav">
@@ -691,34 +684,6 @@
           <div class="mob-items js-to-2"></div>
         </div>
         <!-- SHOP END -->
-
-        <!-- BEGIN NEWSLETTER -->
-        <aside class="newsletter">
-          <div class="newsletter__banner" data-bg="https://via.placeholder.com/1680x450">
-            <div class="newsletter__main">
-              <div class="newsletter__bg">
-                <div class="newsletter__max">
-                  <h4 class="newsletter__title">Newsletter</h4>
-                  <p class="newsletter__text">Be the first to hear about deals, offers and upcoming collections.</p>
-                  <form>
-                    <div class="newsletter-form">
-                      <div class="newsletter-form__left">
-                        <input class="newsletter-form__input text-input" type="email" placeholder="Enter your email" />
-                      </div>
-                      <div class="newsletter-form__right">
-                        <button class="newsletter-form__button button">
-                          <span class="button__text">Subscribe</span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <img class="newsletter__vector" src="assets/img/svg/vector-newsletter.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </aside>
-        <!-- NEWSLETTER END -->
       </main>
       <!-- MAIN END -->
 
@@ -894,23 +859,23 @@
         function displaySideNavForCategories(myArray, id) {
           var shortItemAllCreate = "";
           shortItemAll = document.getElementById(id);
-          shortItemAllCreate += "<li class='side-nav__item active'>";
-          shortItemAllCreate += "<a class='side-nav__link' href='javascript:void(0)' onClick='selectCollectionsList(0)'>All</a>";
+          shortItemAllCreate += "<li>";
+          shortItemAllCreate += "<label class='radio__label'>";
+          shortItemAllCreate += "<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(0)' />";
+          shortItemAllCreate += "<span class='radio__icon'></span>";
+          shortItemAllCreate += "<span class='radio__text'>All</span>";
+          shortItemAllCreate += "</label>";
           shortItemAllCreate += "</li>";
 
           for (var i in myArray) {
-            shortItemAllCreate += "<li class='side-nav__item'>";
-            shortItemAllCreate +=
-              "<a class='side-nav__link' href='javascript:void(0)' onClick='selectCollectionsList(" +
-              myArray[i].id +
-              ")'>" +
-              myArray[i]["collections-list"] +
-              "</a>";
+            shortItemAllCreate += "<li>";
+            shortItemAllCreate += "<label class='radio__label'>";
+            shortItemAllCreate += "<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(" + myArray[i].id + ")' />";
+            shortItemAllCreate += "<span class='radio__icon'></span>";
+            shortItemAllCreate += "<span class='radio__text'>" + myArray[i]["collections-list"] + "</span>";
+            shortItemAllCreate += "</label>";
             shortItemAllCreate += "</li>";
           }
-          shortItemAllCreate += "<li class='side-nav__item'>";
-          shortItemAllCreate += "<a class='side-nav__link' href='javascript:void(0)'>New Arrivals</a>";
-          shortItemAllCreate += "</li>";
           shortItemAll.innerHTML = shortItemAllCreate;
         }
       };
@@ -937,6 +902,7 @@
         for (var i in myArray) {
           shortItemAllCreate += "<article class='short-item'>";
           shortItemAllCreate += "<div class='short-item__all'>";
+          shortItemAllCreate += "<div class='short-item__product'>";
           shortItemAllCreate += "<a class='short-item__image-bg' href='product_page.html'>";
           shortItemAllCreate +=
             "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' data-lazy='" + myArray[i]["image-1"] + "' alt='' />";
@@ -944,21 +910,37 @@
           shortItemAllCreate += "<div class='short-item__top'>";
           shortItemAllCreate += "<div class='short-item__cols'>";
           shortItemAllCreate += "<div class='short-item__col'>";
-          shortItemAllCreate += "<span class='item-tag item-tag_green'>New</span>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "<div class='short-item__col'>";
-          shortItemAllCreate += "<button class='heart-button js-toggle-active'></button>";
+          shortItemAllCreate += "<span class='item-tag item-tag_red'>Hot</span>";
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "</div>";
+          shortItemAllCreate += "<div class='short-item_button_group'>";
+          shortItemAllCreate += "<button class='short-item__button heart-button js-toggle-active'></button>";
+          shortItemAllCreate += "<button class='short-item__button cart-button js-toggle-active'></button>";
+          shortItemAllCreate += "</div>";
+          shortItemAllCreate += "</div>";
+          shortItemAllCreate += "<div class='short-item__info'>";
           shortItemAllCreate += "<h4 class='short-item__title'>";
           shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
           shortItemAllCreate += "</h4>";
           shortItemAllCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
+          shortItemAllCreate += "<span class='short-item__old-price'>$52.99</span>";
+          shortItemAllCreate += "<div class='short-item__color-group'>";
+          shortItemAllCreate += "<a href='javascript:void(0)' class='circle gray'></a>";
+          shortItemAllCreate += "<a href='javascript:void(0)' class='circle yellow active'></a>";
+          shortItemAllCreate += "<a href='javascript:void(0)' class='circle white'></a>";
+          shortItemAllCreate += "</div>";
+          shortItemAllCreate += "</div>";
           shortItemAllCreate += "</div>";
           shortItemAllCreate += "</article>";
         }
         shortItemAll.innerHTML = shortItemAllCreate;
+
+        $(function () {
+          $(".short-item__color-group .circle").on("click", function () {
+            $(this).siblings(this).removeClass("active").end().addClass("active");
+          });
+        });
       }
 
       request.send();
