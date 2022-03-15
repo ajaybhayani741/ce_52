@@ -28,7 +28,7 @@
         margin: 0;
         padding: 0;
         display: none;
-        z-index: 99999;
+        z-index: 9999;
         position: absolute;
         top: 0;
         left: 0;
@@ -425,35 +425,6 @@
 
       <!-- BEGIN MAIN -->
       <main class="main">
-        <!-- BEGIN INNER TOP -->
-        <div class="inner-top">
-          <div class="inner-top__main wrapper">
-            <div class="inner-top__cols">
-              <div class="inner-top__left">
-                <h1 class="inner-top__title">FAQ</h1>
-                <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="#">Home</a>
-                    </li>
-                    <li class="breadcrumbs__item">FAQ</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="inner-top__right">
-                <div class="inner-top__image" data-bg="https://via.placeholder.com/800x400"></div>
-              </div>
-            </div>
-            <img
-              class="inner-top__bg"
-              src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-lazy="assets/img/svg/vector-inner-top.svg"
-              alt=""
-            />
-          </div>
-        </div>
-        <!-- INNER TOP END -->
-
         <!-- BEGIN FAQ -->
         <div class="faq-page wrapper">
           <div class="faq-page__cols">
@@ -709,12 +680,36 @@
           faqData = document.getElementById(id);
           for (var i in myArray) {
             faqDataCreate += "<article class='faq__item js-faq-item'>";
-            faqDataCreate += "<h2 class='faq__title'>";
             faqDataCreate += "<a class='faq__button js-faq-button' href='javascript:void(0);'>" + myArray[i].question + "</a>";
-            faqDataCreate += "</h2>";
             faqDataCreate += "<div class='faq__hide js-faq-hide'>";
             faqDataCreate += "<div class='faq__content'>";
+            faqDataCreate += "<div class='faq__list-item'>";
+            faqDataCreate += "<label>Add items to your bag:</label>";
+            faqDataCreate += "<ul>";
+            faqDataCreate += "<li>Ensure you are on the website.</li>";
+            faqDataCreate +=
+              "<li>Browse the categories across the top navigation bar which includes New In, Clothing, Bags & Accessories, Shoes, Collections, Stores, and Sale.";
+            faqDataCreate += "</li>";
+            faqDataCreate +=
+              "<li>Once you have found an item to purchase, select your preferred colour, size (if applicable) and the quantity you wish to purchase then simply click ‘ADD TO CART’.";
+            faqDataCreate += "</li>";
+            faqDataCreate +=
+              "<li>You can then continue shopping or click ‘CHECKOUT’ to review the items in your bag and to finalise your order.</li>";
+            faqDataCreate += "</ul>";
+            faqDataCreate += "</div>";
+            faqDataCreate += "<div class='faq__list-item'>";
+            faqDataCreate += "<label>Proceed to purchasing items:</label>";
+            faqDataCreate += "<ul>";
+            faqDataCreate +=
+              "<li>Once you have finished browsing and have added the items you wish to purchase to your bag, click the ‘CHECKOUT’ button located at the top right of the website.";
+            faqDataCreate += "</li>";
+            faqDataCreate +=
+              "<li>Within the checkout you can also amend the quantity selected for each itemor delete unwanted by simply clicking the ‘EDIT’ button that is located on the right hand side within the Order Overview section of the checkout. Your amendments will be updated and allow you to proceed with the checkout process.";
+            faqDataCreate += "</li>";
+            faqDataCreate += "</ul>";
+            faqDataCreate += "</div>";
             faqDataCreate += "<p>" + myArray[i].answer + "</p>";
+            faqDataCreate += "</p>";
             faqDataCreate += "</div>";
             faqDataCreate += "</div>";
             faqDataCreate += "</article>";

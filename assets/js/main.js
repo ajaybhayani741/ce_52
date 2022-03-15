@@ -174,7 +174,7 @@ window.onload = function () {
       });
 
       $(".js-product-slider").slick({
-        dots: true,
+        dots: false,
         arrows: false,
         infinite: true,
         autoplay: false,
@@ -183,6 +183,19 @@ window.onload = function () {
         touchThreshold: 200,
         speed: 500,
         waitForAnimate: false,
+        asNavFor: ".js-click-product-normal",
+      });
+    }
+
+    if ($(".js-click-product-normal").length) {
+      $(".js-click-product-normal").slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: ".js-product-slider",
+        dots: false,
+        focusOnSelect: true,
+        infinite: true,
+        arrows: false,
       });
     }
   })();

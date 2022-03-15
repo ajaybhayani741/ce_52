@@ -1,5 +1,10 @@
 @charset 'utf-8';
 
+@import url('../fonts/ionicons/css/ionicons.min.css');
+@import url('../fonts/font-awesome/font-awesome.min.css');
+@import url('../fonts/Eina03/fonts.css');
+@import url('../fonts/theme-icon/theme-font.css');
+
 a, article, aside, b, blockquote, body, caption, center, cite, code, dd, div, dl, dt, em, fgroup, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, i, iframe, img, label, legend, li, main, nav, object, ol, p, pre, q, s, section, small, span, strong, table, tbody, td, tfoot, th, thead, time, tr, ul {
     font-size: 100%;
     margin: 0;
@@ -187,6 +192,7 @@ body {
 
 .container-content {
     max-width: 1740px;
+    padding: 0 15px;
 }
 
 .row {
@@ -1079,7 +1085,7 @@ button {
 .header.scrolled {
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-    z-index: 100000;
+    z-index: 10000;
 }
 
 .header__main {
@@ -4833,9 +4839,11 @@ a.slide-nav__link::after {
 }
 
 .product {
-    padding-top: 120px;
-    padding-bottom: 26px;
-    position: relative
+    padding-top: 90px;
+    padding-bottom: 105px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 110px;
 }
 
 .product__vector {
@@ -4854,30 +4862,41 @@ a.slide-nav__link::after {
 }
 
 .product__left {
-    width: 56.14%;
+    width: 50%;
     position: relative;
     z-index: 2
 }
 
 .product__right {
-    width: 43.86%;
-    padding: 0 0 0 43px;
+    width: 50%;
+    padding: 0 0 0 0;
     position: relative;
     z-index: 2
 }
 
 .product__content {
-    min-height: 449px
+    max-width: 680px;
+    min-height: 449px;
+    padding: 0 0 0 140px;
+}
+
+.product-detail_label {
+    font: 400 13px/18px "Eina", sans-serif;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #999;
 }
 
 .product__title {
-    padding: 0 0 20px;
-    font: 400 40px/1 "Eina", sans-serif;
-    text-transform: capitalize
+    padding: 0 0 15px;
+    font: 400 36px/1 "Eina", sans-serif;
+    text-transform: capitalize;
 }
 
 .product__top {
-    padding: 0 0 23px
+    padding: 0 0 23px;
+    margin-top: 40px;
 }
 
 .product__text {
@@ -4885,34 +4904,36 @@ a.slide-nav__link::after {
 }
 
 .product__prices {
-    padding: 0 0 37px
+    padding: 0 0 10px
 }
 
 .product__price {
-    padding: 3px 16px 3px 0;
+    padding: 3px 0;
     display: inline-block;
     vertical-align: middle;
-    font: 30px/1 "Eina", sans-serif;
-    color: #000
+    font: 700 20px/1 "Eina", sans-serif;
+    color: #000;
 }
 
 .product__old-price {
-    padding: 3px 0;
+    padding: 3px 3px 3px 0;
+    margin-right: 16px;
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    font: 300 20px/1 "Eina", sans-serif;
-    color: #444
+    font: 500 18px/1 "Eina", sans-serif;
+    color: #999;
+    text-decoration: line-through;
 }
 
-.product__old-price:before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background: #444
+.product-color_switch {
+    margin-bottom: 25px;
+}
+
+.product-color_switch .short-item__color-group .circle {
+    width: 33px;
+    height: 33px;
+    margin: 0 14px 0 0;
 }
 
 .product-rating {
@@ -4938,6 +4959,63 @@ a.slide-nav__link::after {
 
 .product-rating__stars {
     margin-bottom: 0 !important
+}
+
+.product-add__whishlist {
+    padding-bottom: 40px;
+}
+
+.product-add__whishlist .btn-wishlist {
+    font: 400 15px/21px "Eina", sans-serif;
+    color: #2b2b2b;
+    position: relative;
+    padding-bottom: 2px;
+    letter-spacing: 0.02em;
+}
+
+.product-add__whishlist .btn-wishlist::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+}
+
+.product-share {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.product-share .social a {
+    color: #888;
+    font: 600 17px/17px "Eina", sans-serif;
+    padding-right: 20px;
+    -webkit-transition: .3s ease-out;
+    -ms-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+.product-share .social a:hover {
+    color: #ff8e8e;
+}
+
+.product-faq .faq__button {
+    font: 600 16px/24px "Eina", sans-serif;
+    text-transform: uppercase;
+}
+
+.product-faq .faq__hide {
+    border-bottom: 0;
+}
+
+.product-faq .faq__content {
+    padding: 20px 64px 0px 64px;
+}
+
+.product-faq .faq__content p {
+    padding-bottom: 0;
 }
 
 .chars {
@@ -4975,14 +5053,61 @@ a.slide-nav__link::after {
     color: #95ccb5
 }
 
-.size {
+.size_select {
+    max-width: 200px;
+    height: 40px;
+    border: 1px solid #eee;
+    padding: 0 !important;
+    margin: 0 0 30px !important;
+}
+
+.size_select::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "\f107";
+    right: 15px;
+    font-size: 5px;
+    font-family: 'FontAwesome';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.size_select .jq-selectbox .jq-selectbox__select,
+.size_select .jq-selectbox .jq-selectbox__select-text,
+.size_select .jq-selectbox {
+    height: 100%;
+}
+
+.size_select .jq-selectbox .jq-selectbox__select-text {
+    padding: 8px 15px;
+}
+
+.size_select .jq-selectbox__dropdown {
+    margin: 0 !important;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    padding: 5px 0;
+}
+
+.size_select .jq-selectbox__dropdown .js-select-scroll {
+    padding-bottom: 0;
+}
+
+.size_select .jq-selectbox__dropdown .js-select-scroll li {
+    padding: 5px 15px;
+}
+
+/* .size {
     margin: 0 -5px;
     padding: 0 0 35px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex
-}
+} */
 
 .size__item {
     padding: 0 5px 10px
@@ -5042,21 +5167,82 @@ a.slide-nav__link::after {
     transition: .3s ease-out
 }
 
+.product-countdown {
+    margin-bottom: 32px;
+}
+
+.product-countdown h3 {
+    font: 500 16px/1.1 "Eina", sans-serif;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    padding-bottom: 0;
+}
+
+.product-countdown .progress {
+    overflow: hidden;
+    height: 12px;
+    margin-bottom: 20px;
+    background-color: #cccccc;
+}
+
+.product-countdown .progress.active .progress-bar, .progress-bar.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+
+.product-countdown .progress-striped .progress-bar, .progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+.product-countdown .progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
+    -webkit-box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 40px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
 .count {
-    width: 109px;
-    height: 50px;
+    width: 130px;
+    height: 55px;
     position: relative
 }
 
 .count__input {
     width: 100%;
-    height: 50px;
+    height: 100%;
     padding: 0 36px;
     display: block;
-    background: #f8f8fb;
-    font: 16px/1 "Eina", sans-serif;
+    background: #fff;
+    font: 400 18px/1 "Eina", sans-serif;
     color: #000;
-    text-align: center
+    text-align: center;
+    border: 1px solid #eee;
 }
 
 .count__button {
@@ -5107,23 +5293,37 @@ a.slide-nav__link::after {
 }
 
 .product-add {
-    margin: 0 -15px;
-    padding: 0 0 10px;
+    padding: 0 0 0;
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
 }
 
 .product-add__col {
-    padding: 0 15px 20px
+    padding: 0 0 0
+}
+
+.product-add .product-add__col:last-child {
+    width: 100%;
 }
 
 .product-add__button, .product-add__count {
-    margin: 0
+    height: 55px;
+}
+
+.product-add__button {
+    margin-left: 10px;
+    margin-bottom: 0;
+    width: 100%;
+    font: 600 15px/58px "Eina", sans-serif;
+    text-transform: uppercase;
+}
+
+.product-add__button i {
+    margin-right: 10px;
+    font-weight: 600;
 }
 
 .product-gallery {
@@ -5169,7 +5369,7 @@ a.slide-nav__link::after {
 }
 
 .product-slider__link {
-    height: 500px;
+    /* height: 500px; */
     display: block
 }
 
@@ -5178,6 +5378,19 @@ a.slide-nav__link::after {
     height: 100%;
     margin: 0;
     object-fit: contain
+}
+
+.multiple-img-list {
+    margin: 0 -5px;
+}
+
+.multiple-img-list .product-col {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.multiple-img-list .product-col.slick-current .img {
+    border: 1px solid #cccccc;
 }
 
 .product-tabs {
@@ -5217,10 +5430,15 @@ a.slide-nav__link::after {
     padding: 0 0 10px
 }
 
+.faq__content .review:first-child {
+    padding-top: 0;
+}
+
 .review {
-    margin: 0 0 20px;
+    margin: 0 0 0;
     padding: 40px 40px 37px;
-    background: #f8f8f8
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .review_reply {
@@ -5305,7 +5523,7 @@ a.slide-nav__link::after {
 }
 
 .add-review__top {
-    padding: 0 0 31px
+    padding: 60px 0 31px
 }
 
 .add-review__title {
@@ -5319,7 +5537,27 @@ a.slide-nav__link::after {
 }
 
 .add-review__button {
-    margin-top: 10px
+    margin-top: 10px;
+    max-width: 265px;
+    width: 100%;
+}
+
+.add-review .textarea, .add-review .text-input {
+    color: #666;
+    background: #FFF;
+    padding-left: 20px;
+    border: 1px solid #eee;
+    padding: 13px 15px 13px;
+    margin-bottom: 30px;
+}
+
+.add-review .textarea::placeholder,
+.add-review .textarea::-webkit-input-placeholder,
+.add-review .textarea::-moz-placeholder,
+.add-review .text-input::placeholder,
+.add-review .text-input::-webkit-input-placeholder,
+.add-review .text-input::-moz-placeholder {
+    color: #666 !important;
 }
 
 .blog-page {
@@ -5890,18 +6128,8 @@ a.slide-nav__link::after {
     margin-bottom: 51px
 }
 
-.faq__item.active .faq__title:before {
-    height: 2px;
-    background: #000;
-    -webkit-transition: .3s ease-out;
-    -ms-transition: .3s ease-out;
-    transition: .3s ease-out
-}
-
-.faq__item.active .faq__button:after, .faq__item.active .faq__button:before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg)
+.faq__item.active .faq__button:before {
+    content: "\f462";
 }
 
 .faq__title {
@@ -5911,59 +6139,57 @@ a.slide-nav__link::after {
     position: relative
 }
 
-.faq__title:before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    margin: -1px 0 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, .1)
-}
-
 .faq__button {
-    padding: 40px 50px 40px 0;
+    padding: 22px 30px 22px 60px;
+    background: #222;
+    color: #fff;
+    margin-top: 50px;
     display: block;
+    font: 400 16px/24px "Eina", sans-serif;
     position: relative;
-    z-index: 1;
-    color: #000
-}
-
-.faq__button:after, .faq__button:before {
-    content: "";
-    width: 15px;
-    height: 9px;
-    margin: -1px 0 0;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    -webkit-transition: .3s ease-out;
-    -ms-transition: .3s ease-out;
-    transition: .3s ease-out
 }
 
 .faq__button:before {
-    background: url(../img/svg/arrow-select.svg) 0 0/100% 100% no-repeat
+    font: 600 30px 'ionicons';
+
+    content: "\f489";
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-.faq__button:after {
-    opacity: 0;
-    z-index: 1;
-    background: url(../img/svg/arrow-select__red.svg) 0 0/100% 100% no-repeat
+.faq__list-item {}
+
+.faq__list-item label {
+    font-size: 600 16px/24px "Eina", sans-serif;
+    font-weight: 600;
+    color: #222;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.faq__list-item ul {
+    padding-left: 15px;
+    list-style: none;
+}
+
+.faq__list-item ul li:before {
+    content: "";
+}
+
+.faq__list-item ul li {
+    list-style-type: decimal;
+    color: #666666;
+    font: 400 14px/24px "Eina", sans-serif;
+    padding-left: 10px;
+    padding-top: 15px;
 }
 
 .desktop .faq__button:hover {
-    color: #ff8e8e;
+    color: #fff;
     text-decoration: none
-}
-
-.desktop .faq__button:hover:before {
-    opacity: 0
-}
-
-.desktop .faq__button:hover:after {
-    opacity: 1
 }
 
 .faq__hide {
@@ -10317,7 +10543,9 @@ body.compensate-for-scrollbar .header {
     }
 
     .product {
-        padding-top: 20px
+        padding-top: 20px;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
     }
 
     .product-tabs {
@@ -10753,9 +10981,9 @@ body.compensate-for-scrollbar .header {
         line-height: 34px
     }
 
-    .product__right {
+    /* .product__right {
         padding-left: 30px
-    }
+    } */
 
     .product__vector {
         right: -200px
@@ -10910,9 +11138,9 @@ body.compensate-for-scrollbar .header {
         padding: 28px 0 0
     }
 
-    .faq__button {
+    /* .faq__button {
         padding: 30px 40px 30px 0
-    }
+    } */
 
     .faq__content {
         padding-top: 35px
@@ -11074,6 +11302,10 @@ body.compensate-for-scrollbar .header {
 
     .inner-catalog {
         margin: 0 -10px
+    }
+
+    .product__content {
+        padding: 0 15px 0 30px;
     }
 }
 
@@ -12478,7 +12710,12 @@ body.compensate-for-scrollbar .header {
     }
 
     .product__content {
-        min-height: 0
+        min-height: 0;
+        padding: 0;
+    }
+
+    .product-add__button {
+        width: 80%;
     }
 
     .product__prices {
@@ -13515,6 +13752,23 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:479px) {
+
+    .product-add {
+        flex-wrap: wrap;
+    }
+
+    .product-add__button {
+        margin-left: 0;
+    }
+
+    .product-faq .faq__button {
+        font: 600 14px/24px "Eina", sans-serif;
+    }
+
+    .faq__button:before {
+        left: 20px;
+    }
+
     .user-nav__text {
         min-width: 16px;
         height: 16px;
@@ -13526,6 +13780,7 @@ body.compensate-for-scrollbar .header {
         font: bold 12px/16px "Eina", sans-serif;
         border-radius: 8px
     }
+
 
     .user-nav {
         margin: 0 -6px
