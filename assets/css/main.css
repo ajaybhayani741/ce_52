@@ -6121,7 +6121,8 @@ a.slide-nav__link::after {
     width: 66.6666%;
     min-width: 0;
     max-width: 100%;
-    padding: 0 130px 0 0
+    padding: 0 0 0 0;
+    margin: 0 auto;
 }
 
 .faq-heading__title {
@@ -11235,7 +11236,7 @@ body.compensate-for-scrollbar .header {
     }
 
     .faq-page__left {
-        padding: 0 50px 0 0;
+        padding: 0 0 0 0;
     }
 
     /* .faq-page__right {
@@ -11967,6 +11968,10 @@ body.compensate-for-scrollbar .header {
 @media screen and (max-width:800px) {
     .short-item__image-bg {
         height: 300px
+    }
+
+    .multiple-img-list .product-col {
+        height: 110px;
     }
 }
 
