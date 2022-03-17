@@ -5369,15 +5369,15 @@ a.slide-nav__link::after {
 }
 
 .product-slider__link {
-    /* height: 500px; */
-    display: block
+    height: 800px;
+    display: block;
 }
 
 .product-slider__image {
     width: 100%;
     height: 100%;
     margin: 0;
-    object-fit: contain
+    object-fit: cover
 }
 
 .multiple-img-list {
@@ -5387,6 +5387,17 @@ a.slide-nav__link::after {
 .multiple-img-list .product-col {
     padding: 0 5px;
     cursor: pointer;
+    height: 200px;
+}
+
+.multiple-img-list .product-col .img {
+    height: 100%;
+}
+
+.multiple-img-list .product-col .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .multiple-img-list .product-col.slick-current .img {
@@ -6107,15 +6118,21 @@ a.slide-nav__link::after {
 }
 
 .faq-page__left {
-    width: 100%;
+    width: 66.6666%;
     min-width: 0;
-    max-width: 760px;
-    padding: 0 40px 0 0
+    max-width: 100%;
+    padding: 0 130px 0 0
+}
+
+.faq-heading__title {
+    font: 500 36px/1.1 "Eina", sans-serif;
+    margin: 20px 0 10px;
+    padding-bottom: 0;
 }
 
 .faq-page__right {
-    width: 360px;
-    padding: 40px 0 0;
+    width: 33.3333%;
+    padding: 0 0 0;
     -webkit-flex-grow: 0;
     flex-grow: 0;
     -ms-flex-grow: 0;
@@ -6145,7 +6162,7 @@ a.slide-nav__link::after {
     color: #fff;
     margin-top: 50px;
     display: block;
-    font: 400 16px/24px "Eina", sans-serif;
+    font: 600 16px/24px "Eina", sans-serif;
     position: relative;
 }
 
@@ -6160,9 +6177,9 @@ a.slide-nav__link::after {
     transform: translateY(-50%);
 }
 
-.faq__list-item {}
+.summary__list-item {}
 
-.faq__list-item label {
+.summary__list-item label {
     font-size: 600 16px/24px "Eina", sans-serif;
     font-weight: 600;
     color: #222;
@@ -6170,16 +6187,52 @@ a.slide-nav__link::after {
     margin-bottom: 10px;
 }
 
-.faq__list-item ul {
+.faq-filter__list {
+    /* padding-right: 90px; */
+}
+
+.faq-filter__list li {
+    border-bottom: 1px solid #bdbdbd;
+    padding: 20px 0;
+}
+
+.faq-filter__list li::before {
+    content: "";
+}
+
+.faq-filter__list li a {
+    font: 400 14px/20px "Eina", sans-serif;
+    color: #888;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+}
+
+.faq-filter__list li a i {
+    font-size: 6px;
+    color: #888;
+    padding-right: 30px;
+}
+
+.faq-filter__list li.active a, .faq-filter__list li:hover a {
+    color: #222;
+}
+
+.faq-filter__list li.active a i, .faq-filter__list li:hover a i {
+    color: #ff8e8e;
+}
+
+.summary__list-item ul {
     padding-left: 15px;
     list-style: none;
 }
 
-.faq__list-item ul li:before {
+.summary__list-item ul li:before {
     content: "";
 }
 
-.faq__list-item ul li {
+.summary__list-item ul li {
     list-style-type: decimal;
     color: #666666;
     font: 400 14px/24px "Eina", sans-serif;
@@ -8149,7 +8202,7 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] 
 }
 
 .dots-2 {
-    padding: 8px 0 0
+    padding: 8px 0 20px
 }
 
 .dots-2 .slick-dots {
@@ -10032,7 +10085,50 @@ body.compensate-for-scrollbar .header {
     color: #ff8e8e
 }
 
+
+.privacy {
+    padding-bottom: 80px;
+}
+
+.privacy-heading__title {
+    font: 600 50px/54px "Eina", sans-serif;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.privacy-heading__sub_title {
+    font: 600 21px/13px "Eina", sans-serif;
+    padding: 0 0 15px 0;
+}
+
+.privacy-text .summary__list-item ul {
+    padding-bottom: 0;
+}
+
+.privacy-text .summary__list-item ul li {
+    padding-top: 0;
+    padding-bottom: 15px;
+    font: 400 14px/33px "Eina", sans-serif;
+}
+
+.privacy-text p, .privacy-text span {
+    color: #666;
+    font: 400 14px/33px "Eina", sans-serif;
+    padding-bottom: 15px;
+    display: block;
+}
+
+.privacy-text h5 {
+    padding: 0 0 15px;
+    font: 600 18px/28px "Eina", sans-serif;
+}
+
 @media screen and (max-width:1700px) {
+
+    .container-content {
+        max-width: 1200px;
+    }
+
     .main-slider__title {
         font-size: 110px
     }
@@ -10044,6 +10140,7 @@ body.compensate-for-scrollbar .header {
     .inner-top__left:before {
         right: 40px
     }
+
 }
 
 @media screen and (max-width:1599px) {
@@ -10115,6 +10212,10 @@ body.compensate-for-scrollbar .header {
 
     .header-nav__list {
         margin: 0 -15px
+    }
+
+    .container-content {
+        max-width: 991px;
     }
 
     .user-nav {
@@ -11133,10 +11234,14 @@ body.compensate-for-scrollbar .header {
         padding: 0 0 20px
     }
 
-    .faq-page__right {
-        width: 260px;
-        padding: 28px 0 0
+    .faq-page__left {
+        padding: 0 50px 0 0;
     }
+
+    /* .faq-page__right {
+        width: 260px;
+        padding: 0 0 0
+    } */
 
     /* .faq__button {
         padding: 30px 40px 30px 0
@@ -12087,6 +12192,11 @@ body.compensate-for-scrollbar .header {
         right: 2px
     }
 
+    .about-detail__info_box h4 {
+        font: 500 26px/39.6px "Eina", sans-serif;
+        margin-bottom: 10px;
+    }
+
     .collection-block {
         padding-top: 0;
         padding-bottom: 60px
@@ -12983,13 +13093,15 @@ body.compensate-for-scrollbar .header {
     }
 
     .faq-page__left {
-        width: auto;
+        width: 100%;
+        max-width: 100%;
         margin-top: -30px;
-        padding: 0 0 15px
+        padding: 0 0 15px;
     }
 
     .faq-page__right {
-        width: auto
+        width: 100%;
+        max-width: 100%;
     }
 
     .faq-page__right .sale-banner {
@@ -13590,6 +13702,10 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:600px) {
+
+    .header__main {
+        padding: 20px 0;
+    }
 
     .about-section {
         padding: 0 0 0;

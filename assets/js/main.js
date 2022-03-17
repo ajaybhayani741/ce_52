@@ -168,36 +168,36 @@ window.onload = function () {
       });
     }
 
-    if ($(".js-product-slider").length) {
-      $(".js-product-slider").on("init", function () {
-        $(".js-product-slider").removeClass("loaded");
-      });
+    // if ($(".js-product-slider").length) {
+    //   $(".js-product-slider").on("init", function () {
+    //     $(".js-product-slider").removeClass("loaded");
+    //   });
 
-      $(".js-product-slider").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        touchThreshold: 200,
-        speed: 500,
-        waitForAnimate: false,
-        asNavFor: ".js-click-product-normal",
-      });
-    }
+    //   $(".js-product-slider").slick({
+    //     dots: false,
+    //     arrows: false,
+    //     infinite: true,
+    //     autoplay: false,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     touchThreshold: 200,
+    //     speed: 500,
+    //     waitForAnimate: false,
+    //     asNavFor: ".js-click-product-normal",
+    //   });
+    // }
 
-    if ($(".js-click-product-normal").length) {
-      $(".js-click-product-normal").slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: ".js-product-slider",
-        dots: false,
-        focusOnSelect: true,
-        infinite: true,
-        arrows: false,
-      });
-    }
+    // if ($(".js-click-product-normal").length) {
+    //   $(".js-click-product-normal").slick({
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+    //     asNavFor: ".js-product-slider",
+    //     dots: false,
+    //     focusOnSelect: true,
+    //     infinite: true,
+    //     arrows: false,
+    //   });
+    // }
   })();
   // sliders end
 
@@ -444,37 +444,6 @@ window.onload = function () {
   });
   // navigation end
 
-  // accordion
-  $(function () {
-    $(".js-faq-item.active").find(".js-faq-hide").slideDown(0);
-
-    $(".js-faq-button").on("click", function () {
-      if ($(this).closest(".js-faq-item").hasClass("active")) {
-        $(this).closest(".js-faq-item").find(".js-faq-hide").slideUp(300);
-        $(this).closest(".js-faq").find(".js-faq-item").removeClass("active");
-      } else {
-        $(this).closest(".js-faq").find(".js-faq-item.active .js-faq-hide").slideUp(300);
-        $(this).closest(".js-faq").find(".js-faq-item.active").removeClass("active");
-        $(this).closest(".js-faq-item").addClass("active");
-        $(this)
-          .closest(".js-faq-item")
-          .closestDescendent(".js-faq-hide")
-          .slideDown(300, function () {
-            if ($(".mob").length) {
-              var url = $(this).closest(".js-faq-item");
-              $("html, body").animate(
-                {
-                  scrollTop: parseInt($(url).offset().top - $(".header").height()),
-                },
-                300
-              );
-            }
-          });
-      }
-    });
-  });
-  // accordion
-
   // formstyler
   if ($(".js-formstyler").length) {
     $("select.js-formstyler").styler({
@@ -682,6 +651,12 @@ function resizeWindow() {
     });
   }
   // tabs line fix end
+
+  // Faq list item filter
+
+  $(".faq-filter__list li").on("click", function () {
+    $(this).siblings().removeClass("active").end().addClass("active");
+  });
 }
 
 window.addEventListener("load", resizeWindow);

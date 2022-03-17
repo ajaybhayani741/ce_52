@@ -802,11 +802,9 @@
                     <span class="footer-title">Useful links</span>
                     <ul class="footer-nav__list">
                       <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Privacy Policy</a>
+                        <a class="footer-nav__link" href="privacy_policy.html">Privacy Policy</a>
                       </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Terms of use</a>
-                      </li>
+
                       <li class="footer-nav__item">
                         <a class="footer-nav__link" href="#">Support</a>
                       </li>
@@ -904,22 +902,22 @@
       request.open("GET", "https://theme-app-thomas.herokuapp.com/go", true);
       request.onload = function () {
         var data = JSON.parse(this.response);
-        this.allMyArray = data.data;
+        allMyArray = data.data;
 
-        this.allMyArray.forEach((data1) => {
+        allMyArray.forEach((data1) => {
           if (data1.title === "Product List") {
-            this.productList = data1.data;
+            productList = data1.data;
           }
         });
-        createData(this.productList, "shortItemAll");
+        createData(productList, "shortItemAll");
 
-        const carpetData = this.productList.filter((element) => element.collections === "Carpet");
+        const carpetData = productList.filter((element) => element.collections === "Carpet");
         createData(carpetData, "carpetData");
 
-        const homeDecoreData = this.productList.filter((element) => element.collections === "Home Decor");
+        const homeDecoreData = productList.filter((element) => element.collections === "Home Decor");
         createData(homeDecoreData, "homeDecoreData");
 
-        const kitchenData = this.productList.filter((element) => element.collections === "Kitchen");
+        const kitchenData = productList.filter((element) => element.collections === "Kitchen");
         createData(kitchenData, "kitchenData");
 
         function createData(myArray, id) {
@@ -952,13 +950,13 @@
           shortItemAll.innerHTML = shortItemAllCreate;
         }
 
-        this.allMyArray.forEach((data1) => {
+        allMyArray.forEach((data1) => {
           if (data1.title === "Hero Slider") {
-            this.heroSliderList = data1.data;
+            heroSliderList = data1.data;
           }
         });
 
-        heroSliderData(this.heroSliderList, "heroSlider");
+        heroSliderData(heroSliderList, "heroSlider");
 
         function heroSliderData(myArray, id) {
           var heroSliderCreate = "";
@@ -987,7 +985,7 @@
           heroSliderDataList.innerHTML = heroSliderCreate;
         }
 
-        bestPrdouctSliderData(this.productList, "bestPrdouctSlider");
+        bestPrdouctSliderData(productList, "bestPrdouctSlider");
 
         function bestPrdouctSliderData(myArray, id) {
           var bestProductSliderCreate = "";

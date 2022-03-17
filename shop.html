@@ -438,97 +438,7 @@
                     <ul class="side-nav__radio" id="sideNavForCategories"></ul>
                   </div>
                 </section>
-
-                <section class="widget js-slidedown">
-                  <h3 class="widget__title widget__title_hide-mob">Price</h3>
-                  <a class="widget__button js-slidedown-button" href="javascript:void(0);">Price</a>
-                  <div class="widget__hide js-slidedown-hide">
-                    <div class="range">
-                      <div class="range__slider" id="range-slider"></div>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="widget js-more js-slidedown">
-                  <h3 class="widget__title widget__title_hide-mob">Colors</h3>
-                  <a class="widget__button js-slidedown-button" href="javascript:void(0);">Colors</a>
-                  <div class="widget__hide js-slidedown-hide">
-                    <div class="checkboxes">
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Black</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" checked />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Blue</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Red</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Yellow</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Green</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Black</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" checked />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Blue</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Red</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Yellow</span>
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" />
-                          <span class="checkbox__icon"></span>
-                          <span class="checkbox__text">Green</span>
-                        </label>
-                      </div>
-                    </div>
-                    <a class="widget__deploy deploy-button js-more-button" href="#">Deploy</a>
-                  </div>
-                </section>
-                <button class="apply-button button">
+    <button class="apply-button button">
                   <span class="button__text">Apply filter</span>
                 </button>
               </div>
@@ -611,7 +521,7 @@
             <div class="shop__right">
               <div class="shop-panel">
                 <div class="shop-panel__left">
-                  <span class="shop-panel__text">There are <b>67</b> products in&nbsp;this&nbsp;category</span>
+                  <span class="shop-panel__text">There are <b></b> products in this category</span>
                 </div>
                 <div class="shop-panel__right">
                   <div class="shop-panel__select select select_1">
@@ -712,11 +622,11 @@
                     <span class="footer-title">Useful links</span>
                     <ul class="footer-nav__list">
                       <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Privacy Policy</a>
+                        <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="privacy_policy.html">Privacy Policy</a>
                       </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Terms of use</a>
                       </li>
+                      
                       <li class="footer-nav__item">
                         <a class="footer-nav__link" href="#">Support</a>
                       </li>
@@ -799,7 +709,6 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      var myArray = [];
       var productList = [];
       var collectionsList = [];
       var allMyArray = [];
@@ -809,8 +718,8 @@
       request.onload = function () {
         var data = JSON.parse(this.response);
 
-        this.allMyArray = data.data;
-        this.allMyArray.forEach((data1) => {
+        allMyArray = data.data;
+        allMyArray.forEach((data1) => {
           if (data1.title === "Collections List") {
             data1.data.forEach((ele, index) => {
               collectionsList.push({ ...ele, id: index + 1 });
@@ -820,19 +729,22 @@
 
         displaySideNavForCategories(collectionsList, "sideNavForCategories");
 
-        this.allMyArray.forEach((data1) => {
+        allMyArray.forEach((data1) => {
           if (data1.title === "Product List") {
-            productList = data1.data;
+            data1.data.forEach((ele, index) => {
+              productList.push({ ...ele, id: index + 1 });
+            });
           }
         });
         createData(productList);
+        $(".shop-panel__text b").html(productList.length);
 
         function displaySideNavForCategories(myArray, id) {
           var shortItemAllCreate = "";
           shortItemAll = document.getElementById(id);
           shortItemAllCreate += "<li>";
           shortItemAllCreate += "<label class='radio__label'>";
-          shortItemAllCreate += "<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(0)' />";
+          shortItemAllCreate += "<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(0)' checked />";
           shortItemAllCreate += "<span class='radio__icon'></span>";
           shortItemAllCreate += "<span class='radio__text'>All</span>";
           shortItemAllCreate += "</label>";
@@ -866,44 +778,50 @@
         }
       }
 
+      function redirectToProductPage(product_id){
+        product = productList.find((element)=> element.id == product_id)
+        localStorage.setItem('selectedProduct',JSON.stringify(product))
+        location.href = 'product_page.html'
+      }
+
       function createData(myArray) {
         var id = "shortItemAll";
         var shortItemAllCreate = "";
         shortItemAll = document.getElementById(id);
         for (var i in myArray) {
-          shortItemAllCreate += "<article class='short-item'>";
-          shortItemAllCreate += "<div class='short-item__all'>";
-          shortItemAllCreate += "<div class='short-item__product'>";
-          shortItemAllCreate += "<a class='short-item__image-bg' href='product_page.html'>";
+          shortItemAllCreate += `<article class='short-item'>`;
+          shortItemAllCreate += `<div class='short-item__all'>`;
+          shortItemAllCreate += `<div class='short-item__product'>`;
+          shortItemAllCreate += `<a class='short-item__image-bg' onclick='redirectToProductPage(${myArray[i].id})'>`;
           shortItemAllCreate +=
-            "<img class='short-item__image' src='" + myArray[i]["image-1"] + "' data-lazy='" + myArray[i]["image-1"] + "' alt='' />";
-          shortItemAllCreate += "</a>";
-          shortItemAllCreate += "<div class='short-item__top'>";
-          shortItemAllCreate += "<div class='short-item__cols'>";
-          shortItemAllCreate += "<div class='short-item__col'>";
-          shortItemAllCreate += "<span class='item-tag item-tag_red'>Hot</span>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "<div class='short-item_button_group'>";
-          shortItemAllCreate += "<button class='short-item__button heart-button js-toggle-active'></button>";
-          shortItemAllCreate += "<button class='short-item__button cart-button js-toggle-active'></button>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "<div class='short-item__info'>";
-          shortItemAllCreate += "<h4 class='short-item__title'>";
-          shortItemAllCreate += "<a class='short-item__link' href='product_page.html'>" + myArray[i]["product-name"] + "</a>";
-          shortItemAllCreate += "</h4>";
-          shortItemAllCreate += "<span class='short-item__price'>" + myArray[i].price + "</span>";
-          shortItemAllCreate += "<span class='short-item__old-price'>$52.99</span>";
-          shortItemAllCreate += "<div class='short-item__color-group'>";
-          shortItemAllCreate += "<a href='javascript:void(0)' class='circle gray'></a>";
-          shortItemAllCreate += "<a href='javascript:void(0)' class='circle yellow active'></a>";
-          shortItemAllCreate += "<a href='javascript:void(0)' class='circle white'></a>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</div>";
-          shortItemAllCreate += "</article>";
+            `<img class='short-item__image' src='${myArray[i][`image-1`]}' data-lazy='${myArray[i][`image-1`]}' alt='' />`;
+          shortItemAllCreate += `</a>`;
+          shortItemAllCreate += `<div class='short-item__top'>`;
+          shortItemAllCreate += `<div class='short-item__cols'>`;
+          shortItemAllCreate += `<div class='short-item__col'>`;
+          shortItemAllCreate += `<span class='item-tag item-tag_red'>Hot</span>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `<div class='short-item_button_group'>`;
+          shortItemAllCreate += `<button class='short-item__button heart-button js-toggle-active'></button>`;
+          shortItemAllCreate += `<button class='short-item__button cart-button js-toggle-active'></button>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `<div class='short-item__info'>`;
+          shortItemAllCreate += `<h4 class='short-item__title'>`;                             
+          shortItemAllCreate += `<a class='short-item__link' onclick='redirectToProductPage(${myArray[i].id})'>${myArray[i][`product-name`]}</a>`;
+          shortItemAllCreate += `</h4>`;
+          shortItemAllCreate += `<span class='short-item__price'>${myArray[i].price}</span>`;
+          shortItemAllCreate += `<span class='short-item__old-price'>${myArray[i]["strikethrough-price"]}</span>`;
+          shortItemAllCreate += `<div class='short-item__color-group'>`;
+          shortItemAllCreate += `<a href='javascript:void(0)' class='circle gray'></a>`;
+          shortItemAllCreate += `<a href='javascript:void(0)' class='circle yellow active'></a>`;
+          shortItemAllCreate += `<a href='javascript:void(0)' class='circle white'></a>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</div>`;
+          shortItemAllCreate += `</article>`;
         }
         shortItemAll.innerHTML = shortItemAllCreate;
 
