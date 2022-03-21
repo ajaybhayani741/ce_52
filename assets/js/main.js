@@ -582,16 +582,6 @@ window.onload = function () {
   });
   // plus minus
 
-  // remove item
-  $(".js-remove-button").on("click", function () {
-    $(this)
-      .closest(".js-remove")
-      .fadeOut(300, function () {
-        $(this).remove();
-      });
-  });
-  // remove item end
-
   // input mask
   if ($(".js-mask-tel").length) {
     $(".js-mask-tel").inputmask({
@@ -680,4 +670,13 @@ $(function () {
     $(".circle").removeClass("active");
     $(this).addClass("active");
   });
+});
+
+// remove item
+$(".js-remove-button").on("click", function () {
+  $(this)
+    .closest(".js-remove")
+    .fadeOut(300, function () {
+      $(this).remove();
+    });
 });

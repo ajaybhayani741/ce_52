@@ -1,790 +1,865 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta id="Viewport" name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <title>Fashionee - Main page</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
-    <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
-    <style>
-      .loaded .load-icon {
-        display: block;
-      }
 
-      .loaded * {
-        -webkit-transition: none;
-        -ms-transition: none;
-        transition: none;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta id="Viewport" name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <title>Fashionee - Main page</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
+  <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
+  <style>
+    .loaded .load-icon {
+      display: block;
+    }
 
-      .load-icon {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        display: none;
-        z-index: 9999;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #fff;
-      }
+    .loaded * {
+      -webkit-transition: none;
+      -ms-transition: none;
+      transition: none;
+    }
 
-      .load-icon:before {
-        content: "";
-        width: 64px;
-        height: 64px;
-        margin: -32px 0 0 -32px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: url(assets/img/loader.gif) no-repeat left top;
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  </head>
+    .load-icon {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: none;
+      z-index: 9999;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+    }
 
-  <body class="loaded">
-    <div class="load-icon"></div>
+    .load-icon:before {
+      content: "";
+      width: 64px;
+      height: 64px;
+      margin: -32px 0 0 -32px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: url(assets/img/loader.gif) no-repeat left top;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
 
-    <div class="page-container">
-      <!-- BEGIN HEADER -->
-      <header class="header">
-        <div class="header__main">
-          <div class="header__cols">
-            <div class="header__left">
-              <div class="header__col">
-                <button class="mob-button js-mob-open">
-                  <span class="mob-button__icon"></span>
-                </button>
+<body class="loaded">
+  <div class="load-icon"></div>
+
+  <div class="page-container">
+    <!-- BEGIN HEADER -->
+    <header class="header">
+      <div class="header__main">
+        <div class="header__cols">
+          <div class="header__left">
+            <div class="header__col">
+              <button class="mob-button js-mob-open">
+                <span class="mob-button__icon"></span>
+              </button>
+            </div>
+            <div class="header__col">
+              <a class="mob__logo logo" href="#">
+                <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="header__center">
+            <div class="header__cols">
+              <div class="header__col header__col_hide-mob">
+                <nav class="header-nav">
+                  <ul class="header-nav__list">
+                    <li class="header-nav__item active">
+                      <a class="header-nav__link" href="index.html">Home</a>
+                    </li>
+                    <li class="header-nav__item js-nav-item">
+                      <a class="header-nav__link header-nav__link_arrow js-nav-button" href="shop.html">Shop</a>
+                      <div class="hide-nav js-nav-hide">
+                        <div class="clearfix">
+                          <ul class="hide-nav__list hide-nav__list_wrap">
+                            <li class="hide-nav__item">
+                              <label>Shop Pages</label>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Shop Page V1</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Shop Page V2</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Shop Page V3</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Shop Page V4</a>
+                            </li>
+                          </ul>
+                          <ul class="hide-nav__list hide-nav__list_wrap">
+                            <li class="hide-nav__item">
+                              <label>Procut Pages</label>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="cart.html">Single Product V1</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Single Product V2</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Single Product V3</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="#">Single Product V4</a>
+                            </li>
+                          </ul>
+                          <div class="hide-nav__list hide-nav__image__wrap text-right">
+                            <a href="" class="hide-nav-collecton__image">
+                              <img src="assets/img/collection/collection.jpeg" alt="" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header-nav__item js-nav-item">
+                      <a class="header-nav__link header-nav__link_arrow js-nav-button"
+                        href="collections.html">Collection</a>
+                      <div class="hide-nav js-nav-hide">
+                        <div class="clearfix">
+                          <div class="hide-nav__list hide-nav__image__wrap text-center">
+                            <a href="" class="hide-nav-collecton__image">
+                              <img src="assets/img/collection/collection.jpeg" alt="" />
+                            </a>
+                            <label for="">New Trending '18</label>
+                          </div>
+                          <div class="hide-nav__list hide-nav__image__wrap text-center">
+                            <a href="" class="hide-nav-collecton__image">
+                              <img src="assets/img/collection/collection.jpeg" alt="" />
+                            </a>
+                            <label for="">New Lookbooks</label>
+                          </div>
+                          <div class="hide-nav__list hide-nav__image__wrap text-center">
+                            <a href="" class="hide-nav-collecton__image">
+                              <img src="assets/img/collection/collection.jpeg" alt="" />
+                            </a>
+                            <label for="">Onsale</label>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header-nav__item logo_nav">
+                      <div class="header__col text-center">
+                        <a class="logo" href="#">
+                          <h3>Logo</h3>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="header-nav__item js-nav-item">
+                      <a class="header-nav__link header-nav__link_arrow js-nav-button" href="about.html">Pages</a>
+                      <div class="hide-nav js-nav-hide">
+                        <div class="clearfix">
+                          <ul class="hide-nav__list hide-nav__list_wrap">
+                            <li class="hide-nav__item">
+                              <label>Page Set 1</label>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="about.html">About us</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="shop.html">Catalog</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="product_page.html">Product page</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="wishlist.html">Wishlist</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="my_profile.html">My Profile</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="404.html">404</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="privacy_policy.html">Privacy Policy</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="terms_of_use.html">Terms of Use</a>
+                            </li>
+                          </ul>
+                          <ul class="hide-nav__list hide-nav__list_wrap">
+                            <li class="hide-nav__item">
+                              <label>Page Set 2</label>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="login.html">Login</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="registration.html">Registration</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="faq.html">FAQ's</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="cart.html">Cart</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="checkout-1.html">Checkout 1</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="checkout-2.html">Checkout 2</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="checkout-3.html">Checkout 3</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header-nav__item header-nav_dropdown__item js-nav-item">
+                      <a class="header-nav__link header-nav__link_arrow js-nav-button" href="blog.html">Blog</a>
+                      <div class="hide-nav dropdown-hide__nav js-nav-hide">
+                        <div class="clearfix">
+                          <ul class="hide-nav__list hide-nav__list_wrap">
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="hide-nav__item">
+                              <a class="hide-nav__link" href="post.html">Blog Post</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header-nav__item">
+                      <a class="header-nav__link" href="contacts.html">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <div class="header__col">
-                <a class="mob__logo logo" href="#">
-                  <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
+            </div>
+          </div>
+          <div class="header__right">
+            <ul class="user-nav">
+
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="wishlist.html">
+                  <span class="user-nav__icon user-nav__icon_3"></span>
+                  <span class="user-nav__text">0</span>
                 </a>
-              </div>
-            </div>
-            <div class="header__center">
-              <div class="header__cols">
-                <div class="header__col header__col_hide-mob">
-                  <nav class="header-nav">
-                    <ul class="header-nav__list">
-                      <li class="header-nav__item active">
-                        <a class="header-nav__link" href="index.html">Home</a>
-                      </li>
-                      <li class="header-nav__item js-nav-item">
-                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="shop.html">Shop</a>
-                        <div class="hide-nav js-nav-hide">
-                          <div class="clearfix">
-                            <ul class="hide-nav__list hide-nav__list_wrap">
-                              <li class="hide-nav__item">
-                                <label>Shop Pages</label>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Shop Page V1</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Shop Page V2</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Shop Page V3</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Shop Page V4</a>
-                              </li>
-                            </ul>
-                            <ul class="hide-nav__list hide-nav__list_wrap">
-                              <li class="hide-nav__item">
-                                <label>Procut Pages</label>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="cart.html">Single Product V1</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Single Product V2</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Single Product V3</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="#">Single Product V4</a>
-                              </li>
-                            </ul>
-                            <div class="hide-nav__list hide-nav__image__wrap text-right">
-                              <a href="" class="hide-nav-collecton__image">
-                                <img src="assets/img/collection/collection.jpeg" alt="" />
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-nav__item js-nav-item">
-                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="collections.html">Collection</a>
-                        <div class="hide-nav js-nav-hide">
-                          <div class="clearfix">
-                            <div class="hide-nav__list hide-nav__image__wrap text-center">
-                              <a href="" class="hide-nav-collecton__image">
-                                <img src="assets/img/collection/collection.jpeg" alt="" />
-                              </a>
-                              <label for="">New Trending '18</label>
-                            </div>
-                            <div class="hide-nav__list hide-nav__image__wrap text-center">
-                              <a href="" class="hide-nav-collecton__image">
-                                <img src="assets/img/collection/collection.jpeg" alt="" />
-                              </a>
-                              <label for="">New Lookbooks</label>
-                            </div>
-                            <div class="hide-nav__list hide-nav__image__wrap text-center">
-                              <a href="" class="hide-nav-collecton__image">
-                                <img src="assets/img/collection/collection.jpeg" alt="" />
-                              </a>
-                              <label for="">Onsale</label>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-nav__item logo_nav">
-                        <div class="header__col text-center">
-                          <a class="logo" href="#">
-                            <h3>Logo</h3>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="header-nav__item js-nav-item">
-                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="about.html">Pages</a>
-                        <div class="hide-nav js-nav-hide">
-                          <div class="clearfix">
-                            <ul class="hide-nav__list hide-nav__list_wrap">
-                              <li class="hide-nav__item">
-                                <label>Page Set 1</label>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="about.html">About us</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="shop.html">Catalog</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="product_page.html">Product page</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="wishlist.html">Wishlist</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="my_profile.html">My Profile</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="404.html">404</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="privacy_policy.html">Privacy Policy</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="terms_of_use.html">Terms of Use</a>
-                              </li>
-                            </ul>
-                            <ul class="hide-nav__list hide-nav__list_wrap">
-                              <li class="hide-nav__item">
-                                <label>Page Set 2</label>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="login.html">Login</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="registration.html">Registration</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="faq.html">FAQ's</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="cart.html">Cart</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="checkout-1.html">Checkout 1</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="checkout-2.html">Checkout 2</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="checkout-3.html">Checkout 3</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-nav__item header-nav_dropdown__item js-nav-item">
-                        <a class="header-nav__link header-nav__link_arrow js-nav-button" href="blog.html">Blog</a>
-                        <div class="hide-nav dropdown-hide__nav js-nav-hide">
-                          <div class="clearfix">
-                            <ul class="hide-nav__list hide-nav__list_wrap">
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="blog.html">Blog</a>
-                              </li>
-                              <li class="hide-nav__item">
-                                <a class="hide-nav__link" href="post.html">Blog Post</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-nav__item">
-                        <a class="header-nav__link" href="contacts.html">Contact</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="header__right">
-              <ul class="user-nav">
-                <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
-                    <span class="user-nav__icon user-nav__icon_1"></span>
-                  </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MOBILE NAVIGATION -->
+    <div class="hide-mob js-mob-hide">
+      <div class="hide-mob__bg">
+        <button class="hide-mob__close close-button js-mob-close"></button>
+        <div class="hide-mob__mask js-mob-close"></div>
+        <ul class="mob-nav">
+          <li class="mob-nav__item active">
+            <a class="mob-nav__link" href="index.html">Home</a>
+          </li>
+          <li class="mob-nav__item js-slidedown">
+            <a class="mob-nav__link js-slidedown-button" href="shop.html">
+              <span class="mob-nav__arrow">Shop</span>
+            </a>
+            <div class="slide-nav js-slidedown-hide">
+              <ul class="slide-nav__list">
+                <li class="slide-nav__item">
+                  <label class="slide-nav__title_label">Shop Pages</label>
                 </li>
-                <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
-                    <span class="user-nav__icon user-nav__icon_2"></span>
-                  </a>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Shop Page V1</a>
                 </li>
-                <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
-                    <span class="user-nav__icon user-nav__icon_3"></span>
-                    <span class="user-nav__text">0</span>
-                  </a>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Shop Page V2</a>
                 </li>
-                <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
-                    <span class="user-nav__icon user-nav__icon_4"></span>
-                    <span class="user-nav__text">0</span>
-                  </a>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Shop Page V3</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Shop Page V4</a>
+                </li>
+              </ul>
+              <ul class="slide-nav__list">
+                <li class="slide-nav__item">
+                  <label class="slide-nav__title_label">Prodcut Pages</label>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Prodcut Page V1</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Prodcut Page V2</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Prodcut Page V3</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="#">Prodcut Page V4</a>
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </header>
-      <!-- HEADER END -->
-
-      <!-- MOBILE NAVIGATION -->
-      <div class="hide-mob js-mob-hide">
-        <div class="hide-mob__bg">
-          <button class="hide-mob__close close-button js-mob-close"></button>
-          <div class="hide-mob__mask js-mob-close"></div>
-          <ul class="mob-nav">
-            <li class="mob-nav__item active">
-              <a class="mob-nav__link" href="index.html">Home</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="shop.html">Collection</a>
+          </li>
+          <li class="mob-nav__item js-slidedown">
+            <a class="mob-nav__link js-slidedown-button" href="about.html">
+              <span class="mob-nav__arrow">Pages</span>
+            </a>
+            <div class="slide-nav js-slidedown-hide">
+              <ul class="slide-nav__list">
+                <li class="slide-nav__item">
+                  <label class="slide-nav__title_label">Page Set 1</label>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="about.html">About us</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="shop.html">Catalog</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="product_page.html">Product Page</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="wishlist.html">Wishlist</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="my_profile.html">My Profile</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="404.html">404</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="privacy_policy.html">Privacy Policy</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="terms_of_use.html">Terms of Use</a>
+                </li>
+              </ul>
+              <ul class="slide-nav__list">
+                <li class="slide-nav__item">
+                  <label class="slide-nav__title_label">Page Set 2</label>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="Login.html">Login</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="registration.html">Registration</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="faq.html">FAQ's</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="cart.html">Cart</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="checkout-1.html">Checkout 1</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="checkout-2.html">Checkout 2</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="checkout-3.html">Checkout 3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mob-nav__item js-slidedown">
+            <a class="mob-nav__link js-slidedown-button" href="blog.html">
+              <span class="mob-nav__arrow">Blog</span>
+            </a>
+            <div class="slide-nav js-slidedown-hide">
+              <ul class="slide-nav__list">
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="blog.html">Blog</a>
+                </li>
+                <li class="slide-nav__item">
+                  <a class="slide-nav__link" href="post.html">Blog Post</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="contacts.html">Contact</a>
+          </li>
+        </ul>
+        <div class="hide-mob__socials">
+          <ul class="socials__list socials__list_center">
+            <li class="socials__item">
+              <a class="socials__link" href="#">Fb</a>
             </li>
-            <li class="mob-nav__item js-slidedown">
-              <a class="mob-nav__link js-slidedown-button" href="shop.html">
-                <span class="mob-nav__arrow">Shop</span>
-              </a>
-              <div class="slide-nav js-slidedown-hide">
-                <ul class="slide-nav__list">
-                  <li class="slide-nav__item">
-                    <label class="slide-nav__title_label">Shop Pages</label>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Shop Page V1</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Shop Page V2</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Shop Page V3</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Shop Page V4</a>
-                  </li>
-                </ul>
-                <ul class="slide-nav__list">
-                  <li class="slide-nav__item">
-                    <label class="slide-nav__title_label">Prodcut Pages</label>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Prodcut Page V1</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Prodcut Page V2</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Prodcut Page V3</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="#">Prodcut Page V4</a>
-                  </li>
-                </ul>
-              </div>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Tw</a>
             </li>
-            <li class="mob-nav__item">
-              <a class="mob-nav__link" href="shop.html">Collection</a>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Ins</a>
             </li>
-            <li class="mob-nav__item js-slidedown">
-              <a class="mob-nav__link js-slidedown-button" href="about.html">
-                <span class="mob-nav__arrow">Pages</span>
-              </a>
-              <div class="slide-nav js-slidedown-hide">
-                <ul class="slide-nav__list">
-                  <li class="slide-nav__item">
-                    <label class="slide-nav__title_label">Page Set 1</label>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="about.html">About us</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="shop.html">Catalog</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="product_page.html">Product Page</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="wishlist.html">Wishlist</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="my_profile.html">My Profile</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="404.html">404</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="privacy_policy.html">Privacy Policy</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="terms_of_use.html">Terms of Use</a>
-                  </li>
-                </ul>
-                <ul class="slide-nav__list">
-                  <li class="slide-nav__item">
-                    <label class="slide-nav__title_label">Page Set 2</label>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="Login.html">Login</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="registration.html">Registration</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="faq.html">FAQ's</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="cart.html">Cart</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="checkout-1.html">Checkout 1</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="checkout-2.html">Checkout 2</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="checkout-3.html">Checkout 3</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="mob-nav__item js-slidedown">
-              <a class="mob-nav__link js-slidedown-button" href="blog.html">
-                <span class="mob-nav__arrow">Blog</span>
-              </a>
-              <div class="slide-nav js-slidedown-hide">
-                <ul class="slide-nav__list">
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="blog.html">Blog</a>
-                  </li>
-                  <li class="slide-nav__item">
-                    <a class="slide-nav__link" href="post.html">Blog Post</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="mob-nav__item">
-              <a class="mob-nav__link" href="contacts.html">Contact</a>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Pt</a>
             </li>
           </ul>
-          <div class="hide-mob__socials">
-            <ul class="socials__list socials__list_center">
-              <li class="socials__item">
-                <a class="socials__link" href="#">Fb</a>
+        </div>
+      </div>
+    </div>
+    <!-- MOBILE NAVIGATION END -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <!-- Privacy List out Section  -->
+      <div class="privacy wrapper container-content">
+        <div class="privacy-text">
+          <h2 class="privacy-heading__title">Terms of Use</h2>
+          <h3 class="privacy-heading__sub_title">INTRODUCTION :</h3>
+          <div class="summary__list-item">
+            <p>
+              We at Wasai LLC respect the privacy of your personal information and, as such, make every effort to ensure
+              your information is
+              protected and remains private. As the owner and operator of loremipsum.io (the "Website") hereafter
+              referred to in this Privacy Policy
+              as "Lorem Ipsum", "us", "our" or "we", we have provided this Privacy Policy to explain how we collect,
+              use, share and protect
+              information about the users of our Website (hereafter referred to as “user”, “you” or "your"). For the
+              purposes of this Agreement, any
+              use of the terms "Lorem Ipsum", "us", "our" or "we" includes Wasai LLC, without limitation. We will not
+              use or share your personal
+              information with anyone except as described in this Privacy Policy. This Privacy Policy will inform you
+              about the types of personal
+              data we collect, the purposes for which we use the data, the ways in which the data is handled and your
+              rights with regard to your
+              personal data. Furthermore, this Privacy Policy is intended to satisfy the obligation of transparency
+              under the EU General Data
+              Protection Regulation 2016/679 ("GDPR") and the laws implementing GDPR. For the purpose of this Privacy
+              Policy the Data Controller of
+              personal data is Wasai LLC and our contact details are set out in the Contact section at the end of this
+              Privacy Policy. Data
+              Controller means the natural or legal person who (either alone or jointly or in common with other persons)
+              determines the purposes for
+              which and the manner in which any personal information are, or are to be, processed. For purposes of this
+              Privacy Policy, "Your
+              Information" or "Personal Data" means information about you, which may be of a confidential or sensitive
+              nature and may include
+              personally identifiable information ("PII") and/or financial information. PII means individually
+              identifiable information that would
+              allow us to determine the actual identity of a specific living person, while sensitive data may include
+              information, comments, content
+              and other information that you voluntarily provide. Lorem Ipsum collects information about you when you
+              use our Website to access our
+              services, and other online products and services (collectively, the “Services”) and through other
+              interactions and communications you
+              have with us. The term Services includes, collectively, various applications, websites, widgets, email
+              notifications and other
+              mediums, or portions of such mediums, through which you have accessed this Privacy Policy. We may change
+              this Privacy Policy from time
+              to time. If we decide to change this Privacy Policy, we will inform you by posting the revised Privacy
+              Policy on the Site. Those
+              changes will go into effect on the "Last updated" date shown at the end of this Privacy Policy. By
+              continuing to use the Site or
+              Services, you consent to the revised Privacy Policy. We encourage you to periodically review the Privacy
+              Policy for the latest
+              information on our privacy practices. BY ACCESSING OR USING OUR SERVICES, YOU CONSENT TO THE COLLECTION,
+              TRANSFER, MANIPULATION,
+              STORAGE, DISCLOSURE AND OTHER USES OF YOUR INFORMATION (COLLECTIVELY, "USE OF YOUR INFORMATION") AS
+              DESCRIBED IN THIS PRIVACY POLICY.
+              IF YOU DO NOT AGREE WITH OR CONSENT TO THIS PRIVACY POLICY YOU MAY NOT ACCESS OR USE OUR SERVICES.
+            </p>
+            <span>INFORMATION PROVIDED DIRECTLY BY YOUWe collect information you provide directly to us, such as when
+              you request information, create
+              or modify your personal account, request Services, subscribe to our Services, complete a Lorem Ipsum form,
+              survey, quiz or
+              application, contact customer support, join or enroll for an event or otherwise communicate with us in any
+              manner. This information
+              may include, without limitation: name, date of birth, e-mail address, physical address, business address,
+              phone number, or any other
+              personal information you choose to provide.</span>
+            <span>INFORMATION COLLECTED THROUGH YOUR USE OF OUR SERVICESThe following are situations in which you may
+              provide Your Information to
+              us:</span>
+            <ul>
+              <li>When you fill out forms or fields through our Services;</li>
+              <li>When you register for an account with our Service;</li>
+              <li>When you create a subscription for our newsletter or Services;</li>
+              <li>When you provide responses to a survey;</li>
+              <li>When you answer questions on a quiz;</li>
+              <li>When you join or enroll in an event through our Services;</li>
+              <li>When you order services or products from, or through our Service;</li>
+              <li>When you provide information to us through a third-party application, service or Website;</li>
+              <li>
+                When you communicate with us or request information about us or our products or Services, whether via
+                email or other means; and
               </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">Tw</a>
+              <li>When you participate in any of our marketing initiatives, including, contests, events, or promotions.
               </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">Ins</a>
+            </ul>
+            <span>
+              We also automatically collect information via the Website through the use of various technologies,
+              including, but not limited to
+              Cookies and Web Beacons (explained below). We may collect your IP address, browsing behavior and device
+              IDs. This information is used
+              by us in order to enable us to better understand how our Services are being used by visitors and allows us
+              to administer and customize
+              the Services to improve your overall experience.</span>
+            <span>
+              INFORMATION COLLECTED FROM OTHER SOURCESWe may also receive information from other sources and combine
+              that with information we
+              collect through our Services. For example if you choose to link, create, or log in to your Lorem Ipsum
+              account with a social media
+              service, e.g. LinkedIn, Facebook or Twitter, or if you engage with a separate App or Website that uses our
+              API, or whose API we use,
+              we may receive information about you or your connections from that Site or App. This includes, without
+              limitation, profile
+              information, profile picture, gender, user name, user ID associated with your social media account, age
+              range, language, country,
+              friends list, and any other information you permit the social network to share with third parties. The
+              data we receive is solely
+              dependent upon your privacy settings with the social network.</span>
+            <span>
+              INFORMATION THIRD PARTIES PROVIDEWe may collect information about you from sources other than you, such as
+              from social media websites
+              (i.e., Facebook, LinkedIn, Twitter or others), blogs, analytics providers, business affiliates and
+              partners and other users. This
+              includes, without limitation, identity data, contact data, marketing and communications data, behavioral
+              data, technical data and
+              content data.</span>
+            <span>
+              AGGREGATED DATAWe may collect, use and share Aggregated Data such as statistical or demographic data for
+              any purpose. Aggregated Data
+              is de-identified or anonymized and does not constitute Personal Data for the purposes of the GDPR as this
+              data does not directly or
+              indirectly reveal your identity. If we ever combine Aggregated Data with your Personal Data so that it can
+              directly or indirectly
+              identify you, we treat the combined data as PII which will only be used in accordance with this Privacy
+              Policy.</span>
+            <h5>COOKIES, LOG FILES AND ANONYMOUS IDENTIFIERS</h5>
+            <ul>
+              <li>
+                When you visit our Services, we may send one or more Cookies – small data files – to your computer to
+                uniquely identify your browser
+                and let us help you log in faster and enhance your navigation through the Sites. “Cookies” are text-only
+                pieces of information that
+                a website transfers to an individual’s hard drive or other website browsing equipment for record keeping
+                purposes. A Cookie may
+                convey anonymous information about how you browse the Services to us so we can provide you with a more
+                personalized experience, but
+                does not collect personal information about you. Cookies allow the Sites to remember important
+                information that will make your use
+                of the site more convenient. A Cookie will typically contain the name of the domain from which the
+                Cookie has come, the “lifetime”
+                of the Cookie, and a randomly generated unique number or other value. Certain Cookies may be used on the
+                Sites regardless of whether
+                you are logged in to your account or not.
               </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">Pt</a>
+              <li>Session Cookies are temporary Cookies that remain in the Cookie file of your browser until you leave
+                the Site.</li>
+              <li>
+                Persistent Cookies remain in the Cookie file of your browser for much longer (though how long will
+                depend on the lifetime of the
+                specific Cookie).
+              </li>
+              <li>
+                When we use session Cookies to track the total number of visitors to our Site, this is done on an
+                anonymous aggregate basis (as
+                Cookies do not in themselves carry any personal data).
+              </li>
+              <li>
+                We may also employ Cookies so that we remember your computer when it is used to return to the Site to
+                help customize your Lorem
+                Ipsum web experience. We may associate personal information with a Cookie file in those instances.
+              </li>
+              <li>
+                We use Cookies to help us know that you are logged on, provide you with features based on your
+                preferences, understand when you are
+                interacting with our Services, and compile other information regarding use of our Services.
+              </li>
+              <li>
+                Third parties with whom we partner to provide certain features on our Site or to display advertising
+                based upon your Web browsing
+                activity use Cookies to collect and store information.
+              </li>
+              <li>
+                Our Website may use remarketing services, to serve ads on our behalf across the internet on third party
+                websites to previous
+                visitors to our Sites. It could mean that we advertise to previous visitors who haven’t completed a task
+                on our site. This could be
+                in the form of an advertisement on the Google search results page or a site in the Google Display
+                Network. Third-party vendors,
+                including Google, use Cookies to serve ads based on your past visits to our Website. Any data collected
+                will be used in accordance
+                with our own privacy policy, as well as Google's privacy policies. To learn more, or to opt-out of
+                receiving advertisements tailored
+                to your interests by our third parties, visit the Network Advertising Initiative
+                at www.networkadvertising.org/choices.
+              </li>
+              <li>
+                Lorem Ipsum may use third-party services such as Google Analytics to help understand use of the
+                Services. These services typically
+                collect the information sent by your browser as part of a web page request, including Cookies and your
+                IP address. They receive this
+                information and their use of it is governed by their respective privacy policies. You may opt-out of
+                Google Analytics for Display
+                Advertisers including AdWords and opt-out of customized Google Display Network ads by visiting the
+                Google Ads Preferences Manager
+                here . To provide website visitors more choice on how their data is collected by Google Analytics,
+                Google has developed an Opt-out
+                Browser add-on, which is available by visiting Google Analytics Opt-out Browser Add-on here .
+              </li>
+              <li>
+                You can control the use of Cookies at the individual browser level. Use the options in your web browser
+                if you do not wish to
+                receive a Cookie or if you wish to set your browser to notify you when you receive a Cookie. You can
+                easily delete and manage any
+                Cookies that have been installed in the Cookie folder of your browser by following the instructions
+                provided by your particular
+                browser manufacturer. Consult the documentation that your particular browser manufacturer provides. You
+                may also consult your mobile
+                device documentation for information on how to disable Cookies on your mobile device. If you reject
+                Cookies, you may still use our
+                Website, but your ability to use some features or areas of our Service may be limited.
+              </li>
+              <li>
+                Lorem Ipsum cannot control the use of Cookies by third parties (or the resulting information), and use
+                of third party Cookies is not
+                covered by this policy.
+              </li>
+              <li>
+                We automatically collect information about how you interact with our Services, preferences expressed,
+                and settings chosen and store
+                it in Log Files. This information may include internet protocol (IP) addresses, browser type, internet
+                service provider (ISP),
+                referring/exit pages, operating system, date/time stamp, and/or clickstream data. We may combine this
+                automatically collected log
+                information with other information we collect about you. We do this to improve services we offer you, to
+                improve marketing,
+                analytics, or Website functionality, and to document your consent to receiving products, services or
+                communications from us or our
+                partners. If we link such information with personally identifiable information in a manner that
+                identifies a particular individual,
+                then we will treat all such information as PII for purposes of this Privacy Policy.
+              </li>
+              <li>
+                When you use our Services, we may employ Web Beacons (also known as clear GIFs or tracking pixels) to
+                anonymously track online usage
+                patterns. No Personally Identifiable Information from your account is collected using these Web Beacons.
+              </li>
+            </ul>
+            <span>DEVICE INFORMATIONWhen you use our Services through your computer, mobile phone or other device, we
+              may collect information regarding
+              and related to your device, such as hardware models and IDs, device type, operating system version, the
+              request type, the content of
+              your request and basic usage information about your use of our Services, such as date and time. We may
+              also collect and store
+              information locally on your device using mechanisms such as browser web storage and application data
+              caches.</span>
+            <span>
+              LOCATION INFORMATIONWhen you use the Services we may collect your precise location data. We may also
+              derive your approximate location
+              from your IP address.
+            </span>
+            <span>PROTECTIVE MEASURES WE USEWe protect your information using commercially reasonable technical and
+              administrative security measures to
+              reduce the risks of loss, misuse, unauthorized access, disclosure and alteration. Although we take
+              measures to secure your
+              information, we do not promise, and you should not expect, that your personal information, or searches, or
+              other information will
+              always remain secure. We cannot guarantee the security of our information storage, nor can we guarantee
+              that the information you
+              supply will not be intercepted while being transmitted to and from us over the Internet including, without
+              limitation, email and text
+              transmissions. In the event that any information under our control is compromised as a result of a breach
+              of security, we will take
+              reasonable steps to investigate the situation and where appropriate, notify those individuals whose
+              information may have been
+              compromised and take other steps, in accordance with any applicable laws and regulations.</span>
+            <h5>
+              THE LEGAL BASIS FOR COLLECTION AND PROCESSING OF YOUR PERSONAL INFORMATIONThe legal basis upon which we
+              rely for the collection and
+              processing of your Personal Information under the GDPR are the following:
+            </h5>
+            <ul>
+              <li>
+                When signing up subscribing to use our Services, you have given us explicit consent allowing Lorem Ipsum
+                to provide you with our
+                Services and generally to process your information in accordance with this Privacy Policy; and to the
+                transfer of your personal data
+                to other jurisdictions including, without limitation, the United States;
+              </li>
+              <li>It is necessary registering you as a user, managing your account and profile, and authenticating you
+                when you log in.</li>
+              <li>
+                It is necessary for our legitimate interests in the proper administration of our website and business;
+                analyzing the use of the
+                website and our Services; assuring the security of our website and Services; maintaining back-ups of our
+                databases; and
+                communicating with you;
+              </li>
+              <li>
+                To resolve technical issues you encounter, to respond to your requests for assistance, comments and
+                questions, to analyze crash
+                information, to repair and improve the Services and provide other customer support.
+              </li>
+              <li>
+                To send communications via email and within the Services, including, for example, responding to your
+                comments, questions and
+                requests, providing customer support, and sending you technical notices, product updates, security
+                alerts, and administrative and
+                account management related messages.
+              </li>
+              <li>To send promotional communications that may be of specific interest to you.</li>
+              <li>
+                It is necessary for our legitimate interests in the protection and assertion of our legal rights, and
+                the legal rights of others,
+                including you;
+              </li>
+              <li>
+                It is necessary for our compliance with certain legal provisions which may require us to process your
+                personal data. By way of
+                example, and without limitation, we may be required by law to disclose your personal data to law
+                enforcement or a regulatory agency.
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <!-- MOBILE NAVIGATION END -->
+      <!-- Privacy List out Section End -->
+    </main>
+    <!-- MAIN END -->
 
-      <!-- BEGIN MAIN -->
-      <main class="main">
-        <!-- Privacy List out Section  -->
-        <div class="privacy wrapper container-content">
-          <div class="privacy-text">
-            <h2 class="privacy-heading__title">Terms of Use</h2>
-            <h3 class="privacy-heading__sub_title">INTRODUCTION :</h3>
-            <div class="summary__list-item">
-              <p>
-                We at Wasai LLC respect the privacy of your personal information and, as such, make every effort to ensure your information is
-                protected and remains private. As the owner and operator of loremipsum.io (the "Website") hereafter referred to in this Privacy Policy
-                as "Lorem Ipsum", "us", "our" or "we", we have provided this Privacy Policy to explain how we collect, use, share and protect
-                information about the users of our Website (hereafter referred to as “user”, “you” or "your"). For the purposes of this Agreement, any
-                use of the terms "Lorem Ipsum", "us", "our" or "we" includes Wasai LLC, without limitation. We will not use or share your personal
-                information with anyone except as described in this Privacy Policy. This Privacy Policy will inform you about the types of personal
-                data we collect, the purposes for which we use the data, the ways in which the data is handled and your rights with regard to your
-                personal data. Furthermore, this Privacy Policy is intended to satisfy the obligation of transparency under the EU General Data
-                Protection Regulation 2016/679 ("GDPR") and the laws implementing GDPR. For the purpose of this Privacy Policy the Data Controller of
-                personal data is Wasai LLC and our contact details are set out in the Contact section at the end of this Privacy Policy. Data
-                Controller means the natural or legal person who (either alone or jointly or in common with other persons) determines the purposes for
-                which and the manner in which any personal information are, or are to be, processed. For purposes of this Privacy Policy, "Your
-                Information" or "Personal Data" means information about you, which may be of a confidential or sensitive nature and may include
-                personally identifiable information ("PII") and/or financial information. PII means individually identifiable information that would
-                allow us to determine the actual identity of a specific living person, while sensitive data may include information, comments, content
-                and other information that you voluntarily provide. Lorem Ipsum collects information about you when you use our Website to access our
-                services, and other online products and services (collectively, the “Services”) and through other interactions and communications you
-                have with us. The term Services includes, collectively, various applications, websites, widgets, email notifications and other
-                mediums, or portions of such mediums, through which you have accessed this Privacy Policy. We may change this Privacy Policy from time
-                to time. If we decide to change this Privacy Policy, we will inform you by posting the revised Privacy Policy on the Site. Those
-                changes will go into effect on the "Last updated" date shown at the end of this Privacy Policy. By continuing to use the Site or
-                Services, you consent to the revised Privacy Policy. We encourage you to periodically review the Privacy Policy for the latest
-                information on our privacy practices. BY ACCESSING OR USING OUR SERVICES, YOU CONSENT TO THE COLLECTION, TRANSFER, MANIPULATION,
-                STORAGE, DISCLOSURE AND OTHER USES OF YOUR INFORMATION (COLLECTIVELY, "USE OF YOUR INFORMATION") AS DESCRIBED IN THIS PRIVACY POLICY.
-                IF YOU DO NOT AGREE WITH OR CONSENT TO THIS PRIVACY POLICY YOU MAY NOT ACCESS OR USE OUR SERVICES.
-              </p>
-              <span
-                >INFORMATION PROVIDED DIRECTLY BY YOUWe collect information you provide directly to us, such as when you request information, create
-                or modify your personal account, request Services, subscribe to our Services, complete a Lorem Ipsum form, survey, quiz or
-                application, contact customer support, join or enroll for an event or otherwise communicate with us in any manner. This information
-                may include, without limitation: name, date of birth, e-mail address, physical address, business address, phone number, or any other
-                personal information you choose to provide.</span
-              >
-              <span
-                >INFORMATION COLLECTED THROUGH YOUR USE OF OUR SERVICESThe following are situations in which you may provide Your Information to
-                us:</span
-              >
-              <ul>
-                <li>When you fill out forms or fields through our Services;</li>
-                <li>When you register for an account with our Service;</li>
-                <li>When you create a subscription for our newsletter or Services;</li>
-                <li>When you provide responses to a survey;</li>
-                <li>When you answer questions on a quiz;</li>
-                <li>When you join or enroll in an event through our Services;</li>
-                <li>When you order services or products from, or through our Service;</li>
-                <li>When you provide information to us through a third-party application, service or Website;</li>
-                <li>
-                  When you communicate with us or request information about us or our products or Services, whether via email or other means; and
-                </li>
-                <li>When you participate in any of our marketing initiatives, including, contests, events, or promotions.</li>
-              </ul>
-              <span>
-                We also automatically collect information via the Website through the use of various technologies, including, but not limited to
-                Cookies and Web Beacons (explained below). We may collect your IP address, browsing behavior and device IDs. This information is used
-                by us in order to enable us to better understand how our Services are being used by visitors and allows us to administer and customize
-                the Services to improve your overall experience.</span
-              >
-              <span>
-                INFORMATION COLLECTED FROM OTHER SOURCESWe may also receive information from other sources and combine that with information we
-                collect through our Services. For example if you choose to link, create, or log in to your Lorem Ipsum account with a social media
-                service, e.g. LinkedIn, Facebook or Twitter, or if you engage with a separate App or Website that uses our API, or whose API we use,
-                we may receive information about you or your connections from that Site or App. This includes, without limitation, profile
-                information, profile picture, gender, user name, user ID associated with your social media account, age range, language, country,
-                friends list, and any other information you permit the social network to share with third parties. The data we receive is solely
-                dependent upon your privacy settings with the social network.</span
-              >
-              <span>
-                INFORMATION THIRD PARTIES PROVIDEWe may collect information about you from sources other than you, such as from social media websites
-                (i.e., Facebook, LinkedIn, Twitter or others), blogs, analytics providers, business affiliates and partners and other users. This
-                includes, without limitation, identity data, contact data, marketing and communications data, behavioral data, technical data and
-                content data.</span
-              >
-              <span>
-                AGGREGATED DATAWe may collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data
-                is de-identified or anonymized and does not constitute Personal Data for the purposes of the GDPR as this data does not directly or
-                indirectly reveal your identity. If we ever combine Aggregated Data with your Personal Data so that it can directly or indirectly
-                identify you, we treat the combined data as PII which will only be used in accordance with this Privacy Policy.</span
-              >
-              <h5>COOKIES, LOG FILES AND ANONYMOUS IDENTIFIERS</h5>
-              <ul>
-                <li>
-                  When you visit our Services, we may send one or more Cookies – small data files – to your computer to uniquely identify your browser
-                  and let us help you log in faster and enhance your navigation through the Sites. “Cookies” are text-only pieces of information that
-                  a website transfers to an individual’s hard drive or other website browsing equipment for record keeping purposes. A Cookie may
-                  convey anonymous information about how you browse the Services to us so we can provide you with a more personalized experience, but
-                  does not collect personal information about you. Cookies allow the Sites to remember important information that will make your use
-                  of the site more convenient. A Cookie will typically contain the name of the domain from which the Cookie has come, the “lifetime”
-                  of the Cookie, and a randomly generated unique number or other value. Certain Cookies may be used on the Sites regardless of whether
-                  you are logged in to your account or not.
-                </li>
-                <li>Session Cookies are temporary Cookies that remain in the Cookie file of your browser until you leave the Site.</li>
-                <li>
-                  Persistent Cookies remain in the Cookie file of your browser for much longer (though how long will depend on the lifetime of the
-                  specific Cookie).
-                </li>
-                <li>
-                  When we use session Cookies to track the total number of visitors to our Site, this is done on an anonymous aggregate basis (as
-                  Cookies do not in themselves carry any personal data).
-                </li>
-                <li>
-                  We may also employ Cookies so that we remember your computer when it is used to return to the Site to help customize your Lorem
-                  Ipsum web experience. We may associate personal information with a Cookie file in those instances.
-                </li>
-                <li>
-                  We use Cookies to help us know that you are logged on, provide you with features based on your preferences, understand when you are
-                  interacting with our Services, and compile other information regarding use of our Services.
-                </li>
-                <li>
-                  Third parties with whom we partner to provide certain features on our Site or to display advertising based upon your Web browsing
-                  activity use Cookies to collect and store information.
-                </li>
-                <li>
-                  Our Website may use remarketing services, to serve ads on our behalf across the internet on third party websites to previous
-                  visitors to our Sites. It could mean that we advertise to previous visitors who haven’t completed a task on our site. This could be
-                  in the form of an advertisement on the Google search results page or a site in the Google Display Network. Third-party vendors,
-                  including Google, use Cookies to serve ads based on your past visits to our Website. Any data collected will be used in accordance
-                  with our own privacy policy, as well as Google's privacy policies. To learn more, or to opt-out of receiving advertisements tailored
-                  to your interests by our third parties, visit the Network Advertising Initiative at www.networkadvertising.org/choices.
-                </li>
-                <li>
-                  Lorem Ipsum may use third-party services such as Google Analytics to help understand use of the Services. These services typically
-                  collect the information sent by your browser as part of a web page request, including Cookies and your IP address. They receive this
-                  information and their use of it is governed by their respective privacy policies. You may opt-out of Google Analytics for Display
-                  Advertisers including AdWords and opt-out of customized Google Display Network ads by visiting the Google Ads Preferences Manager
-                  here . To provide website visitors more choice on how their data is collected by Google Analytics, Google has developed an Opt-out
-                  Browser add-on, which is available by visiting Google Analytics Opt-out Browser Add-on here .
-                </li>
-                <li>
-                  You can control the use of Cookies at the individual browser level. Use the options in your web browser if you do not wish to
-                  receive a Cookie or if you wish to set your browser to notify you when you receive a Cookie. You can easily delete and manage any
-                  Cookies that have been installed in the Cookie folder of your browser by following the instructions provided by your particular
-                  browser manufacturer. Consult the documentation that your particular browser manufacturer provides. You may also consult your mobile
-                  device documentation for information on how to disable Cookies on your mobile device. If you reject Cookies, you may still use our
-                  Website, but your ability to use some features or areas of our Service may be limited.
-                </li>
-                <li>
-                  Lorem Ipsum cannot control the use of Cookies by third parties (or the resulting information), and use of third party Cookies is not
-                  covered by this policy.
-                </li>
-                <li>
-                  We automatically collect information about how you interact with our Services, preferences expressed, and settings chosen and store
-                  it in Log Files. This information may include internet protocol (IP) addresses, browser type, internet service provider (ISP),
-                  referring/exit pages, operating system, date/time stamp, and/or clickstream data. We may combine this automatically collected log
-                  information with other information we collect about you. We do this to improve services we offer you, to improve marketing,
-                  analytics, or Website functionality, and to document your consent to receiving products, services or communications from us or our
-                  partners. If we link such information with personally identifiable information in a manner that identifies a particular individual,
-                  then we will treat all such information as PII for purposes of this Privacy Policy.
-                </li>
-                <li>
-                  When you use our Services, we may employ Web Beacons (also known as clear GIFs or tracking pixels) to anonymously track online usage
-                  patterns. No Personally Identifiable Information from your account is collected using these Web Beacons.
-                </li>
-              </ul>
-              <span
-                >DEVICE INFORMATIONWhen you use our Services through your computer, mobile phone or other device, we may collect information regarding
-                and related to your device, such as hardware models and IDs, device type, operating system version, the request type, the content of
-                your request and basic usage information about your use of our Services, such as date and time. We may also collect and store
-                information locally on your device using mechanisms such as browser web storage and application data caches.</span
-              >
-              <span>
-                LOCATION INFORMATIONWhen you use the Services we may collect your precise location data. We may also derive your approximate location
-                from your IP address.
-              </span>
-              <span
-                >PROTECTIVE MEASURES WE USEWe protect your information using commercially reasonable technical and administrative security measures to
-                reduce the risks of loss, misuse, unauthorized access, disclosure and alteration. Although we take measures to secure your
-                information, we do not promise, and you should not expect, that your personal information, or searches, or other information will
-                always remain secure. We cannot guarantee the security of our information storage, nor can we guarantee that the information you
-                supply will not be intercepted while being transmitted to and from us over the Internet including, without limitation, email and text
-                transmissions. In the event that any information under our control is compromised as a result of a breach of security, we will take
-                reasonable steps to investigate the situation and where appropriate, notify those individuals whose information may have been
-                compromised and take other steps, in accordance with any applicable laws and regulations.</span
-              >
-              <h5>
-                THE LEGAL BASIS FOR COLLECTION AND PROCESSING OF YOUR PERSONAL INFORMATIONThe legal basis upon which we rely for the collection and
-                processing of your Personal Information under the GDPR are the following:
-              </h5>
-              <ul>
-                <li>
-                  When signing up subscribing to use our Services, you have given us explicit consent allowing Lorem Ipsum to provide you with our
-                  Services and generally to process your information in accordance with this Privacy Policy; and to the transfer of your personal data
-                  to other jurisdictions including, without limitation, the United States;
-                </li>
-                <li>It is necessary registering you as a user, managing your account and profile, and authenticating you when you log in.</li>
-                <li>
-                  It is necessary for our legitimate interests in the proper administration of our website and business; analyzing the use of the
-                  website and our Services; assuring the security of our website and Services; maintaining back-ups of our databases; and
-                  communicating with you;
-                </li>
-                <li>
-                  To resolve technical issues you encounter, to respond to your requests for assistance, comments and questions, to analyze crash
-                  information, to repair and improve the Services and provide other customer support.
-                </li>
-                <li>
-                  To send communications via email and within the Services, including, for example, responding to your comments, questions and
-                  requests, providing customer support, and sending you technical notices, product updates, security alerts, and administrative and
-                  account management related messages.
-                </li>
-                <li>To send promotional communications that may be of specific interest to you.</li>
-                <li>
-                  It is necessary for our legitimate interests in the protection and assertion of our legal rights, and the legal rights of others,
-                  including you;
-                </li>
-                <li>
-                  It is necessary for our compliance with certain legal provisions which may require us to process your personal data. By way of
-                  example, and without limitation, we may be required by law to disclose your personal data to law enforcement or a regulatory agency.
-                </li>
-              </ul>
+    <!-- BEGIN FOOTER -->
+    <footer class="footer">
+      <div class="footer__main wrapper">
+        <div class="footer__top">
+          <div class="footer__cols">
+            <div class="footer__col">
+              <a class="footer-logo logo" href="#">
+                <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
+              </a>
+              <span class="footer-description">Cillum eu id enim aliquip aute ullamco anim. <br />Culpa deserunt nostrud
+                excepteur voluptate.</span>
+              <div class="socials">
+                <span class="socials__text">Find us here:</span>
+                <ul class="socials__list">
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">Fb</a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">Tw</a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">Ins</a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">Pt</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col">
+              <nav class="footer-nav">
+                <div class="footer-nav__col">
+                  <span class="footer-title">About</span>
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="about.html">About us</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="collections.html">Collections</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="contacts.html">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-nav__col">
+                  <span class="footer-title">Useful links</span>
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="privacy_policy.html">Privacy Policy</a>
+                    </li>
+                    </li>
+
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="#">Support</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="#">Shipping details</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="faq.html">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </div>
           </div>
         </div>
-        <!-- Privacy List out Section End -->
-      </main>
-      <!-- MAIN END -->
-
-      <!-- BEGIN FOOTER -->
-      <footer class="footer">
-        <div class="footer__main wrapper">
-          <div class="footer__top">
-            <div class="footer__cols">
-              <div class="footer__col">
-                <a class="footer-logo logo" href="#">
-                  <img class="logo__image" src="https://via.placeholder.com/82x17" alt="" />
-                </a>
-                <span class="footer-description">Cillum eu id enim aliquip aute ullamco anim. <br />Culpa deserunt nostrud excepteur voluptate.</span>
-                <div class="socials">
-                  <span class="socials__text">Find us here:</span>
-                  <ul class="socials__list">
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">Fb</a>
+        <div class="footer__bottom">
+          <div class="footer__cols">
+            <div class="footer__left">
+              <span class="copyrights">&copy; All right reserved. Mollee 2021</span>
+            </div>
+            <div class="footer__right">
+              <div class="payments">
+                <div class="payments__col">
+                  <span class="payments__text">Payment methods:</span>
+                </div>
+                <div class="payments__col">
+                  <ul class="payments__list">
+                    <li class="payments__item">
+                      <img class="payments__image" alt=""
+                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        data-lazy="https://via.placeholder.com/34x20" />
                     </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">Tw</a>
+                    <li class="payments__item">
+                      <img class="payments__image" alt=""
+                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        data-lazy="https://via.placeholder.com/34x20" />
                     </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">Ins</a>
+                    <li class="payments__item">
+                      <img class="payments__image" alt=""
+                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        data-lazy="https://via.placeholder.com/34x20" />
                     </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">Pt</a>
+                    <li class="payments__item">
+                      <img class="payments__image" alt=""
+                        src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        data-lazy="https://via.placeholder.com/34x20" />
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="footer__col">
-                <nav class="footer-nav">
-                  <div class="footer-nav__col">
-                    <span class="footer-title">About</span>
-                    <ul class="footer-nav__list">
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="about.html">About us</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="collections.html">Collections</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="shop.html">Shop</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="blog.html">Blog</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="contacts.html">Contact us</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="footer-nav__col">
-                    <span class="footer-title">Useful links</span>
-                    <ul class="footer-nav__list">
-                      <li class="footer-nav__item">
-                        <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="privacy_policy.html">Privacy Policy</a>
-                      </li>
-                      </li>
-                      
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Support</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="#">Shipping details</a>
-                      </li>
-                      <li class="footer-nav__item">
-                        <a class="footer-nav__link" href="faq.html">FAQs</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
             </div>
           </div>
-          <div class="footer__bottom">
-            <div class="footer__cols">
-              <div class="footer__left">
-                <span class="copyrights">&copy; All right reserved. Mollee 2021</span>
-              </div>
-              <div class="footer__right">
-                <div class="payments">
-                  <div class="payments__col">
-                    <span class="payments__text">Payment methods:</span>
-                  </div>
-                  <div class="payments__col">
-                    <ul class="payments__list">
-                      <li class="payments__item">
-                        <img
-                          class="payments__image"
-                          alt=""
-                          src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                          data-lazy="https://via.placeholder.com/34x20"
-                        />
-                      </li>
-                      <li class="payments__item">
-                        <img
-                          class="payments__image"
-                          alt=""
-                          src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                          data-lazy="https://via.placeholder.com/34x20"
-                        />
-                      </li>
-                      <li class="payments__item">
-                        <img
-                          class="payments__image"
-                          alt=""
-                          src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                          data-lazy="https://via.placeholder.com/34x20"
-                        />
-                      </li>
-                      <li class="payments__item">
-                        <img
-                          class="payments__image"
-                          alt=""
-                          src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                          data-lazy="https://via.placeholder.com/34x20"
-                        />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="footer__bg-left" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
-          <img class="footer__bg-right" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png" alt="" />
         </div>
-      </footer>
-      <!-- FOOTER END -->
-    </div>
+        <img class="footer__bg-left" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png"
+          alt="" />
+        <img class="footer__bg-right" src="assets/img/patterns/flower.png" data-lazy="assets/img/patterns/flower.png"
+          alt="" />
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+  </div>
 
-    <script src="assets/js/libs/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/libs/jquery-migrate-1.4.1.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <script src="assets/js/libs/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/libs/jquery-migrate-1.4.1.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
