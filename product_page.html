@@ -827,6 +827,7 @@
       } else {
         localStorage.setItem('favouriteProduct', JSON.stringify([favouriteProduct]))
       }
+      $(".user-nav__text").html((JSON.parse(localStorage.getItem("favouriteProduct")) || 0).length);
     }
 
 
