@@ -193,6 +193,7 @@ body {
 .container-content {
     max-width: 1740px;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 .w-full {
@@ -1494,7 +1495,10 @@ button {
     -webkit-transition: .2s ease-out;
     -ms-transition: .2s ease-out;
     transition: .2s ease-out;
-    border-radius: 9px
+    border-radius: 9px;
+    position: absolute;
+    top: -10px;
+    left: 15px;
 }
 
 .hide-mob {
@@ -2031,7 +2035,7 @@ a.slide-nav__link::after {
 .main {
     min-width: 0;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 90px;
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto
@@ -10179,6 +10183,7 @@ body.compensate-for-scrollbar .header {
     max-width: 40rem;
     width: 100%;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .story-banner__style_2 .story-content {
@@ -10226,6 +10231,10 @@ body.compensate-for-scrollbar .header {
     padding-bottom: 48px;
 }
 
+.story-wrapper-container {
+    max-width: 1536px;
+}
+
 
 @media screen and (max-width:1700px) {
 
@@ -10255,6 +10264,15 @@ body.compensate-for-scrollbar .header {
 
     .inner-deal__image {
         margin: 0 -162px 0 -200px
+    }
+
+    .story-banner__style_2 {
+        min-height: 580px;
+    }
+
+    .story-banner__style_2 .story-content {
+        padding: 0 30px;
+        max-width: 50rem;
     }
 }
 
@@ -10305,6 +10323,20 @@ body.compensate-for-scrollbar .header {
 
     .about-detail.advantages.wrapper {
         padding: 80px 20px 60px;
+    }
+
+    .banner-title__style {
+        padding: 120px 0 60px;
+    }
+
+    .banner-title__style h2 {
+        font: 500 44px "Eina", sans-serif;
+        padding-bottom: 14px;
+    }
+
+    .banner-title__style p {
+        font: 500 18px/32px "Eina", sans-serif;
+        padding-bottom: 20px;
     }
 }
 
@@ -10953,6 +10985,17 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:1200px) {
+
+    .story-content__text h2, .story-banner__style_2 .story-content__text h2 {
+        font: 500 50px "Eina", sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .story-content__text p, .story-banner__style_2 .story-content__text p {
+        font: 500 18px "Eina", sans-serif;
+        padding-bottom: 30px;
+    }
+
     .short-item__image-bg {
         height: 330px
     }
@@ -11434,6 +11477,7 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (min-width: 1200px) {
+
     .about-company .about-content__image_sm {
         margin-top: 100px;
         margin-bottom: 82px;
@@ -11519,6 +11563,19 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:991px) {
+
+    .story-banner__style_1,
+    .story-banner__style_2 {
+        min-height: calc(100vh - 87px);
+    }
+
+    .story-banner__style_1 .left_wrap,
+    .story-banner__style_1 .right_wrap,
+    .story-banner__style_2 .left_wrap,
+    .story-banner__style_2 .right_wrap {
+        max-width: 50%;
+    }
+
     .add-button {
         padding-left: 28px;
         font-size: 15px
@@ -12069,6 +12126,7 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:800px) {
+
     .short-item__image-bg {
         height: 300px
     }
@@ -12076,6 +12134,47 @@ body.compensate-for-scrollbar .header {
     .multiple-img-list .product-col {
         height: 110px;
     }
+
+    .story-banner__style_1 {
+        flex-direction: column-reverse;
+    }
+
+    .story-banner__style_1 .left_wrap,
+    .story-banner__style_1 .right_wrap,
+    .story-banner__style_2 .left_wrap,
+    .story-banner__style_2 .right_wrap {
+        max-width: 100%;
+    }
+
+    .story-banner__style_1 .story-content, .story-banner__style_2 .story-content {
+        min-height: 50vh;
+        padding: 50px 15px;
+    }
+
+    .story-content__text h2, .story-banner__style_2 .story-content__text h2 {
+        font: 500 30px "Eina", sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .story-content__text p, .story-banner__style_2 .story-content__text p {
+        font: 500 16px "Eina", sans-serif;
+        padding-bottom: 30px;
+    }
+
+    .banner-title__style {
+        padding: 80px 0 40px;
+    }
+
+    .banner-title__style h2 {
+        font: 500 38px "Eina", sans-serif;
+        padding-bottom: 14px;
+    }
+
+    .banner-title__style p {
+        font: 500 16px/28px "Eina", sans-serif;
+        padding-bottom: 20px;
+    }
+
 }
 
 @media screen and (min-width:768px) {
@@ -13973,6 +14072,16 @@ body.compensate-for-scrollbar .header {
         font-weight: 500;
         border-bottom: 2px solid #95ccb5
     }
+
+    .banner-title__style {
+        padding: 50px 0 30px;
+    }
+
+    .banner-title__style h2 {
+        font: 500 32px "Eina", sans-serif;
+        padding-bottom: 14px;
+    }
+
 }
 
 @media screen and (max-width:479px) {

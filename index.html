@@ -154,7 +154,7 @@
                     </li>
                     <li class="header-nav__item logo_nav">
                       <div class="header__col text-center">
-                        <a class="logo" href="#">
+                        <a class="logo" href="index.html">
                           <h3>Logo</h3>
                         </a>
                       </div>
@@ -237,9 +237,10 @@
                       </div>
                     </li>
                     <li class="header-nav__item">
-                      <a class="header-nav__link" href="contacts.html">Contact</a>
+                      <a class="header-nav__link" href="contacts.html">Contact us</a>
                     </li>
                   </ul>
+
                 </nav>
               </div>
             </div>
@@ -893,7 +894,9 @@
 
       allMyArray.forEach((data1) => {
         if (data1.title === "Product List") {
-          productList = data1.data;
+          data1.data.forEach((ele, index) => {
+            productList.push({ ...ele, id: index + 1 });
+          });
         }
       });
       createData(productList, "shortItemAll");
@@ -1049,7 +1052,6 @@
       include("assets/js/slider_script.js");
     };
     request.send();
-
 
     function addToWishlist(product_id) {
       favouriteProduct = productList.find((element) => element.id == product_id)

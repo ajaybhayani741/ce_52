@@ -620,64 +620,82 @@
         }
       });
 
-      wishListData(favouriteProduct, "wishlist");
-
-      function wishListData(wishlistArray, id) {
-        var wishlistCreate = "";
-        var wishListBox = document.getElementById(id);
-        for (var i in wishlistArray) {
-          console.log('[wishlistArray]', [wishlistArray])
-          wishlistCreate += `<article class='wishlist__item js-remove'>`;
-          wishlistCreate += `<div class='wishlist__cols'>`;
-          wishlistCreate += `<div class='wishlist__left'>`;
-          wishlistCreate += `<a class='wishlist__image-link' href='product_page.html'>`;
-          wishlistCreate += `<img class='wishlist__image' src='https://via.placeholder.com/130x140' alt='' />`;
-          wishlistCreate += `</a>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist__right'>`;
-          wishlistCreate += `<div class='wishlist__top'>`;
-          wishlistCreate += `<div class='wishlist__col'>`;
-          wishlistCreate += `<h2 class='wishlist__title'>`;
-          wishlistCreate += `<a class='wishlist__link' href='product_page.html'>${wishlistArray[i]["product-name"]}</a>`;
-          wishlistCreate += `</h2>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist__col'>`;
-          wishlistCreate += `<button class='wishlist__remove remove-button js-remove-button'></button>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist__bottom'>`;
-          wishlistCreate += `<div class='wishlist__col'>`;
-          wishlistCreate += `<div class='wishlist-info'>`;
-          wishlistCreate += `<div class='wishlist-info__col'>`;
-          wishlistCreate += `<span class='wishlist-info__label'>Article:</span>`;
-          wishlistCreate += `<span class='wishlist-info__text'>000845DZ1</span>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist-info__col'>`;
-          wishlistCreate += `<span class='wishlist-info__label'>Status:</span>`;
-          wishlistCreate += `<span class='wishlist-info__text'>`;
-          wishlistCreate += `<span class='green'>In Stock</span>`;
-          wishlistCreate += `</span>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist__col'>`;
-          wishlistCreate += `<span class='wishlist__old-price'>${wishlistArray[i]['strikethrough-price']}</span>`;
-          wishlistCreate += `<span class='wishlist__price'>${wishlistArray[i].price}</span>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `<div class='wishlist__col'>`;
-          wishlistCreate += `<a class='wishlist__add add-button' href='#'>add to cart</a>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</div>`;
-          wishlistCreate += `</article>`;
-        }
-        wishListBox.innerHTML = wishlistCreate;
-        include("assets/js/main.js");
-      }
-
     };
     request.send();
+
+    function removeToWishlist(product_id) {
+      favouriteProduct = productList.find((element) => element.id == product_id)
+      const selectedProductStringFormat = localStorage.getItem('favouriteProduct');
+      if (selectedProductStringFormat) {
+        const selectedProductArrayFormat = JSON.parse(selectedProductStringFormat);
+        selectedProductArrayFormat?.forEach((element, index) => {
+          if (product_id === element.id) {
+            selectedProductArrayFormat.splice(index, 1);
+          }
+        });
+        if (selectedProductArrayFormat && selectedProductArrayFormat.length) {
+          localStorage.setItem('favouriteProduct', JSON.stringify(selectedProductArrayFormat));
+        } else {
+          localStorage.removeItem('favouriteProduct');
+        }
+      }
+    }
+
+    wishListData(favouriteProduct, "wishlist");
+
+    function wishListData(wishlistArray, id) {
+      var wishlistCreate = "";
+      var wishListBox = document.getElementById(id);
+      for (var i in wishlistArray) {
+        wishlistCreate += `<article class='wishlist__item js-remove'>`;
+        wishlistCreate += `<div class='wishlist__cols'>`;
+        wishlistCreate += `<div class='wishlist__left'>`;
+        wishlistCreate += `<a class='wishlist__image-link' href='product_page.html'>`;
+        wishlistCreate += `<img class='wishlist__image' src='https://via.placeholder.com/130x140' alt='' />`;
+        wishlistCreate += `</a>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist__right'>`;
+        wishlistCreate += `<div class='wishlist__top'>`;
+        wishlistCreate += `<div class='wishlist__col'>`;
+        wishlistCreate += `<h2 class='wishlist__title'>`;
+        wishlistCreate += `<a class='wishlist__link' href='product_page.html'>${wishlistArray[i]["product-name"]}</a>`;
+        wishlistCreate += `</h2>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist__col'>`;
+        wishlistCreate += `<button class='wishlist__remove remove-button js-remove-button' onclick='removeToWishlist(${wishlistArray[i].id})'></button>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist__bottom'>`;
+        wishlistCreate += `<div class='wishlist__col'>`;
+        wishlistCreate += `<div class='wishlist-info'>`;
+        wishlistCreate += `<div class='wishlist-info__col'>`;
+        wishlistCreate += `<span class='wishlist-info__label'>Article:</span>`;
+        wishlistCreate += `<span class='wishlist-info__text'>000845DZ1</span>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist-info__col'>`;
+        wishlistCreate += `<span class='wishlist-info__label'>Status:</span>`;
+        wishlistCreate += `<span class='wishlist-info__text'>`;
+        wishlistCreate += `<span class='green'>In Stock</span>`;
+        wishlistCreate += `</span>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist__col'>`;
+        wishlistCreate += `<span class='wishlist__old-price'>${wishlistArray[i]['strikethrough-price']}</span>`;
+        wishlistCreate += `<span class='wishlist__price'>${wishlistArray[i].price}</span>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `<div class='wishlist__col'>`;
+        wishlistCreate += `<a class='wishlist__add add-button' href='#'>add to cart</a>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</div>`;
+        wishlistCreate += `</article>`;
+      }
+      wishListBox.innerHTML = wishlistCreate;
+      include("assets/js/main.js");
+    }
+
   </script>
 </body>
 

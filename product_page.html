@@ -609,6 +609,7 @@
   <script src="assets/js/main.js"></script>
   <main_js></main_js>
   <script>
+    var productList = [];
     function include(file) {
       var script = document.createElement("script");
       script.src = file;
@@ -642,7 +643,9 @@
       allMyArray = data.data;
       allMyArray.forEach((data1) => {
         if (data1.title === "Product List") {
-          productList = data1.data;
+          data1.data.forEach((ele, index) => {
+            productList.push({ ...ele, id: index + 1 });
+          });
         }
       });
 
@@ -855,10 +858,19 @@
         var shortItemAllCreate = "";
         featuresProductSliderList = document.getElementById(id);
         for (var i in myArray) {
+          const selectedProductStringFormat = localStorage.getItem('favouriteProduct');
+          const selectedProductArrayFormat = JSON.parse(selectedProductStringFormat);
+          const data = selectedProductArrayFormat?.find(element => myArray[i].id === element.id);
+          isActive = '';
+          if (data) {
+            isActive = 'active'
+          } else {
+            isActive = ''
+          }
           shortItemAllCreate += `<article class='short-item'>`;
           shortItemAllCreate += `<div class='short-item__all'>`;
           shortItemAllCreate += `<div class='short-item__product'>`;
-          shortItemAllCreate += `<a class='short-item__image-bg' href='product_page.html'>`;
+          shortItemAllCreate += `<a class='short-item__image-bg' onclick='redirectToProductPage(${myArray[i].id})'>`;
           shortItemAllCreate +=
             `<img class='short-item__image' src='${myArray[i][`image-1`]}' data-lazy='${myArray[i][`image-1`]}' alt='' />`;
           shortItemAllCreate += `</a>`;
@@ -870,16 +882,16 @@
           shortItemAllCreate += `</div>`;
           shortItemAllCreate += `</div>`;
           shortItemAllCreate += `<div class='short-item_button_group'>`;
-          shortItemAllCreate += `<button class='short-item__button heart-button js-toggle-active'></button>`;
+          shortItemAllCreate += `<button class='short-item__button heart-button js-toggle-active ${isActive}' onclick='addToWishlist(${myArray[i].id})'></button>`;
           shortItemAllCreate += `<button class='short-item__button cart-button js-toggle-active'></button>`;
           shortItemAllCreate += `</div>`;
           shortItemAllCreate += `</div>`;
           shortItemAllCreate += `<div class='short-item__info'>`;
           shortItemAllCreate += `<h4 class='short-item__title'>`;
-          shortItemAllCreate += `<a class='short-item__link' href='product_page.html'>${myArray[i][`product-name`]}</a>`;
+          shortItemAllCreate += `<a class='short-item__link' onclick='redirectToProductPage(${myArray[i].id})'>${myArray[i][`product-name`]}</a>`;
           shortItemAllCreate += `</h4>`;
           shortItemAllCreate += `<span class='short-item__price'>${myArray[i].price}</span>`;
-          shortItemAllCreate += `<span class='short-item__old-price'>$52.99</span>`;
+          shortItemAllCreate += `<span class='short-item__old-price'>${myArray[i]["strikethrough-price"]}</span>`;
           shortItemAllCreate += `<div class='short-item__color-group'>`;
           shortItemAllCreate += `<a href='javascript:void(0)' class='circle gray'></a>`;
           shortItemAllCreate += `<a href='javascript:void(0)' class='circle yellow active'></a>`;
@@ -899,6 +911,28 @@
 
     };
     request.send();
+
+    function addToWishlist(product_id) {
+      favouriteProduct = productList.find((element) => element.id == product_id)
+      const selectedProductStringFormat = localStorage.getItem('favouriteProduct');
+
+      if (selectedProductStringFormat) {
+        const selectedProductArrayFormat = JSON.parse(selectedProductStringFormat);
+        const data = selectedProductArrayFormat?.find(element => product_id === element.id);
+        if (!data) {
+          selectedProductArrayFormat.push(favouriteProduct);
+          localStorage.setItem('favouriteProduct', JSON.stringify(selectedProductArrayFormat))
+        } else {
+          const storeData = selectedProductArrayFormat?.filter(element => product_id !== element.id);
+          localStorage.setItem('favouriteProduct', JSON.stringify(storeData))
+        }
+      } else {
+        localStorage.setItem('favouriteProduct', JSON.stringify([favouriteProduct]))
+      }
+    }
+
+
+
   </script>
 </body>
 
