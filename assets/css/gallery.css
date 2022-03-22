@@ -2286,3 +2286,34 @@ body.is-preload .items.onload-fade-in>*>.inner {
 .items.style2>* {
     border-color: rgba(0, 0, 0, 0.2);
 }
+
+
+/* @media only screen and (max-width:991px) {
+    .header-nav {
+        padding: 0;
+    }
+
+    .header__col_hide-mob {
+        position: fixed;
+        width: 320px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #fff;
+        box-shadow: 2px 1px 11px 0px #0000001f;
+        padding: 0;
+    }
+
+    .header-nav__list {
+        margin: 0 0px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .header-nav__item {
+        width: 100%;
+        padding: 20px 0;
+    }
+} */

@@ -680,3 +680,5 @@ $(".js-remove-button").on("click", function () {
       $(this).remove();
     });
 });
+
+$(".user-nav__text").html((JSON.parse(localStorage.getItem("favouriteProduct")) || 0).length);
