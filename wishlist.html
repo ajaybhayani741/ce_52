@@ -539,6 +539,7 @@
           localStorage.removeItem('favouriteProduct');
         }
       }
+      $(".user-nav__text").html((JSON.parse(localStorage.getItem("favouriteProduct")) || 0).length);
     }
 
     wishListData(favouriteProduct, "wishlist");
