@@ -167,37 +167,6 @@ window.onload = function () {
         ],
       });
     }
-
-    // if ($(".js-product-slider").length) {
-    //   $(".js-product-slider").on("init", function () {
-    //     $(".js-product-slider").removeClass("loaded");
-    //   });
-
-    //   $(".js-product-slider").slick({
-    //     dots: false,
-    //     arrows: false,
-    //     infinite: true,
-    //     autoplay: false,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     touchThreshold: 200,
-    //     speed: 500,
-    //     waitForAnimate: false,
-    //     asNavFor: ".js-click-product-normal",
-    //   });
-    // }
-
-    // if ($(".js-click-product-normal").length) {
-    //   $(".js-click-product-normal").slick({
-    //     slidesToShow: 5,
-    //     slidesToScroll: 1,
-    //     asNavFor: ".js-product-slider",
-    //     dots: false,
-    //     focusOnSelect: true,
-    //     infinite: true,
-    //     arrows: false,
-    //   });
-    // }
   })();
   // sliders end
 
@@ -318,92 +287,74 @@ window.onload = function () {
   $(function () {
     var navTimer;
 
+    var windowSize = $(window).width();
     // main nav
-    function mouseOverNav($this, $navButton, $navItem, $navHide, $speed) {
-      timerOut(navTimer);
-      navTimer = setTimeout(function () {
-        $this
-          .addClass("active")
-          .closest($navItem)
-          .addClass("active")
-          .closestDescendent($navHide)
-          .stop()
-          .fadeIn($speed, function () {
-            $navItem.removeClass("to-right");
-            if (
-              $this.closest($navItem).closestDescendent($navHide).width() >
-              $(window).width() - $this.closest($navItem).closestDescendent($navHide).offset().left
-            ) {
-              $this.closest($navItem).addClass("to-right");
-            }
-          });
+    if (windowSize >= 991) {
+      function mouseOverNav($this, $navButton, $navItem, $navHide, $speed) {
+        timerOut(navTimer);
+        navTimer = setTimeout(function () {
+          $this
+            .addClass("active")
+            .closest($navItem)
+            .addClass("active")
+            .closestDescendent($navHide)
+            .stop()
+            .fadeIn($speed, function () {
+              $navItem.removeClass("to-right");
+              if (
+                $this.closest($navItem).closestDescendent($navHide).width() >
+                $(window).width() - $this.closest($navItem).closestDescendent($navHide).offset().left
+              ) {
+                $this.closest($navItem).addClass("to-right");
+              }
+            });
 
-        $this
-          .closest($navItem)
-          .siblings($navItem)
-          .removeClass("active")
-          .closestDescendent($navHide)
-          .stop()
-          .fadeOut($speed)
-          .closest($navItem)
-          .find($navButton)
-          .removeClass("active");
-      }, 20);
-    }
-
-    function mouseOutNav($this, $navButton, $navItem, $navHide, $speed) {
-      timerOut(navTimer);
-      $($this).removeClass("active").find($navButton).removeClass("active");
-      $($this).find($navHide).fadeOut($speed);
-    }
-
-    function clickNav($this, $navButton, $navItem, $navHide, $speed) {
-      if ($this.hasClass("active")) {
-        $($navItem).removeClass("active");
-        $($navButton).removeClass("active");
-        $($navHide).fadeOut($speed);
-        $("html").removeClass("scroll-hidden");
-      } else {
-        $($navItem).removeClass("active");
-        $($navButton).removeClass("active");
-        $($navHide).fadeOut($speed);
-        $this
-          .addClass("active")
-          .closest($navItem)
-          .addClass("active")
-          .closestDescendent($navHide)
-          .stop()
-          .fadeIn($speed, function () {
-            $navItem.removeClass("to-right");
-            if (
-              $this.closest($navItem).closestDescendent($navHide).width() >
-              $(window).width() - $this.closest($navItem).closestDescendent($navHide).offset().left
-            ) {
-              $this.closest($navItem).addClass("to-right");
-            }
-          });
+          $this
+            .closest($navItem)
+            .siblings($navItem)
+            .removeClass("active")
+            .closestDescendent($navHide)
+            .stop()
+            .fadeOut($speed)
+            .closest($navItem)
+            .find($navButton)
+            .removeClass("active");
+        }, 20);
       }
+
+      function mouseOutNav($this, $navButton, $navItem, $navHide, $speed) {
+        timerOut(navTimer);
+        $($this).removeClass("active").find($navButton).removeClass("active");
+        $($this).find($navHide).fadeOut($speed);
+      }
+
+      $(".desktop .js-nav-button").live("mouseenter", function () {
+        mouseOverNav($(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 300);
+      });
+
+      $(".desktop .js-nav-item").live("mouseleave", function () {
+        mouseOutNav($(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 0);
+      });
+
+      $(document).on("click touchstart", function (e) {
+        if ($(e.target).closest(".js-nav-item").length) return;
+        $(".desktop .js-nav-item, .desktop .js-nav-button").removeClass("active");
+        $(".desktop .js-nav-hide").stop().fadeOut(0);
+      });
+    } else {
+      $(".js-nav-button").live("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active").closest(".js-nav-item").toggleClass("active").closestDescendent(".js-nav-hide").stop().slideToggle(300);
+      });
+      $(".desktop .js-nav-button").on("click", function () {
+        $(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 300;
+      });
+
+      $(".desktop .js-nav-item").on("click", function () {
+        $(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 0;
+      });
     }
 
-    $(".desktop .js-nav-button").live("mouseenter", function () {
-      mouseOverNav($(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 300);
-    });
-
-    $(".desktop .js-nav-item").live("mouseleave", function () {
-      mouseOutNav($(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 0);
-    });
-
-    $(".mob .js-nav-button").live("click", function () {
-      clickNav($(this), $(".js-nav-button"), $(".js-nav-item"), $(".js-nav-hide"), 300);
-    });
-
-    $(document).on("click touchstart", function (e) {
-      if ($(e.target).closest(".js-nav-item").length) return;
-      $(".desktop .js-nav-item, .desktop .js-nav-button").removeClass("active");
-      $(".desktop .js-nav-hide").stop().fadeOut(0);
-    });
-
-    // mobile nav
     $(".js-mob-open").live("click", function () {
       timerOut(navTimer);
       $(".js-mob-hide")
@@ -427,19 +378,17 @@ window.onload = function () {
       }, 301);
     });
 
+    // mobile nav
+
     $(".main").on("click", function () {
       $("body").removeClass("pushmenu-push-toleft");
     });
 
     // slidedown
-    $(".js-slidedown-button").live("click", function (e) {
-      e.preventDefault();
-      $(this).toggleClass("active").closest(".js-slidedown").toggleClass("active").closestDescendent(".js-slidedown-hide").stop().slideToggle(300);
-    });
 
-    $(".js-slidedown.active").each(function () {
-      $(this).closestDescendent(".js-slidedown-hide").stop().slideDown(0);
-      $(this).closestDescendent(".js-slidedown-button").addClass("active");
+    $(".js-nav-item.active").each(function () {
+      $(this).closestDescendent(".js-nav-hide").stop().slideDown(0);
+      $(this).closestDescendent(".js-nav-button").addClass("active");
     });
   });
   // navigation end
@@ -663,14 +612,6 @@ jQuery(window).on("scroll load", function () {
   }
 });
 /* scrolled header */
-
-// Side Nav Jquery
-$(function () {
-  $(".short-item__color-group .circle").on("click", function () {
-    $(".circle").removeClass("active");
-    $(this).addClass("active");
-  });
-});
 
 // remove item
 $(".js-remove-button").on("click", function () {

@@ -121,4 +121,21 @@
       arrows: false,
     });
   }
+
+  (function () {
+    var srcArr = document.querySelectorAll("[data-bg]");
+    if ($(".mob").length) {
+      setTimeout(function () {
+        for (var i = 0; i < srcArr.length; i++) {
+          var newSrc = srcArr[i].dataset.bg;
+          srcArr[i].style.backgroundImage = "url(" + newSrc + ")";
+        }
+      }, 1500);
+    } else {
+      for (var i = 0; i < srcArr.length; i++) {
+        var newSrc = srcArr[i].dataset.bg;
+        srcArr[i].style.backgroundImage = "url(" + newSrc + ")";
+      }
+    }
+  })();
 })();

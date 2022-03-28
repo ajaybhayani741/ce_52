@@ -74,6 +74,7 @@
           <div class="header__center">
             <div class="header__cols">
               <div class="header__col header__col_hide-mob">
+                <button class="hide-mob__close close-button js-mob-close"></button>
                 <nav class="header-nav">
                   <ul class="header-nav__list">
                     <li class="header-nav__item js-nav-item">
@@ -102,7 +103,8 @@
                               <label>Procut Pages</label>
                             </li>
                             <li class="hide-nav__item">
-                              <a class="hide-nav__link" href="cart.html">Single Product V1</a>
+                              <a class="hide-nav__link" href="cart.html">Single Product
+                                V1</a>
                             </li>
                             <li class="hide-nav__item">
                               <a class="hide-nav__link" href="#">Single Product V2</a>
@@ -122,7 +124,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="header-nav__item">
+                    <li class="header-nav__item active">
                       <a class="header-nav__link" href="our_story.html">Our Story</a>
                     </li>
                     <li class="header-nav__item logo_nav">
@@ -148,7 +150,7 @@
               <li class="user-nav__item">
                 <a class="user-nav__link" href="wishlist.html">
                   <span class="user-nav__icon user-nav__icon_3"></span>
-                  <span class="user-nav__text">0</span>
+                  <span class="user-nav__text" id="wishlistCount">0</span>
                 </a>
               </li>
             </ul>
@@ -157,160 +159,6 @@
       </div>
     </header>
     <!-- HEADER END -->
-
-    <!-- MOBILE NAVIGATION -->
-    <div class="hide-mob js-mob-hide">
-      <div class="hide-mob__bg">
-        <button class="hide-mob__close close-button js-mob-close"></button>
-        <div class="hide-mob__mask js-mob-close"></div>
-        <ul class="mob-nav">
-          <li class="mob-nav__item">
-            <a class="mob-nav__link" href="index.html">Home</a>
-          </li>
-          <li class="mob-nav__item js-slidedown">
-            <a class="mob-nav__link js-slidedown-button" href="shop.html">
-              <span class="mob-nav__arrow">Shop</span>
-            </a>
-            <div class="slide-nav js-slidedown-hide">
-              <ul class="slide-nav__list">
-                <li class="slide-nav__item">
-                  <label class="slide-nav__title_label">Shop Pages</label>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Shop Page V1</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Shop Page V2</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Shop Page V3</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Shop Page V4</a>
-                </li>
-              </ul>
-              <ul class="slide-nav__list">
-                <li class="slide-nav__item">
-                  <label class="slide-nav__title_label">Prodcut Pages</label>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Prodcut Page V1</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Prodcut Page V2</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Prodcut Page V3</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="#">Prodcut Page V4</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="mob-nav__item">
-            <a class="mob-nav__link" href="shop.html">Collection</a>
-          </li>
-          <li class="mob-nav__item js-slidedown">
-            <a class="mob-nav__link js-slidedown-button" href="about.html">
-              <span class="mob-nav__arrow">Pages</span>
-            </a>
-            <div class="slide-nav js-slidedown-hide">
-              <ul class="slide-nav__list">
-                <li class="slide-nav__item">
-                  <label class="slide-nav__title_label">Page Set 1</label>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="about.html">About us</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="shop.html">Catalog</a>
-                </li>
-                <li class="slide-nav__item active">
-                  <a class="slide-nav__link" href="product_page.html">Product Page</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="wishlist.html">Wishlist</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="my_profile.html">My Profile</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="404.html">404</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="privacy_policy.html">Privacy Policy</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="terms_of_use.html">Terms of Use</a>
-                </li>
-              </ul>
-              <ul class="slide-nav__list">
-                <li class="slide-nav__item">
-                  <label class="slide-nav__title_label">Page Set 2</label>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="Login.html">Login</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="registration.html">Registration</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="faq.html">FAQ's</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="cart.html">Cart</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="checkout-1.html">Checkout 1</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="checkout-2.html">Checkout 2</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="checkout-3.html">Checkout 3</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="mob-nav__item js-slidedown">
-            <a class="mob-nav__link js-slidedown-button" href="blog.html">
-              <span class="mob-nav__arrow">Blog</span>
-            </a>
-            <div class="slide-nav js-slidedown-hide">
-              <ul class="slide-nav__list">
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="blog.html">Blog</a>
-                </li>
-                <li class="slide-nav__item">
-                  <a class="slide-nav__link" href="post.html">Blog Post</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="mob-nav__item">
-            <a class="mob-nav__link" href="contacts.html">Contact</a>
-          </li>
-        </ul>
-        <div class="hide-mob__socials">
-          <ul class="socials__list socials__list_center">
-            <li class="socials__item">
-              <a class="socials__link" href="#">Fb</a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">Tw</a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">Ins</a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">Pt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- MOBILE NAVIGATION END -->
 
     <!-- BEGIN MAIN -->
     <main class="main">
@@ -345,34 +193,6 @@
         </div>
       </section>
       <!-- PRODUCT CARD END -->
-
-      <!-- BEGIN BEST SELLERS -->
-      <section class="main-block wrapper container-content">
-        <div class="main-block__top">
-          <span class="main-block__subtitle category-subtitle"><b>you</b> viewed</span>
-          <h3 class="main-block__title">reviewed by you</h3>
-          <p class="main-block__text">
-            Cillum eu id enim aliquip aute ullamco anim. Culpa deserunt nostrud excepteur voluptate velit ipsum esse
-            enim.
-          </p>
-        </div>
-        <div class="catalog-slider js-catalog loaded">
-          <div class="catalog-slider__list-wrap">
-            <div class="catalog-slider__list js-catalog-carousel" id="featuresProductSlider"></div>
-          </div>
-          <div class="catalog-slider__cols">
-            <div class="catalog-slider__col">
-              <button class="prev-button js-catalog-prev"></button>
-            </div>
-            <div class="catalog-slider__col dots-2 js-catalog-dots"></div>
-            <div class="catalog-slider__col">
-              <button class="next-button js-catalog-next"></button>
-            </div>
-          </div>
-          <div class="load-icon"></div>
-        </div>
-      </section>
-      <!-- BEST SELLERS END -->
     </main>
     <!-- MAIN END -->
 
@@ -576,8 +396,8 @@
         }
         mainProductDetailThublineList.innerHTML = mainProductDetailThublineCreate;
       };
-
       displaySelectedProduct();
+
       function displaySelectedProduct() {
         var id = "productRight";
         var showSelectedProduct = "";
@@ -616,39 +436,16 @@
         showSelectedProduct += `<div class='labelexpired'>Expired</div>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='product-color_switch'>`;
-        showSelectedProduct += `<label class='product-detail_label'>Color:</label>`;
-        showSelectedProduct += `<div class='short-item__color-group'>`;
-        showSelectedProduct += `<a href='javascript:void(0)' class='circle gray'></a><a href='javascript:void(0)' class='circle yellow active'></a`;
-        showSelectedProduct += `><a href='javascript:void(0)' class='circle white'></a>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
         showSelectedProduct += `<div class='size'>`;
         showSelectedProduct += `<div class='product-add'>`;
         showSelectedProduct += `<div class='product-add__col'>`;
-        showSelectedProduct += `<div class='product-add__count count js-count'>`;
-        showSelectedProduct += `<button class='count__button count__button_minus js-count-minus'></button>`;
-        showSelectedProduct += `<input class='count__input js-count-input' type='text' value='1' maxlength='4' />`;
-        showSelectedProduct += `<button class='count__button count__button_plus js-count-plus'></button>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='product-add__col'>`;
-        showSelectedProduct += `<button class='product-add__button button'>`;
-        showSelectedProduct += `<span class='button__text'><i class='theme-icon-cart'></i> Add to cart</span>`;
-        showSelectedProduct += `</button>`;
+        showSelectedProduct += `<a class='product-add__button button' href='${selectedProduct['buy-button-link']}' target='_blank'>`;
+        showSelectedProduct += `<span class='button__text'><i class='theme-icon-cart'></i>${selectedProduct['buy-button-text']}</span>`;
+        showSelectedProduct += `</a>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `<div class='product-add__whishlist'>`;
-        showSelectedProduct += `<a href='' class='btn-wishlist'>+ Add to wishlist</a>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='product-share'>`;
-        showSelectedProduct += `<label class='product-detail_label'>Share +</label>`;
-        showSelectedProduct += `<div class='social'>`;
-        showSelectedProduct += `<a href=''><i class='fa fa-facebook'></i></a>`;
-        showSelectedProduct += `<a href=''><i class='fa fa-twitter'></i></a>`;
-        showSelectedProduct += `<a href=''><i class='fa fa-instagram'></i></a>`;
-        showSelectedProduct += `<a href=''><i class='fa fa-pinterest'></i></a>`;
-        showSelectedProduct += `</div>`;
+        showSelectedProduct += `<a href='javascript:void(0)' class='btn-wishlist' onclick='addToWishlist(${selectedProduct.id})' >+ Add to wishlist</a>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `<div class='product-faq faq js-faq'>`;
         showSelectedProduct += `<article class='faq__item js-faq-item'>`;
@@ -668,138 +465,9 @@
         showSelectedProduct += `</div>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `</article>`;
-        showSelectedProduct += `<article class='faq__item js-faq-item'>`;
-        showSelectedProduct += `<h2 class='faq__title'><a class='faq__button js-faq-button' href='javascript:void(0);'>Customer Reviews (2)</a></h2>`;
-        showSelectedProduct += `<div class='faq__hide js-faq-hide'>`;
-        showSelectedProduct += `<div class='faq__content'>`;
-        showSelectedProduct += `<article class='review'>`;
-        showSelectedProduct += `<div class='review__top'>`;
-        showSelectedProduct += `<div class='review__left'>`;
-        showSelectedProduct += `<div class='review__cols'>`;
-        showSelectedProduct += `<div class='review__col'>`;
-        showSelectedProduct += `<h5 class='review__author'>Melissa Johnson</h5>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='review__col'>`;
-        showSelectedProduct += `<span class='review__date'>Aug 02, 2020</span>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='review__right'>`;
-        showSelectedProduct += `<div class='review__rating rating rating_small'>`;
-        showSelectedProduct += `<input class='star' name='review-rating-1' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-1' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-1' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-1' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-1' type='radio' checked disabled />`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<p class='review__text'>Proident voluptate adipisicing ullamco veniam incididunt laboris nulla elit et anim tempor duis dolor nostrud. Ad eiusmodlaborum deserunt id eiusmod. Eiusmod ea aute ex et nisi exercitation eu fugiat.`;
-        showSelectedProduct += `</p>`;
-        showSelectedProduct += `</article>`;
-        showSelectedProduct += `<article class='review'>`;
-        showSelectedProduct += `<div class='review__top'>`;
-        showSelectedProduct += `<div class='review__left'>`;
-        showSelectedProduct += `<div class='review__cols'>`;
-        showSelectedProduct += `<div class='review__col'>`;
-        showSelectedProduct += `<h5 class='review__author'>Melissa Johnson</h5>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='review__col'>`;
-        showSelectedProduct += `<span class='review__date'>Aug 02, 2020</span>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<div class='review__right'>`;
-        showSelectedProduct += `<div class='review__rating rating rating_small'>`;
-        showSelectedProduct += `<input class='star' name='review-rating-2' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-2' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-2' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-2' type='radio' disabled />`;
-        showSelectedProduct += `<input class='star' name='review-rating-2' type='radio' checked disabled />`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<p class='review__text'>Proident voluptate adipisicing ullamco veniam incididunt laboris nulla elit et anim tempor duis dolor nostrud. Ad eiusmod laborum deserunt id eiusmod. Eiusmod ea aute ex et nisi exercitation eu fugiat.`;
-        showSelectedProduct += `</p>`;
-        showSelectedProduct += `</article>`;
-        showSelectedProduct += `<form>`;
-        showSelectedProduct += `<section class='add-review'>`;
-        showSelectedProduct += `<div class='add-review__top'>`;
-        showSelectedProduct += `<h3 class='add-review__title'>Your Rating</h3>`;
-        showSelectedProduct += `<div class='add-review__rating rating'>`;
-        showSelectedProduct += `<input class='star' name='add-review-rating' type='radio' />`;
-        showSelectedProduct += `<input class='star' name='add-review-rating' type='radio' />`;
-        showSelectedProduct += `<input class='star' name='add-review-rating' type='radio' />`;
-        showSelectedProduct += `<input class='star' name='add-review-rating' type='radio' />`;
-        showSelectedProduct += `<input class='star' name='add-review-rating' type='radio' />`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `<input class='text-input' type='email' placeholder='Name' />`;
-        showSelectedProduct += `<input class='text-input' type='text' placeholder='Phone Number' />`;
-        showSelectedProduct += `<textarea class='textarea' placeholder='Your reviews'></textarea>`;
-        showSelectedProduct += `<button class='add-review__button button'>`;
-        showSelectedProduct += `<span class='button__text'>Submit</span>`;
-        showSelectedProduct += `</button>`;
-        showSelectedProduct += `</section>`;
-        showSelectedProduct += `</form>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</div>`;
-        showSelectedProduct += `</article>`;
         showSelectedProduct += `</div>`;
         showSelectedProduct += `</div>`;
         shortProductRight.innerHTML = showSelectedProduct;
-      }
-
-      featuresProductSliderData(productList, "featuresProductSlider");
-
-      function featuresProductSliderData(myArray, id) {
-        var shortItemAllCreate = "";
-        featuresProductSliderList = document.getElementById(id);
-        for (var i in myArray) {
-          const selectedProductStringFormat = localStorage.getItem('favouriteProduct');
-          const selectedProductArrayFormat = JSON.parse(selectedProductStringFormat);
-          const data = selectedProductArrayFormat?.find(element => myArray[i].id === element.id);
-          isActive = '';
-          if (data) {
-            isActive = 'active'
-          } else {
-            isActive = ''
-          }
-          shortItemAllCreate += `<article class='short-item'>`;
-          shortItemAllCreate += `<div class='short-item__all'>`;
-          shortItemAllCreate += `<div class='short-item__product'>`;
-          shortItemAllCreate += `<a class='short-item__image-bg' onclick='redirectToProductPage(${myArray[i].id})'>`;
-          shortItemAllCreate +=
-            `<img class='short-item__image' src='${myArray[i][`image-1`]}' data-lazy='${myArray[i][`image-1`]}' alt='' />`;
-          shortItemAllCreate += `</a>`;
-          shortItemAllCreate += `<div class='short-item__top'>`;
-          shortItemAllCreate += `<div class='short-item__cols'>`;
-          shortItemAllCreate += `<div class='short-item__col'>`;
-          shortItemAllCreate += `<span class='item-tag item-tag_red'>Hot</span>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `<div class='short-item_button_group'>`;
-          shortItemAllCreate += `<button class='short-item__button heart-button js-toggle-active ${isActive}' onclick='addToWishlist(${myArray[i].id})'></button>`;
-          shortItemAllCreate += `<button class='short-item__button cart-button js-toggle-active'></button>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `<div class='short-item__info'>`;
-          shortItemAllCreate += `<h4 class='short-item__title'>`;
-          shortItemAllCreate += `<a class='short-item__link' onclick='redirectToProductPage(${myArray[i].id})'>${myArray[i][`product-name`]}</a>`;
-          shortItemAllCreate += `</h4>`;
-          shortItemAllCreate += `<span class='short-item__price'>${myArray[i].price}</span>`;
-          shortItemAllCreate += `<span class='short-item__old-price'>${myArray[i]["strikethrough-price"]}</span>`;
-          shortItemAllCreate += `<div class='short-item__color-group'>`;
-          shortItemAllCreate += `<a href='javascript:void(0)' class='circle gray'></a>`;
-          shortItemAllCreate += `<a href='javascript:void(0)' class='circle yellow active'></a>`;
-          shortItemAllCreate += `<a href='javascript:void(0)' class='circle white'></a>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</div>`;
-          shortItemAllCreate += `</article>`;
-        }
-        featuresProductSliderList.innerHTML = shortItemAllCreate;
       }
 
       include("assets/js/accordion.js");
