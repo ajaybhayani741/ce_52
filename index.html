@@ -125,7 +125,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="header-nav__item active">
+                    <li class="header-nav__item">
                       <a class="header-nav__link" href="our_story.html">Our Story</a>
                     </li>
                     <li class="header-nav__item logo_nav">
@@ -256,62 +256,19 @@
           <h3 class="main-block__title">Featured products</h3>
         </div>
         <div class="products-nav tabs-nav js-line">
-          <ul class="tabs-nav__list">
-            <li class="tabs-nav__item js-tabs-item js-line-item active">
-              <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-1">All</a>
-            </li>
-            <li class="tabs-nav__item js-line-item js-tabs-item">
-              <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-2">Carpet</a>
-            </li>
-            <li class="tabs-nav__item js-line-item js-tabs-item">
-              <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-3">Home Decor</a>
-            </li>
-            <li class="tabs-nav__item js-line-item js-tabs-item">
-              <a class="tabs-nav__link js-line-link js-tabs-link" href="#products-4">Kitchen</a>
-            </li>
-          </ul>
+          <ul class="tabs-nav__list" id="homeNavTab"></ul>
           <div class="tabs-nav__line js-line-element"></div>
         </div>
 
         <!-- BEGIN TAB 1 -->
-        <div class="product-tab js-tabs-content active" id="products-1">
+        <div class="product-tab js-tabs-content active">
           <div class="main-catalog">
-            <div class="main-catalog__list" id="shortItemAll"></div>
+            <div class="main-catalog__list" id="product_data_tab"></div>
             <img class="main-catalog__bg" src="assets/img/patterns/flower.png"
               data-lazy="assets/img/patterns/flower.png" alt="" />
           </div>
         </div>
         <!-- TAB 1 END -->
-
-        <!-- BEGIN TAB 2 -->
-        <div class="product-tab js-tabs-content" id="products-2">
-          <div class="main-catalog">
-            <div class="main-catalog__list" id="carpetData"></div>
-            <img class="main-catalog__bg" src="assets/img/patterns/flower.png"
-              data-lazy="assets/img/patterns/flower.png" alt="" />
-          </div>
-        </div>
-        <!-- TAB 2 END -->
-
-        <!-- BEGIN TAB 3 -->
-        <div class="product-tab js-tabs-content" id="products-3">
-          <div class="main-catalog">
-            <div class="main-catalog__list" id="homeDecoreData"></div>
-            <img class="main-catalog__bg" src="assets/img/patterns/flower.png"
-              data-lazy="assets/img/patterns/flower.png" alt="" />
-          </div>
-        </div>
-        <!-- TAB 3 END -->
-
-        <!-- BEGIN TAB 4 -->
-        <div class="product-tab js-tabs-content" id="products-4">
-          <div class="main-catalog">
-            <div class="main-catalog__list" id="kitchenData"></div>
-            <img class="main-catalog__bg" src="assets/img/patterns/flower.png"
-              data-lazy="assets/img/patterns/flower.png" alt="" />
-          </div>
-        </div>
-        <!-- TAB 4 END -->
 
         <div class="load-more">
           <a class="button" href="shop.html">
@@ -555,6 +512,7 @@
     var newArrivalsList = [];
     var allMyArray = [];
     var heroSliderList = [];
+    var collectionList = [];
 
     function include(file) {
       var script = document.createElement("script");
@@ -579,22 +537,19 @@
         if (data1.title === "New arraivals") {
           newArrivalsList = data1.data;
         }
+        if (data1.title === "Collections List") {
+          collectionList = data1.data;
+        }
       });
-      createData(productList, "shortItemAll");
 
-      const carpetData = productList.filter((element) => element.collections === "Carpet");
-      createData(carpetData, "carpetData");
-
-      const homeDecoreData = productList.filter((element) => element.collections === "Home Decor");
-      createData(homeDecoreData, "homeDecoreData");
-
-      const kitchenData = productList.filter((element) => element.collections === "Kitchen");
-      createData(kitchenData, "kitchenData");
-
-      function createData(myArray, id) {
+      function createData(myArray) {
         var shortItemAllCreate = "";
-        shortItemAll = document.getElementById(id);
-        for (var i in myArray) {
+        shortItemAll = document.getElementById("product_data_tab");
+        var product_length = myArray.length;
+        if (product_length > 8) {
+          product_length = 8;
+        }
+        for (var i = 0; i < product_length; i++) {
           const selectedProductStringFormat = localStorage.getItem("favouriteProduct");
           const selectedProductArrayFormat = JSON.parse(selectedProductStringFormat);
           const data = selectedProductArrayFormat?.find((element) => myArray[i].id === element.id);
@@ -716,10 +671,41 @@
         bestProductSliderList.innerHTML = shortItemAllCreate;
       }
 
+      homeNavTab(collectionList, "homeNavTab")
 
+      function homeNavTab(tabArray, id) {
+        var homeNavCreate = "";
+        var homeNavHtml = document.getElementById(id);
+        homeNavCreate += `<li class='tabs-nav__item js-tabs-item js-line-item'>`;
+        homeNavCreate += `<a class='tabs-nav__link js-line-link js-tabs-link active' data-value='products-All'>All</a>`;
+        homeNavCreate += `</li>`;
+
+        for (let i = 0; i < 4; i++) {
+          str_id = `#products-${tabArray[i]['collections-list'].replace(/\s+/g, '-')}`;
+          homeNavCreate += `<li class='tabs-nav__item js-tabs-item js-line-item'>`;
+          homeNavCreate += `<a class='tabs-nav__link js-line-link js-tabs-link' data-value='${tabArray[i]['collections-list']}'>${tabArray[i]['collections-list']}</a>`;
+          homeNavCreate += `</li>`;
+
+        }
+        homeNavHtml.innerHTML += homeNavCreate;
+      }
+
+      $('.tabs-nav__list').on('click', '.tabs-nav__link', function (e) {
+        e.preventDefault;
+        var main_data = $(this);
+        var value = $(this).data("value");
+        if (value == "products-All") {
+          var filtered_data = productList;
+        }
+        else {
+          var filtered_data = productList.filter((element) => element.collections === value);
+        }
+        createData(filtered_data);
+      });
+      $('.tabs-nav__link.active').trigger("click");
 
       newArrivals(newArrivalsList, "newArrivalsId");
-      console.log('newArrivalsList', newArrivalsList)
+
       function newArrivals(arrivalsArray, id) {
         var newArrivalsCreate = "";
         var newArrivalsHtml = document.getElementById(id);
@@ -744,12 +730,11 @@
           newArrivalsCreate += `</article>`;
         }
         newArrivalsHtml.innerHTML = newArrivalsCreate;
-        include("assets/js/slider_script.js");
       }
+      include("assets/js/slider_script.js");
+
     };
     request.send();
-
-
 
     function addToWishlist(product_id) {
       favouriteProduct = productList.find((element) => element.id == product_id);

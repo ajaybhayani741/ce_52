@@ -10199,6 +10199,25 @@ body.compensate-for-scrollbar .header {
     max-width: 1536px;
 }
 
+.team-wrapper {
+    padding: 100px 0;
+}
+
+.team-ul {
+    display: -webkit-box;
+    -ms-display: flex;
+    -moz-display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+}
+
+.team-ul li {
+    max-width: 33.33%;
+    width: 100%;
+    padding-left: 20px;
+}
 
 @media screen and (max-width:1700px) {
 
