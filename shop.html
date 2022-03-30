@@ -188,9 +188,9 @@
               </div>
               <div class="shop-panel__right">
                 <div class="shop-panel__select select select_1">
-                  <select class="js-formstyler">
-                    <option>Price high to low</option>
-                    <option>Price low to high</option>
+                  <select class="js-formstyler sort_price">
+                    <option value="1" data-value="htl">Price high to low</option>
+                    <option value="2" data-value="lth">Price low to high</option>
                   </select>
                 </div>
               </div>
@@ -381,7 +381,7 @@
         shortItemAll = document.getElementById(id);
         shortItemAllCreate += `<li>`;
         shortItemAllCreate += `<label class='radio__label'>`;
-        shortItemAllCreate += `<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(0)' checked />`;
+        shortItemAllCreate += `<input class='radio__input' type='radio' name='payment' data-id='0' onClick='selectCollectionsList(0)' checked />`;
         shortItemAllCreate += `<span class='radio__icon'></span>`;
         shortItemAllCreate += `<span class='radio__text'>All</span>`;
         shortItemAllCreate += `</label>`;
@@ -390,7 +390,7 @@
         for (var i in myArray) {
           shortItemAllCreate += `<li>`;
           shortItemAllCreate += `<label class='radio__label'>`;
-          shortItemAllCreate += `<input class='radio__input' type='radio' name='payment' onClick='selectCollectionsList(${myArray[i].id})' />`;
+          shortItemAllCreate += `<input class='radio__input' type='radio' name='payment' data-id='${myArray[i].id}' onClick='selectCollectionsList(${myArray[i].id})' />`;
           shortItemAllCreate += `<span class='radio__icon'></span>`;
           shortItemAllCreate += `<span class='radio__text'>${myArray[i]["collections-list"]}</span>`;
           shortItemAllCreate += `</label>`;
@@ -402,18 +402,33 @@
     };
 
     function selectCollectionsList(type) {
+      sort = $(".js-formstyler").find(":selected").data("value")
       if (type === 0) {
-        const data = productList;
-        createData(data);
+        var data = productList;
       } else {
         const selectedCollectionsList = collectionsList.find((ele) => ele.id === type);
         if (selectedCollectionsList["collections-list"]) {
-          const data = productList.filter((element) => {
+          var data = productList.filter((element) => {
             return element.collections === selectedCollectionsList["collections-list"];
           });
-          createData(data);
         }
       }
+      if (sort == "lth") {
+        sorted_data = data.sort(function (a, b) {
+          let x = parseFloat(a.price)
+          let y = parseFloat(b.price)
+          if (x < y) { return -1; }
+          if (x > y) { return 1; }
+        })
+      } else {
+        sorted_data = data.sort(function (a, b) {
+          let x = parseFloat(a.price)
+          let y = parseFloat(b.price)
+          if (x > y) { return -1; }
+          if (x < y) { return 1; }
+        })
+      }
+      createData(sorted_data);
     }
 
     function redirectToProductPage(product_id) {
@@ -488,40 +503,45 @@
       }
       shortItemAll.innerHTML = shortItemAllCreate;
 
-      $(document).ready(function () {
-        product_box = $(".short-item").size();
-        console.log('product_box', product_box)
-        product = 3;
+      // $(document).ready(function () {
+      product_box = $(".short-item").size();
+      console.log('product_box', product_box)
+      product = 3;
 
-        function showLessButton() {
-          if (product <= 4) {
-            $('#showLess').hide();
-          }
-          else {
-            $('#showLess').show();
-          }
+      function showLessButton() {
+        if (product <= 4) {
+          $('#showLess').hide();
         }
+        else {
+          $('#showLess').show();
+        }
+      }
 
+      $('.short-item:lt(' + product + ')').show();
+      $('#loadMore').click(function () {
+        product = (product + 3 <= product_box) ? product + 3 : product_box;
         $('.short-item:lt(' + product + ')').show();
-        $('#loadMore').click(function () {
-          product = (product + 3 <= product_box) ? product + 3 : product_box;
-          $('.short-item:lt(' + product + ')').show();
-          showLessButton();
-        });
-        $('#showLess').click(function () {
-          product = (product - 3 < 0) ? 3 : product - 3;
-          $('.short-item').not(':lt(' + product + ')').hide();
-          showLessButton();
-        });
         showLessButton();
-
-        $("body").on("change", ".js-formstyler", function () {
-          console.log("----->", $(this).val())
-        });
       });
+      $('#showLess').click(function () {
+        product = (product - 3 < 0) ? 3 : product - 3;
+        $('.short-item').not(':lt(' + product + ')').hide();
+        showLessButton();
+      });
+      showLessButton();
+
+
     }
 
     request.send();
+    $(document).on("change", ".sort_price", function (e) {
+      if (e.handled !== true) {
+        e.handled = true;
+        var radio_id = $('input[name=payment]:checked').data("id");
+        selectCollectionsList(radio_id)
+        return false;
+      }
+    });
   </script>
 </body>
 
