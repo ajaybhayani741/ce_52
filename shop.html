@@ -189,11 +189,8 @@
               <div class="shop-panel__right">
                 <div class="shop-panel__select select select_1">
                   <select class="js-formstyler">
-                    <option>Best Selling</option>
                     <option>Price high to low</option>
                     <option>Price low to high</option>
-                    <option>Date, old to new</option>
-                    <option>Date, new to old</option>
                   </select>
                 </div>
               </div>
@@ -517,6 +514,10 @@
           showLessButton();
         });
         showLessButton();
+
+        $("body").on("change", ".js-formstyler", function () {
+          console.log("----->", $(this).val())
+        });
       });
     }
 
