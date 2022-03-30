@@ -579,18 +579,6 @@ function resizeWindow() {
   }
   // moving content
 
-  // tabs line fix
-  if ($(".js-line").length) {
-    $(".js-line").each(function () {
-      $(this)
-        .find(".js-line-element")
-        .css("left", $(this).find(".js-line-item.active .js-line-link").position().left + "px")
-        .css("top", $(this).find(".js-line-item.active .js-line-link").position().top + "px")
-        .css("width", $(this).find(".js-line-item.active .js-line-link").width() + "px");
-    });
-  }
-  // tabs line fix end
-
   // Faq list item filter
 
   $(".faq-filter__list li").on("click", function () {

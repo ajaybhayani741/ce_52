@@ -540,6 +540,9 @@
         if (data1.title === "Collections List") {
           collectionList = data1.data;
         }
+        if (data1.title === "Hero Slider") {
+          heroSliderList = data1.data;
+        }
       });
 
       function createData(myArray) {
@@ -590,12 +593,6 @@
         shortItemAll.innerHTML = shortItemAllCreate;
       }
 
-      allMyArray.forEach((data1) => {
-        if (data1.title === "Hero Slider") {
-          heroSliderList = data1.data;
-        }
-      });
-
       heroSliderData(heroSliderList, "heroSlider");
 
       function heroSliderData(myArray, id) {
@@ -625,7 +622,9 @@
         heroSliderDataList.innerHTML = heroSliderCreate;
       }
 
-      bestPrdouctSliderData(productList, "bestPrdouctSlider");
+      var bestProdcutRandom = productList.sort(() => Math.random() - 0.5);
+
+      bestPrdouctSliderData(bestProdcutRandom, "bestPrdouctSlider");
 
       function bestPrdouctSliderData(myArray, id) {
         var shortItemAllCreate = "";
@@ -702,6 +701,7 @@
         }
         createData(filtered_data);
       });
+
       $('.tabs-nav__link.active').trigger("click");
 
       newArrivals(newArrivalsList, "newArrivalsId");
@@ -731,10 +731,17 @@
         }
         newArrivalsHtml.innerHTML = newArrivalsCreate;
       }
+
       include("assets/js/slider_script.js");
 
     };
     request.send();
+
+    function redirectToProductPage(product_id) {
+      product = productList.find((element) => element.id == product_id)
+      localStorage.setItem('selectedProduct', JSON.stringify(product))
+      location.href = 'product_page.html'
+    }
 
     function addToWishlist(product_id) {
       favouriteProduct = productList.find((element) => element.id == product_id);
