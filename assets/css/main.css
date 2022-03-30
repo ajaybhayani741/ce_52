@@ -12366,6 +12366,13 @@ body.compensate-for-scrollbar .header {
         padding-bottom: 20px;
     }
 
+    .team-card__social li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.925rem;
+    }
+
 }
 
 @media screen and (min-width:768px) {
@@ -13989,6 +13996,7 @@ body.compensate-for-scrollbar .header {
 }
 
 @media screen and (max-width:700px) {
+
     .footer__bottom .footer__cols {
         display: block;
         text-align: center
@@ -14066,6 +14074,15 @@ body.compensate-for-scrollbar .header {
 
     .post-mini__left {
         display: none
+    }
+
+    .team-wrapper {
+        padding: 50px 0;
+    }
+
+    .team-ul .team-card__item {
+        max-width: 50%;
+        margin-bottom: 30px;
     }
 }
 
@@ -14245,6 +14262,23 @@ body.compensate-for-scrollbar .header {
     .banner-title__style h2 {
         font: 500 32px "Eina", sans-serif;
         padding-bottom: 14px;
+    }
+
+    .team-ul .team-card__item {
+        max-width: 100%;
+    }
+
+    .team-card_member_image img {
+        margin-bottom: 10px;
+    }
+
+    .main-block__top {
+        padding: 0 10px;
+    }
+
+    .main-block__title {
+        font-size: 24px;
+        line-height: 28px;
     }
 
 }
